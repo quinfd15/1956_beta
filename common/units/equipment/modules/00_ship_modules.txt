@@ -1966,6 +1966,28 @@ equipment_modules = {
 		}
 		dismantle_cost_ic = 700
 	}
+	
+	
+	ship_deck_space = {
+		category = ship_deck_space
+		gfx = ship_airplane_launcher_2 
+
+		
+		add_stats = {
+			carrier_size = 10
+			build_cost_ic = 1000
+		}
+		manpower = 250 #outside the add_stats section for code reasons
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		dismantle_cost_ic = 300
+	}
+	
+	
 
 ### #  # ### #       ###  ##  #  # # #  ## 
 #   #  # #   #        #  #  # ## # # # #   
