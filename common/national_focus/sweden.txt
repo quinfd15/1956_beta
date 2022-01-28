@@ -37,7 +37,7 @@ focus_tree = {
 		cost = 10
 		completion_reward = {
 			
-			#most
+			#some xp and military planning nat. spirit
 		}
 	}
 
