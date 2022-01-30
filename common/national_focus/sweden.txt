@@ -146,3 +146,25 @@ focus_tree = {
 		completion_reward = {
 		#unlock decisions to rebuild/refit various ships creating a few that don't exist at start date
 		}
+	}
+
+	focus = {
+		id = SWE_Baltic_domination
+		icon = GFX_goal_r56_goal_generic_navy_schematics
+		prerequisite = { focus = SWE_modernize_the_ships }
+		relative_position_id = SWE_modernize_the_ships
+
+		x = 0 
+
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 5
+		}
+
+		completion_reward = {
+			#heavy cruiser/coastal ship buffs?
+		}
+	}
