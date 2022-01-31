@@ -53,8 +53,8 @@ SWE_CA_HISTORICAL = {
 
 	unique = {
 		"Dristigheten" "Sverige" "Drottning Victoria" "Gustav V" "Äran" "Tapperheten" "Wasa" "Manligheten" "Oscar II"  
-		"Hans Wachtmeister" "Tre Kronor" "Älvsnabben" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" 
-		"Oden" "Thor" "Niord" "Svea" "Göta" "Thule" "Viking"
+		"Hans Wachtmeister" "Älvsnabben" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" 
+		
 	}
 }
 
@@ -72,7 +72,7 @@ SWE_BB_HISTORICAL = {
 	fallback_name = "Slagskepp %d"		
 
 	unique = {
-		 "Karl XIV Johann" "Karl XII" 
+		 "Karl XIV Johann" "Karl XII" "Oden" "Thor" "Niord" "Svea" "Göta" "Thule" "Viking" 
 	}
 }
 
