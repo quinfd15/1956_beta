@@ -12,8 +12,8 @@ SWE_DD_HISTORICAL = {
 	fallback_name = "J %d"					
 
 	unique = {											
-		"Göteborg" "Stockholm" "Malmö" "Karlskrona" "Gävle" "Norrköping" "Plisander" "Puke" "Visby" "Sundsvall" "Hälsingborg" "Kalmar" 
-		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" 
+		"Göteborg" "Stockholm" "Malmö" "Karlskrona" "Gävle" "Norrköping" "Plisander" "Puke" "Visby" "Sundsvall" "Hälsingborg" 
+		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå"
 		"Öland" "Uppland" "Halland" "Småland" "Östergötland" "Södermanland" "Gästrikland" "Hälsingland" 
 		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" 
 		"Örnen" "Jacob Bagge" "Klas Horn" "Klas Uggla" "Ehrensköld" "Nordenskjöld" "Frederik Otter" "Joachim Scheel" "Stenbock" "Trolle" 
@@ -53,7 +53,7 @@ SWE_CA_HISTORICAL = {
 
 	unique = {
 		"Dristigheten" "Sverige" "Drottning Victoria" "Gustav V" "Äran" "Tapperheten" "Wasa" "Manligheten" "Oscar II"  
-		"Hans Wachtmeister" "Älvsnabben" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" 
+		"Hans Wachtmeister" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" 
 		
 	}
 }
@@ -127,4 +127,24 @@ SWE_SS_HISTORICAL = {
 		"Sjölejonet" "Sjöbjörnen" "Sjöhunden" "Svärdfisken" "Tumlaren" "Dykaren" "Sjöhästen" "Sjöormen" "Sjöborren" 
 		"Neptun" "Najad" "Näcken" "Vargen" "Forellen" "Aborren" "Siken" "Gäddan" "Laxen" "Makrillen" 
 	}
+}
+
+
+### COMMUNIST DESTROYERS ###
+SWE_DD_COMMUNIST = {
+	name = NAME_THEME_COMMUNIST_DESTROYERS
+
+	for_countries = { SWE }
+
+	can_use = { 
+		has_government = communism
+	}
+
+	type = ship
+	ship_types = { ship_hull_light destroyer }
+
+	#prefix = 
+
+	unique = {
+		"Arbetare"
 }
