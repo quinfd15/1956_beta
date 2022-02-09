@@ -1654,34 +1654,41 @@ characters={
 		}
 	}
 
-	FRA_roger_salengro={
-		name=FRA_roger_salengro
-		portraits={
-			army={
-				small="GFX_idea_FRA_roger_salengro"
-			}
-		}
-		advisor={
-			slot = political_advisor
-			idea_token = FRA_roger_salengro
-			allowed  = {
-				original_tag  = FRA
-			}
-			available  = {
-				has_completed_focus  = FRA_form_the_popular_front 
-			}
-			traits  = {
-				compassionate_gentleman 
-			}
-			on_add  = {
-			}
-			do_effect  = {
-			}
-			ai_will_do  = {
-				factor  = 1.000
-			}
-		}
-	}
+	#FRA_roger_salengro={ #This guy is totally insignificant and shouldn't be in the game - waffle
+	#	name=FRA_roger_salengro
+	#	portraits={
+	#		army={
+	#			small="GFX_idea_FRA_roger_salengro"
+	#		}
+	#	}
+	#	advisor={
+	#		slot = political_advisor
+	#		idea_token = FRA_roger_salengro
+	#		allowed  = {
+	#			original_tag  = FRA
+	#		}
+	#		available  = {
+	#			OR = {
+	#				AND = {
+	#					has_completed_focus  = FRA_radicalize_front
+	#					date < 1940.01.01 						
+	#				}
+	#				has_government = communism
+	#			}
+#
+	#		}
+	#		traits  = {
+	#			compassionate_gentleman 
+	#		}
+	#		on_add  = {
+	#		}
+	#		do_effect  = {
+	#		}
+	#		ai_will_do  = {
+	#			factor  = 1.000
+	#		}
+	#	}
+	#}
 
 	FRA_zivony_peshkov={
 		name=FRA_zivony_peshkov
