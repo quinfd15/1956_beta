@@ -34,7 +34,7 @@ SWE_CL_HISTORICAL = {
 
 	unique = {
 		"Gotland" "Fylgia" "Klas Horn" "Klas Uggla" "Göta Lejon" "Tre Kronor" "Klas Fleming" "Motala" "Nybro" "Flen" "Arvika"
-		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" 
+		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" "Lagan"
 		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad"
 	}
 }
@@ -48,7 +48,7 @@ SWE_CA_HISTORICAL = {
 	type = ship
 	ship_types = { ship_hull_cruiser heavy_cruiser }
 	
-	prefix = "HsWMS "
+	prefix = "Fs "
 	fallback_name = "Tung Kryśsare %d"
 
 	unique = {
@@ -143,8 +143,80 @@ SWE_DD_COMMUNIST = {
 	type = ship
 	ship_types = { ship_hull_light destroyer }
 
-	#prefix = 
+	prefix = "Fs "
 
 	unique = {
-		"Arbetare"
+		"Arbetare" "Stockholm" "Göteborg" "Malmö" "Karlskrona" "Gävle" "Norrköping" "Plisander" "Puke" "Visby" "Sundsvall" "Hälsingborg" 
+		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå"
+		"Öland" "Uppland" "Halland" "Småland" "Östergötland" "Södermanland" "Gästrikland" "Hälsingland" 
+		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" 
+		"Örnen" "Nordenskjöld" 
+}
+
+### COMMUNIST SUBMARINES ###
+SWE_SS_COMMUNIST = {
+	name = NAME_THEME_COMMUNIST_SUBMARINES
+
+	for_countries = { SWE }
+
+	can_use = { 
+		has_government = communism
+	}
+
+	type = ship
+	ship_types = { ship_hull_submarine submarine }
+	
+	prefix = "Fs "
+	fallback_name = "U %d"
+	
+	unique = {
+		"Hajen" "Sälen" "Valrossen" "Bävern" "Illern" "Uttern" "Valen" "Draken" "Gripen" "Ulven" "Delfinen" "Nordkaparen" "Springaren"
+		"Sjölejonet" "Sjöbjörnen" "Sjöhunden" "Svärdfisken" "Tumlaren" "Dykaren" "Sjöhästen" "Sjöormen" "Sjöborren" 
+		"Neptun" "Najad" "Näcken" "Vargen" "Forellen" "Aborren" "Siken" "Gäddan" "Laxen" "Makrillen" "Lagan"
+	}
+}
+
+### COMMUNIST LIGHT CRUISER NAMES###
+SWE_CL_COMMUNIST = {
+	name = NAME_THEME_COMMUNIST_CL
+
+	for_countries = { SWE }
+
+	can_use = { 
+		has_government = communism
+	}
+
+	type = ship
+	ship_types = { ship_hull_cruiser light_cruiser }
+	
+	prefix = "Fs "
+	fallback_name = "LK %d"
+
+	unique = {
+		"Gotland" "Fylgia" "Motala" "Nybro" "Flen" "Arvika"
+		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" 
+		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad"
+	}
+}
+
+### COMMUNIST HEAVY CRUISER NAMES###
+SWE_CA_COMMUNIST = {
+	name = NAME_THEME_COMMUNIST_CA
+
+	for_countries = { SWE }
+
+	can_use = { 
+		has_government = communism
+	}
+
+	type = ship
+	ship_types = { ship_hull_cruiser heavy_cruiser }
+	
+	prefix = "Fs "
+	fallback_name = "Tung Kryśsare %d"
+
+	unique = {
+		"Sven Linderot" "Dristigheten" "Sverige" "Äran" "Tapperheten" "Wasa" "Manligheten" 
+		"Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" "Karl Marx"
+	}
 }
