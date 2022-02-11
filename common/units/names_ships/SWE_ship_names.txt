@@ -13,10 +13,13 @@ SWE_DD_HISTORICAL = {
 
 	unique = {											
 		"Göteborg" "Stockholm" "Malmö" "Karlskrona" "Gävle" "Norrköping" "Plisander" "Puke" "Visby" "Sundsvall" "Hälsingborg" 
-		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå"
-		"Öland" "Uppland" "Halland" "Småland" "Östergötland" "Södermanland" "Gästrikland" "Hälsingland" 
-		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" 
+		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå" "Gimån" "Lafsan" "Lunen"
+		"Öland" "Uppland" "Halland" "Småland" "Östergötland" "Södermanland" "Gästrikland" "Hälsingland" "Hanhijoki" "Lagan"
+		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" "Alån" "Fyrisån" "Maltan" 
 		"Örnen" "Jacob Bagge" "Klas Horn" "Klas Uggla" "Ehrensköld" "Nordenskjöld" "Frederik Otter" "Joachim Scheel" "Stenbock" "Trolle" 
+		"Nissan" "Norrström" "Palojoki" "Pennikajoki" "Ramsan" "Rinnan" "Rottnan" "Skansån" "Slien" "Surtan" "Tidan" "Törlan"
+		"Unnan" "Vaikkojoki" "Vikan" "Visman" "Voxnan" "Ytterån" "Orust" "Torsö" "Ljusterö" "Adelsö" "Frösön" "Björkö"
+		"Ven" "Märket" "Lidingö" "Kilesand"  
 	}
 }
 
@@ -35,7 +38,8 @@ SWE_CL_HISTORICAL = {
 	unique = {
 		"Gotland" "Fylgia" "Klas Horn" "Klas Uggla" "Göta Lejon" "Tre Kronor" "Klas Fleming" "Motala" "Nybro" "Flen" "Arvika"
 		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" "Lagan"
-		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad"
+		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad" "Alby" 
+		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken"
 	}
 }
 
@@ -147,10 +151,13 @@ SWE_DD_COMMUNIST = {
 
 	unique = {
 		"Arbetare" "Stockholm" "Göteborg" "Malmö" "Karlskrona" "Gävle" "Norrköping" "Plisander" "Puke" "Visby" "Sundsvall" "Hälsingborg" 
-		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå"
-		"Öland" "Uppland" "Halland" "Småland" "Östergötland" "Södermanland" "Gästrikland" "Hälsingland" 
-		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" 
-		"Örnen" "Nordenskjöld" 
+		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå" "Gimån" "Lafsan" "Lunen"
+		"Öland" "Uppland" "Halland" "Småland" "Östergötland" "Södermanland" "Gästrikland" "Hälsingland" "Hanhijoki" "Lagan"
+		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" "Örnen" "Nordenskjöld" 
+		"Nissan" "Norrström" "Palojoki" "Pennikajoki" "Ramsan" "Rinnan" "Rottnan" "Skansån" "Slien" "Surtan" "Tidan" "Törlan"
+		"Unnan" "Vaikkojoki" "Vikan" "Visman" "Voxnan" "Ytterån" "Orust" "Torsö" "Ljusterö" "Adelsö" "Frösön" "Björkö"
+		"Ven" "Märket" "Lidingö" "Kilesand"  
+	}
 }
 
 ### COMMUNIST SUBMARINES ###
@@ -195,7 +202,8 @@ SWE_CL_COMMUNIST = {
 	unique = {
 		"Gotland" "Fylgia" "Motala" "Nybro" "Flen" "Arvika"
 		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" 
-		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad"
+		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad" 
+		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken" "Alby"
 	}
 }
 
