@@ -19,9 +19,14 @@ SWE_DD_HISTORICAL = {
 		"Örnen" "Jacob Bagge" "Klas Horn" "Klas Uggla" "Ehrensköld" "Nordenskjöld" "Frederik Otter" "Joachim Scheel" "Stenbock"  
 		"Nissan" "Norrström" "Palojoki" "Pennikajoki" "Ramsan" "Rinnan" "Rottnan" "Skansån" "Slien" "Surtan" "Tidan" "Törlan"
 		"Unnan" "Vaikkojoki" "Vikan" "Visman" "Voxnan" "Ytterån" "Orust" "Torsö" "Ljusterö" "Adelsö" "Frösön" "Björkö"
-		"Ven" "Märket" "Lidingö" "Kilesand" "Aneby" "Arboga" "Alvesta" "Alingsås" "Arjeplog" "Emmaboda" "Eskilstuna"
+		"Ven" "Märket" "Lidingö" "Kilesand" "Aneby" "Arboga" "Alvesta" "Alingsås" "Arjeplog" "Emmaboda" "Eskilstuna" "Skara"
 		"Bengtsfors" "Bollebygd" "Boxholm" "Tumba" "Botkyrka" "Borlänge" "Dorotea" "Danderyd" "Falkenberg" "Filipstad"
-		"Gnesta" "Gislaved" "Gagnef" "Grums" "Hallsberg" "Jokkmokk" "Kalix" "Karlshamn" "Kil" "Lekeburg" "Lerum" 
+		"Gnesta" "Gislaved" "Gagnef" "Grums" "Hallsberg" "Jokkmokk" "Kalix" "Karlshamn" "Kil" "Lekeburg" "Lerum" "Simrishamn"
+		"Komet" "Lila Edet" "Svensksund" "Leksand" "Spängaren" "Edöfjärd" "Jägaren" "Asköfjärd" "Pense" "Ljusdal" "Vara"
+		"Ljungby" "Lessebo" "Kopparberg" "Ludvika" "Malung" "Kinna" "Mellerud" "Norberg" "Nordmaling" "Nordanstig" 
+		"Orsa" "Oskarshamn" "Pajala" "Perstorp" "Partille" "Ragunda" "Oxelösund" "Rättvik" "Sigtuna" "Robertsfors" "Sandviken"
+		"Staffenstorp" "Stenungsund" "Sundbyberg" "Sunne" "Surahammar" "Svedala" "Svenlijunga" "Tibro" "Tidaholm" "Tierp"
+		"Tingsyrd" "Tjörn" "Torsby" "Vaggeryrd" "Vadstena" "Vansbro" "Varberg" "Vindeln" Ydre" 
 	}
 }
 
@@ -43,7 +48,7 @@ SWE_CL_HISTORICAL = {
 		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad" "Alby" 
 		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken" "Köping" "Laholm" "Kungsbacka" "Sigtuna"
 		"Lund" "Mariefred" "Karlstad" "Hässleholm" "Huskvarna" "Hjo" "Hedemora" "Enköping" "Ängelholm" "Vimmerby" "Vetlanda"
-		"Katerineholm" 
+		"Katerineholm" "Krokom" "Ulriksdal" "Roserberg" "Motala" "Nacka" 
 	}
 }
 
@@ -62,7 +67,7 @@ SWE_CA_HISTORICAL = {
 	unique = {
 		"Dristigheten" "Sverige" "Drottning Victoria" "Gustav V" "Äran" "Tapperheten" "Wasa" "Manligheten" "Oscar II"  
 		"Hans Wachtmeister" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" "Norrbotten" "Kronoberg" "Darlana"
-		"Jönköping" "Halland" "Värmland" "Halland" "Bohus"
+		"Jönköping" "Halland" "Värmland" "Halland" "Bohus" "Modet" "Hjältemod" "Kvinnligheten" "Motvärn" "Arvfurstens"
 		
 	}
 }
@@ -81,7 +86,7 @@ SWE_BB_HISTORICAL = {
 	fallback_name = "Slagskepp %d"		
 
 	unique = {
-		 "Karl XIV Johann" "Karl XII" "Oden" "Thor" "Niord" "Svea" "Göta" "Thule" "Viking" 
+		"Karl XIV Johann" "Oden" "Thor" "Niord" "Svea" "Göta" "Thule" "Viking" "Kejsaren" "Kungen" "Lejon"		 
 	}
 }
 
@@ -99,6 +104,8 @@ SWE_BC_HISTORICAL = {
 
 	unique = {
 		"Gustav II Adolf" "Karl XII" "Karl XI" "Gustav III" "Gustav Vasa" 
+		#Napoleonic era generals 
+		"Cederström" "Von Essen" "Armfelt" "Adlercreutz" "Stedingk" "Suremain" "Sandals"
 	}
 }
 
@@ -115,7 +122,7 @@ SWE_CV_HISTORICAL = {
 	fallback_name = "Hangarfartyg %d"	
 
 	unique = {
-		"Kronan" "Riksäpplet" "Spiran" "Ulrika Eleonora" "Kristina" "Margareta"
+		"Kronan" "Riksäpplet" "Spiran" "Ulrika Eleonora" "Kristina" "Margareta" "Örnen"
 	}
 }
 
