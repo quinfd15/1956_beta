@@ -15,11 +15,13 @@ SWE_DD_HISTORICAL = {
 		"Göteborg" "Stockholm" "Malmö" "Karlskrona" "Gävle" "Norrköping" "Plisander" "Puke" "Visby" "Sundsvall" "Hälsingborg" 
 		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå" "Gimån" "Lafsan" "Lunen"
 		"Öland" "Uppland" "Halland" "Småland" "Östergötland" "Södermanland" "Gästrikland" "Hälsingland" "Hanhijoki" "Lagan"
-		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" "Alån" "Fyrisån" "Maltan" 
-		"Örnen" "Jacob Bagge" "Klas Horn" "Klas Uggla" "Ehrensköld" "Nordenskjöld" "Frederik Otter" "Joachim Scheel" "Stenbock" "Trolle" 
+		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" "Alån" "Fyrisån" "Maltan" "Trolle"
+		"Örnen" "Jacob Bagge" "Klas Horn" "Klas Uggla" "Ehrensköld" "Nordenskjöld" "Frederik Otter" "Joachim Scheel" "Stenbock"  
 		"Nissan" "Norrström" "Palojoki" "Pennikajoki" "Ramsan" "Rinnan" "Rottnan" "Skansån" "Slien" "Surtan" "Tidan" "Törlan"
 		"Unnan" "Vaikkojoki" "Vikan" "Visman" "Voxnan" "Ytterån" "Orust" "Torsö" "Ljusterö" "Adelsö" "Frösön" "Björkö"
-		"Ven" "Märket" "Lidingö" "Kilesand"  
+		"Ven" "Märket" "Lidingö" "Kilesand" "Aneby" "Arboga" "Alvesta" "Alingsås" "Arjeplog" "Emmaboda" "Eskilstuna"
+		"Bengtsfors" "Bollebygd" "Boxholm" "Tumba" "Botkyrka" "Borlänge" "Dorotea" "Danderyd" "Falkenberg" "Filipstad"
+		"Gnesta" "Gislaved" "Gagnef" "Grums" "Hallsberg" "Jokkmokk" "Kalix" "Karlshamn" "Kil" "Lekeburg" "Lerum" 
 	}
 }
 
@@ -39,7 +41,9 @@ SWE_CL_HISTORICAL = {
 		"Gotland" "Fylgia" "Klas Horn" "Klas Uggla" "Göta Lejon" "Tre Kronor" "Klas Fleming" "Motala" "Nybro" "Flen" "Arvika"
 		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" "Lagan"
 		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad" "Alby" 
-		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken"
+		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken" "Köping" "Laholm" "Kungsbacka" "Sigtuna"
+		"Lund" "Mariefred" "Karlstad" "Hässleholm" "Huskvarna" "Hjo" "Hedemora" "Enköping" "Ängelholm" "Vimmerby" "Vetlanda"
+		"Katerineholm" 
 	}
 }
 
@@ -57,7 +61,8 @@ SWE_CA_HISTORICAL = {
 
 	unique = {
 		"Dristigheten" "Sverige" "Drottning Victoria" "Gustav V" "Äran" "Tapperheten" "Wasa" "Manligheten" "Oscar II"  
-		"Hans Wachtmeister" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" 
+		"Hans Wachtmeister" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" "Norrbotten" "Kronoberg" "Darlana"
+		"Jönköping" "Halland" "Värmland" "Halland" "Bohus"
 		
 	}
 }
