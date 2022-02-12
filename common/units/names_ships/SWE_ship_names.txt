@@ -11,6 +11,8 @@ SWE_DD_HISTORICAL = {
 	prefix = "HsWMS "
 	fallback_name = "J %d"					
 
+		#Named after (certain) cities, admirals, and counties.
+
 	unique = {											
 		"Göteborg" "Stockholm" "Malmö" "Karlskrona" "Gävle" "Norrköping" "Plisander" "Puke" "Visby" "Sundsvall" "Hälsingborg" 
 		"Mode" "Magne" "Mjölner" "Munin" "Romulus" "Remus" "Kalmar" "Kramfors" "Lunde" "Sollefteå" "Gimån" "Lafsan" "Lunen"
@@ -42,13 +44,15 @@ SWE_CL_HISTORICAL = {
 	prefix = "HsWMS "
 	fallback_name = "LK %d"
 
+		#Named for Palaces, towns, large islands, and an admiral or two.
+
 	unique = {
 		"Gotland" "Fylgia" "Klas Horn" "Klas Uggla" "Göta Lejon" "Tre Kronor" "Klas Fleming" "Motala" "Nybro" "Flen" "Arvika"
 		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" "Lagan"
 		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad" "Alby" 
 		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken" "Köping" "Laholm" "Kungsbacka" "Sigtuna"
 		"Lund" "Mariefred" "Karlstad" "Hässleholm" "Huskvarna" "Hjo" "Hedemora" "Enköping" "Ängelholm" "Vimmerby" "Vetlanda"
-		"Katerineholm" "Krokom" "Ulriksdal" "Roserberg" "Motala" "Nacka" 
+		"Katerineholm" "Krokom" "Ulriksdal" "Roserberg" "Motala" "Nacka" "Boden" "Djursholm" 
 	}
 }
 
@@ -64,11 +68,14 @@ SWE_CA_HISTORICAL = {
 	prefix = "Fs "
 	fallback_name = "Tung Kryśsare %d"
 
+		#Due to the nature of Sweden's capital ships being only of Heavy cruiser size, this list is admittedly hard to distinguish
+		#from the BB list.
+
 	unique = {
 		"Dristigheten" "Sverige" "Drottning Victoria" "Gustav V" "Äran" "Tapperheten" "Wasa" "Manligheten" "Oscar II"  
 		"Hans Wachtmeister" "Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" "Norrbotten" "Kronoberg" "Darlana"
 		"Jönköping" "Halland" "Värmland" "Halland" "Bohus" "Modet" "Hjältemod" "Kvinnligheten" "Motvärn" "Arvfurstens"
-		
+		"Prins Gustaf Adolf" "Prins Wilhelm" "Prins Erik" "Prins Eugen" "Exemplet" "Rasande" "Krigsman" "Greve av Wisborg"
 	}
 }
 
@@ -85,8 +92,13 @@ SWE_BB_HISTORICAL = {
 	prefix = "HsWMS "
 	fallback_name = "Slagskepp %d"		
 
+		#Named varyingly after monarchs, Norse gods, and adjectives. I will note I translated over some of these from the British capital ships
+		# of early WW1 and carriers of the post war era.
+
 	unique = {
-		"Karl XIV Johann" "Oden" "Thor" "Niord" "Svea" "Göta" "Thule" "Viking" "Kejsaren" "Kungen" "Lejon"		 
+		"Karl XIV Johann" "Oden" "Thor" "Niord" "Svea" "Göta" "Thule" "Viking" "Kejsaren" "Kungen" "Lejon" "Oscar I"
+		"Prins Gustaf" "Prinsessan Eugénie" "Förtrupp" "Triumf" "Segrande" "Prins Carl Oscar" "Kejsarinna" "Hertig av Dalarna"
+		"Greve Folke Bernadotte" "Drottningen" "Fruktansvärd" "Kraftfull" "Majestätisk" "Korsfararen"
 	}
 }
 
@@ -102,10 +114,14 @@ SWE_BC_HISTORICAL = {
 	prefix = "HsWMS "
 	fallback_name = "Stridsskepp %d"		
 
+		#Named for some monarchs and napoleonic generals.
+
 	unique = {
 		"Gustav II Adolf" "Karl XII" "Karl XI" "Gustav III" "Gustav Vasa" 
 		#Napoleonic era generals 
 		"Cederström" "Von Essen" "Armfelt" "Adlercreutz" "Stedingk" "Suremain" "Sandals"
+		#ADJ
+		"Skräck" "Snabb" "Bålverk" 
 	}
 }
 
@@ -121,8 +137,12 @@ SWE_CV_HISTORICAL = {
 	prefix = "HsWMS "
 	fallback_name = "Hangarfartyg %d"	
 
+		#No peticular scheme here, seemingly female monarchs (but I put a few of those in the BB list) so I added some standard birds
+		# and translated over some British names. Example: Unicorn to Enhörning. 
+
 	unique = {
-		"Kronan" "Riksäpplet" "Spiran" "Ulrika Eleonora" "Kristina" "Margareta" "Örnen"
+		"Kronan" "Riksäpplet" "Spiran" "Ulrika Eleonora" "Kristina" "Margareta" "Örnen" "Enhörning" 
+		"Fenix" "Falk" 
 	}
 }
 
@@ -138,10 +158,12 @@ SWE_SS_HISTORICAL = {
 	prefix = "HsWMS "
 	fallback_name = "U %d"
 	
+		#Named for aquatic creatures.
+
 	unique = {
 		"Hajen" "Sälen" "Valrossen" "Bävern" "Illern" "Uttern" "Valen" "Draken" "Gripen" "Ulven" "Delfinen" "Nordkaparen" "Springaren"
 		"Sjölejonet" "Sjöbjörnen" "Sjöhunden" "Svärdfisken" "Tumlaren" "Dykaren" "Sjöhästen" "Sjöormen" "Sjöborren" 
-		"Neptun" "Najad" "Näcken" "Vargen" "Forellen" "Aborren" "Siken" "Gäddan" "Laxen" "Makrillen" 
+		"Neptun" "Najad" "Näcken" "Vargen" "Forellen" "Aborren" "Siken" "Gäddan" "Laxen" "Makrillen" "Måsen" 
 	}
 }
 
@@ -168,7 +190,14 @@ SWE_DD_COMMUNIST = {
 		"Wrangel" "Wachtmeister" "Mjölner" "Munin" "Ragnar" "Sigurd" "Vidar" "Hugin" "Wale" "Örnen" "Nordenskjöld" 
 		"Nissan" "Norrström" "Palojoki" "Pennikajoki" "Ramsan" "Rinnan" "Rottnan" "Skansån" "Slien" "Surtan" "Tidan" "Törlan"
 		"Unnan" "Vaikkojoki" "Vikan" "Visman" "Voxnan" "Ytterån" "Orust" "Torsö" "Ljusterö" "Adelsö" "Frösön" "Björkö"
-		"Ven" "Märket" "Lidingö" "Kilesand"  
+		"Ven" "Märket" "Lidingö" "Kilesand" "Aneby" "Arboga" "Alvesta" "Alingsås" "Arjeplog" "Emmaboda" "Eskilstuna" "Skara"
+		"Bengtsfors" "Bollebygd" "Boxholm" "Tumba" "Botkyrka" "Borlänge" "Dorotea" "Danderyd" "Falkenberg"
+		"Gnesta" "Gislaved" "Gagnef" "Grums" "Hallsberg" "Jokkmokk" "Kalix" "Kil" "Lekeburg" "Lerum" "Simrishamn"
+		"Komet" "Lila Edet" "Svensksund" "Leksand" "Spängaren" "Edöfjärd" "Jägaren" "Asköfjärd" "Pense" "Ljusdal" "Vara"
+		"Ljungby" "Lessebo" "Kopparberg" "Ludvika" "Malung" "Kinna" "Mellerud" "Norberg" "Nordmaling" "Nordanstig" 
+		"Orsa" "Oskarshamn" "Pajala" "Perstorp" "Partille" "Ragunda" "Oxelösund" "Rättvik" "Sigtuna" "Robertsfors" "Sandviken"
+		"Staffenstorp" "Stenungsund" "Sundbyberg" "Sunne" "Surahammar" "Svedala" "Svenlijunga" "Tibro" "Tidaholm" "Tierp"
+		"Tingsyrd" "Tjörn" "Torsby" "Vaggeryrd" "Vadstena" "Vansbro" "Varberg" "Vindeln" Ydre"  
 	}
 }
 
@@ -190,7 +219,7 @@ SWE_SS_COMMUNIST = {
 	
 	unique = {
 		"Hajen" "Sälen" "Valrossen" "Bävern" "Illern" "Uttern" "Valen" "Draken" "Gripen" "Ulven" "Delfinen" "Nordkaparen" "Springaren"
-		"Sjölejonet" "Sjöbjörnen" "Sjöhunden" "Svärdfisken" "Tumlaren" "Dykaren" "Sjöhästen" "Sjöormen" "Sjöborren" 
+		"Sjölejonet" "Sjöbjörnen" "Sjöhunden" "Svärdfisken" "Tumlaren" "Dykaren" "Sjöhästen" "Sjöormen" "Sjöborren" "Måsen" 
 		"Neptun" "Najad" "Näcken" "Vargen" "Forellen" "Aborren" "Siken" "Gäddan" "Laxen" "Makrillen" "Lagan"
 	}
 }
@@ -215,7 +244,9 @@ SWE_CL_COMMUNIST = {
 		"Gotland" "Fylgia" "Motala" "Nybro" "Flen" "Arvika"
 		"Kalmar" "Västervik" "Gävle" "Malmö" "Halmstad" "Karlskrona" "Sundsvall" "Luleå" "Umeå" "Härnösand" "Hudiksvall" 
 		"Uddevalla" "Helsingborg" "Varberg" "Söderköping" "Älvsnabben" "Skara" "Nora" "Solna" "Ronneby" "Trosa" "Ystad" 
-		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken" "Alby"
+		"Seby" "Segerstad" "Bläsinge" "Borgholm" "Eriksöre" "Fagerum" "Ottenby" "Öjkroken" "Alby" "Seby" "Segerstad" "Bläsinge"  
+		"Fagerum" "Ottenby" "Öjkroken" "Köping" "Laholm" "Kungsbacka" "Sigtuna" "Krokom" "Borgholm" "Eriksöre"
+		"Lund" "Mariefred" "Karlstad" "Hässleholm" "Huskvarna" "Hjo" "Hedemora" "Enköping" "Ängelholm" "Vimmerby" "Vetlanda"
 	}
 }
 
@@ -236,7 +267,8 @@ SWE_CA_COMMUNIST = {
 	fallback_name = "Tung Kryśsare %d"
 
 	unique = {
-		"Sven Linderot" "Dristigheten" "Sverige" "Äran" "Tapperheten" "Wasa" "Manligheten" 
-		"Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" "Karl Marx"
+		"Sven Linderot" "Dristigheten" "Sverige" "Äran" "Tapperheten" "Wasa" "Manligheten" "Fridfull"
+		"Starkodder" "Styrbiörn" "Svealand" "Götaland" "Norrland" "Karl Marx" "Svealand" "Norrbotten" "Kronoberg" "Darlana"
+		"Jönköping" "Halland" "Värmland" "Halland" "Bohus" "Modet" "Hjältemod" "Kvinnligheten" "Motvärn" "Arvfurstens"
 	}
 }
