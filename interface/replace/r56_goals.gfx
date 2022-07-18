@@ -5853,17 +5853,34 @@ spriteTypes = {
 		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_appoint_pro_axis_government.dds"
 	}
 	SpriteType = {
-		name = GFX_goal_ROM_academia_romana
+		name = "GFX_goal_ROM_academia_romana"
 		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_academia_romana.dds"
 	}
 	SpriteType = {
-		name = GFX_goal_ROM_timber_industry
+		name = "GFX_goal_ROM_timber_industry"
 		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_timber_industry.dds"
 	}
 	SpriteType = {
-		name = GFX_goal_ROM_industrial_investment
+		name = "GFX_goal_ROM_industrial_investment"
 		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_industrial_investment.dds"
 	}
+	SpriteType = {
+		name = "GFX_goal_ROM_steel_mill"
+		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_steel_mill.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ROM_steel_mill_investment"
+		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_steel_mill_investment.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ROM_ploughmens_front"
+		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_ploughmens_front.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_ROM_pcr"
+		texturefile = "gfx/interface/goals/rom/r56_goal_ROM_pcr.dds"
+	}
+
 
 ###------> RUT <><> <><> <><> <><> <><>
 	SpriteType = {

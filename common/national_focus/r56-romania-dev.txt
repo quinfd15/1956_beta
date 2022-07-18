@@ -130,6 +130,15 @@ focus_tree = {
 				long_name = national_peasants_party
 				name = PNT
 			}
+			add_country_leader_role = {
+			character = ROM_iuliu_maniu
+			promote_leader = yes
+				country_leader = {
+					ideology = liberalism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
+			}
         }
 		search_filters = { FOCUS_FILTER_POLITICAL }
     }
@@ -221,6 +230,15 @@ focus_tree = {
 				long_name = national_christian_party
 				name = PNC
 			}
+			add_country_leader_role = {
+			character = ROM_octavian_goga
+			promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
+			}
         }
 		search_filters = { FOCUS_FILTER_POLITICAL }
     }
@@ -252,6 +270,15 @@ focus_tree = {
 				ideology = fascism
 				long_name = iron_guard
 				name = GF
+			}
+			add_country_leader_role = {
+			character = ROM_corneliu_codreanu
+			promote_leader = yes
+				country_leader = {
+					ideology = nazism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
 			}
         }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -291,7 +318,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_the_ploughmens_front
-		icon = GFX_goal_generic_communist_pride
+		icon = GFX_goal_ROM_ploughmens_front
 		x = -1
 		y = 1
 		cost = 1
@@ -317,13 +344,22 @@ focus_tree = {
 				long_name = ploughmens_front
 				name = FP
 			}
+			add_country_leader_role = {
+			character = ROM_petru_groza
+				country_leader = {
+					ideology = leninism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
+				promote_leader = yes
+			}
         }
 		search_filters = { FOCUS_FILTER_POLITICAL }
     }
 
 	focus = {
 		id = ROM_the_romanian_communist_party
-		icon = GFX_goal_generic_communist_pride
+		icon = GFX_goal_ROM_pcr
 		x = 1
 		y = 1
 		cost = 1
@@ -348,6 +384,15 @@ focus_tree = {
 				ideology = communism
 				long_name = romanian_communist_party
 				name = PCR
+			}
+			add_country_leader_role = {
+			character = ROM_constantin_ion_parhon
+			promote_leader = yes
+				country_leader = {
+					ideology = stalinism
+					expire = "1965.1.1.1"
+					traits = { }
+				}
 			}
         }
 		search_filters = { FOCUS_FILTER_POLITICAL }
@@ -553,10 +598,10 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = industrial_complex
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 			}
@@ -579,10 +624,10 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = industrial_complex
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 			}
@@ -623,14 +668,15 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			84 = {
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
+			random_owned_controlled_state = {
+                prioritize = { 84 }
+                add_extra_state_shared_building_slots = 2
+                add_building_construction = {
+                    type = industrial_complex
+                    level = 2
+                    instant_build = yes
+                }
+            }
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -812,10 +858,10 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = arms_factory
-						level = 3
+						level = 2
 						instant_build = yes
 					}
 			}
@@ -838,10 +884,10 @@ focus_tree = {
 
 		completion_reward = {
 			random_owned_controlled_state = {
-				add_extra_state_shared_building_slots = 4
+				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
 						type = arms_factory
-						level = 4
+						level = 2
 						instant_build = yes
 					}
 			}
@@ -851,7 +897,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_invest_in_the_calan_steelworks
-		icon = GFX_focus_generic_expansion_of_new_towns
+		icon = GFX_goal_ROM_steel_mill_investment
 		prerequisite = { focus = ROM_resita_works }
 		relative_position_id = ROM_resita_works
 		x = 2
@@ -884,7 +930,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_expand_nadrag_steelworks
-		icon = GFX_focus_generic_steel
+		icon = GFX_goal_ROM_steel_mill
 		prerequisite = { focus = ROM_invest_in_the_calan_steelworks }
 		relative_position_id = ROM_invest_in_the_calan_steelworks
 		x = 1
@@ -916,7 +962,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_expand_galati_steelworks
-		icon = GFX_focus_generic_steel
+		icon = GFX_goal_ROM_steel_mill
 		prerequisite = { focus = ROM_invest_in_the_calan_steelworks }
 		relative_position_id = ROM_invest_in_the_calan_steelworks
 		x = -1
@@ -963,7 +1009,7 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 16
+				amount = 12
 				state = 84
 			}
 			add_resource = {
@@ -1049,12 +1095,12 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = oil
-				amount = 24
+				amount = 16
 				state = 79
 			}
 			add_resource = {
 				type = oil
-				amount = 36
+				amount = 24
 				state = 46
 			}
 			79 = {
