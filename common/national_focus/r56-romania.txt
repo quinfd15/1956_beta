@@ -4,20 +4,22 @@
 #focus_tree = {
 #	id = r56_romanian_focus
 #
-#    country = {
+#	country = {
 #		factor = 0
-#		
 #		modifier = {
-#			add = 0
-#			tag = ROM
-#			always = no
+#			add = 30
+#			original_tag = ROM
+#			#always = no
 #			NOT = {
 #				has_dlc = "Death or Dishonor"
 #			}
+#			
 #		}
 #	}
-#
 #	default = no
+#	reset_on_civilwar = no
+#
+#	continuous_focus_position = { x = 0 y = 1000 }
 #
 #	########################
 #	###Industrial Focuses###
@@ -31,13 +33,13 @@
 #
 #	focus = {
 #		id = ROM_industrial_investments
-#		icon = GFX_goal_ROM_industrial_investment
-#		x = -20
+#		icon = GFX_goal_industrial_investment
+#		x = 37
 #		y = 0
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 10
 #		}
 #
 #		completion_reward = {
@@ -57,7 +59,7 @@
 #			add_tech_bonus = {
 #				name = ROM_industrial_bonus
 #				bonus = 1
-#				uses = 2
+#				uses = 1
 #				category = industry
 #			}
 #		}
@@ -66,7 +68,7 @@
 #
 #	focus = {
 #		id = ROM_romloc_factory_expansion
-#		icon = GFX_focus_generic_expansion_of_new_towns
+#		icon = GFX_focus_generic_industry_2
 #		prerequisite = { focus = ROM_industrial_investments }
 #		relative_position_id = ROM_industrial_investments
 #		x = -1
@@ -74,20 +76,20 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 5
 #		}
 #
 #		completion_reward = {
 #			random_owned_controlled_state = {
-#				add_extra_state_shared_building_slots = 3
+#				add_extra_state_shared_building_slots = 2
 #				add_building_construction = {
-#						type = industrial_complex
-#						level = 3
-#						instant_build = yes
-#					}
+#					type = industrial_complex
+#					level = 2
+#					instant_build = yes
+#				}
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -100,25 +102,26 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 5
 #		}
 #
 #		completion_reward = {
 #			random_owned_controlled_state = {
-#				add_extra_state_shared_building_slots = 4
+#				add_extra_state_shared_building_slots = 2
 #				add_building_construction = {
 #						type = industrial_complex
-#						level = 4
+#						level = 2
 #						instant_build = yes
 #					}
 #			}
+#			add_equipment_to_stockpile = { type = motorized_equipment_1 amount = 125 producer = USA }
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
 #		id = ROM_romanian_timber_industry
-#		icon = GFX_goal_ROM_timber_industry
+#		icon = GFX_goal_timber_industry
 #		prerequisite = { focus = ROM_romloc_factory_expansion }
 #		relative_position_id = ROM_romloc_factory_expansion
 #		x = -2
@@ -126,13 +129,13 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 4
 #		}
 #
 #		completion_reward = {
 #			add_ideas = ROM_romanian_timber_idea
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -145,20 +148,21 @@
 #		cost = 7.2
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 4
 #		}
 #
 #		completion_reward = {
-#			84 = {
-#				add_extra_state_shared_building_slots = 2
-#				add_building_construction = {
-#					type = industrial_complex
-#					level = 2
-#					instant_build = yes
-#				}
-#			}
+#			random_owned_controlled_state = {
+#                prioritize = { 84 }
+#                add_extra_state_shared_building_slots = 2
+#                add_building_construction = {
+#                    type = industrial_complex
+#                    level = 2
+#                    instant_build = yes
+#                }
+#            }
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -171,7 +175,7 @@
 #		cost = 7.2
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 3
 #		}
 #
 #		completion_reward = {
@@ -211,7 +215,7 @@
 #				}
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -229,10 +233,10 @@
 #
 #		completion_reward = {
 #			random_owned_controlled_state = {
-#				add_extra_state_shared_building_slots = 3
+#				add_extra_state_shared_building_slots = 2
 #				add_building_construction = {
 #					type = industrial_complex
-#					level = 3
+#					level = 2
 #					instant_build = yes
 #				}
 #			}
@@ -243,7 +247,7 @@
 #				category = train_tech
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -256,7 +260,7 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 40
 #		}
 #
 #		completion_reward = {
@@ -277,7 +281,7 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 5
 #		}
 #
 #		completion_reward = {
@@ -298,7 +302,7 @@
 #				add_extra_state_shared_building_slots = 1
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -320,7 +324,7 @@
 #				add_idea = ROM_agricultural_boom_idea
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -333,25 +337,25 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 4
 #		}
 #
 #		completion_reward = {
 #			random_owned_controlled_state = {
-#				add_extra_state_shared_building_slots = 3
+#				add_extra_state_shared_building_slots = 2
 #				add_building_construction = {
-#						type = arms_factory
-#						level = 3
-#						instant_build = yes
-#					}
+#					type = arms_factory
+#					level = 2
+#					instant_build = yes
+#				}
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
 #		id = ROM_ateliere_leonida
-#		icon = GFX_goal_generic_construct_mil_factory
+#		icon = GFX_focus_generic_tank_production
 #		prerequisite = { focus = ROM_resita_works }
 #		relative_position_id = ROM_resita_works
 #		x = 0
@@ -364,15 +368,22 @@
 #
 #		completion_reward = {
 #			random_owned_controlled_state = {
-#				add_extra_state_shared_building_slots = 4
+#				add_extra_state_shared_building_slots = 2
 #				add_building_construction = {
-#						type = arms_factory
-#						level = 4
-#						instant_build = yes
-#					}
+#					type = arms_factory
+#					level = 2
+#					instant_build = yes
+#				}
 #			}
+#			add_tech_bonus = {
+#				name = armor_bonus
+#				bonus = 1
+#				uses = 1
+#				category = armor
+#				category = cat_anti_tank
+#			}			
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_RESEARCH  FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -385,13 +396,19 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 3
+#		}
+#
+#		bypass = {
+#			NOT = {
+#				owns_state = 84
+#			}
+#			has_civil_war = no
 #		}
 #
 #		completion_reward = {
 #			84 = {
-#			add_extra_state_shared_building_slots = 1 }
-#			84 = {
+#				add_extra_state_shared_building_slots = 1 
 #				add_building_construction = {
 #					type = steel_mill
 #					level = 1
@@ -405,7 +422,7 @@
 #				category = steel_tech
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_STEEL }
 #	}
 #
 #	focus = {
@@ -420,7 +437,12 @@
 #		ai_will_do = {
 #			factor = 1
 #		}
-#
+#		bypass = {
+#			NOT = {
+#				owns_state = 81
+#			}
+#			has_civil_war = no
+#		}
 #		completion_reward = {
 #			81 = {
 #			add_extra_state_shared_building_slots = 2 }
@@ -437,7 +459,7 @@
 #				state = 81
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_STEEL }
 #	}
 #
 #	focus = {
@@ -452,7 +474,12 @@
 #		ai_will_do = {
 #			factor = 1
 #		}
-#
+#		bypass = {
+#			NOT = {
+#				owns_state = 79
+#			}
+#			has_civil_war = no
+#		}
 #		completion_reward = {
 #			79 = {
 #			add_extra_state_shared_building_slots = 2 }
@@ -469,7 +496,7 @@
 #				state = 79
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_STEEL }
 #	}
 #
 #	focus = {
@@ -487,24 +514,31 @@
 #		}
 #
 #		completion_reward = {
+#
+#			add_tech_bonus = {
+#				name = industrial_bonus
+#				bonus = 0.75
+#				uses = 1
+#				category = excavation_tech
+#			}			
 #			add_resource = {
 #				type = steel
-#				amount = 16
+#				amount = 6
 #				state = 84
 #			}
 #			add_resource = {
 #				type = steel
-#				amount = 12
+#				amount = 6
 #				state = 81
 #			}
 #			add_resource = {
 #				type = steel
-#				amount = 7
+#				amount = 3
 #				state = 79
 #			}
 #			add_resource = {
 #				type = steel
-#				amount = 4
+#				amount = 2
 #				state = 82
 #			}
 #			add_resource = {
@@ -513,7 +547,7 @@
 #				state = 82
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_STEEL }
 #	}
 #
 #	focus = {
@@ -526,13 +560,13 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 4
 #		}
 #
 #		completion_reward = {
 #			add_ideas = ROM_gold_extraction_idea
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_INDUSTRY }
 #	}
 #
 #	focus = {
@@ -545,18 +579,18 @@
 #		cost = 10
 #
 #		ai_will_do = {
-#			factor = 1
+#			factor = 4
 #		}
 #
 #		completion_reward = {
 #			add_ideas = ROM_extensive_coal_mining_idea
 #			modify_building_resources = {
-#			building = steel_mill
-#			resource = steel
-#			amount = 2
+#				building = steel_mill
+#				resource = steel
+#				amount = 1
+#			}
 #		}
-#		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_STEEL }
 #	}
 #
 #	focus = {
@@ -573,32 +607,47 @@
 #		}
 #
 #		completion_reward = {
+#
 #			add_resource = {
 #				type = oil
-#				amount = 24
+#				amount = 16
 #				state = 79
 #			}
 #			add_resource = {
 #				type = oil
-#				amount = 36
+#				amount = 24
 #				state = 46
 #			}
-#			79 = {
-#				add_extra_state_shared_building_slots = 2
+#			add_tech_bonus = {
+#				name = industrial_bonus
+#				bonus = 1
+#				uses = 2
+#				category = refining_tech
+#			}	
+#			add_tech_bonus = {
+#				name = excavation_tech_bonus_name
+#				bonus = 0.5
+#				uses = 1
+#				category = excavation_tech
+#			}				
+#			random_owned_controlled_state = {
+#				prioritize = { 79 }
+#				add_extra_state_shared_building_slots = 1
 #				add_building_construction = {
 #					type = fuel_silo
-#					level = 2
+#					level = 1
 #				}
 #			}
-#			46 = {
-#				add_extra_state_shared_building_slots = 2
+#			random_owned_controlled_state = {
+#				prioritize = { 46 }
+#				add_extra_state_shared_building_slots = 1
 #				add_building_construction = {
 #					type = fuel_silo
-#					level = 2
+#					level = 1
 #				}
 #			}
 #		}
-#		search_filters = { FOCUS_FILTER_RESEARCH }
+#		search_filters = { FOCUS_FILTER_OIL }
 #	}
 #
 #	focus = {
@@ -622,3 +671,4 @@
 #		search_filters = { FOCUS_FILTER_RESEARCH }
 #	}
 #}
+#

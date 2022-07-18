@@ -524,7 +524,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ITA_christian_democracy
-		icon = GFX_focus_mex_restore_the_army_of_christ
+		icon = GFX_goal_christianity_and_state
 		cost = 7.2
 		prerequisite = {
 			focus = ITA_referendum_on_the_monarchy
@@ -5796,6 +5796,9 @@ focus_tree = {
 						expire = 0
 					}
 				}
+			}
+			USA = {	#USA can denounce the aggression
+				set_country_flag = { flag = USA_yugoslavia_window days = 60 value = 1 }	#probably missing
 			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION }
