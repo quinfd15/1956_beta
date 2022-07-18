@@ -5,7 +5,7 @@ focus_tree = {
 		factor = 0
 		
 		modifier = {
-			add = 0
+			add = 10
 			tag = ROM
 			always = yes
 		}
@@ -43,7 +43,7 @@ focus_tree = {
     }
 
 	focus = {
-		id = ROM_democracy_is_the_way
+		id = ROM_cement_democracy
 		icon = GFX_goal_democracy_people
 		x = 0
 		y = 1
@@ -76,9 +76,9 @@ focus_tree = {
 		x = -1
 		y = 1
 		cost = 1
-		prerequisite = { focus = ROM_democracy_is_the_way }
+		prerequisite = { focus = ROM_cement_democracy }
 		mutually_exclusive = { focus = ROM_back_the_national_peasants_party}
-		relative_position_id = ROM_democracy_is_the_way
+		relative_position_id = ROM_cement_democracy
 
 		ai_will_do = {
 			factor = 1
@@ -108,9 +108,9 @@ focus_tree = {
 		x = 1
 		y = 1
 		cost = 1
-		prerequisite = { focus = ROM_democracy_is_the_way }
+		prerequisite = { focus = ROM_cement_democracy }
 		mutually_exclusive = { focus = ROM_back_the_national_liberal_party}
-		relative_position_id = ROM_democracy_is_the_way
+		relative_position_id = ROM_cement_democracy
 
 		ai_will_do = {
 			factor = 1
@@ -181,7 +181,7 @@ focus_tree = {
 		y = 1
 		cost = 4
 		prerequisite = { focus = ROM_upcoming_elections }
-		mutually_exclusive = { focus = ROM_the_communist_alternative focus = ROM_democracy_is_the_way }
+		mutually_exclusive = { focus = ROM_the_communist_alternative focus = ROM_cement_democracy }
 		relative_position_id = ROM_upcoming_elections
 
 		ai_will_do = {
@@ -295,7 +295,7 @@ focus_tree = {
 		y = 1
 		cost = 4
 		prerequisite = { focus = ROM_upcoming_elections }
-		mutually_exclusive = { focus = ROM_democracy_is_the_way focus = ROM_back_the_fascists }
+		mutually_exclusive = { focus = ROM_cement_democracy focus = ROM_back_the_fascists }
 		relative_position_id = ROM_upcoming_elections
 
 		ai_will_do = {
@@ -896,7 +896,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = invest_in_the_calan_steelworks
+		id = ROM_invest_in_the_calan_steelworks
 		icon = GFX_focus_generic_expansion_of_new_towns
 		prerequisite = { focus = ROM_resita_works }
 		relative_position_id = ROM_resita_works
@@ -929,7 +929,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = expand_nadrag_steelworks
+		id = ROM_expand_nadrag_steelworks
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = ROM_invest_in_the_calan_steelworks }
 		relative_position_id = ROM_invest_in_the_calan_steelworks
@@ -961,7 +961,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = expand_galati_steelworks
+		id = ROM_expand_galati_steelworks
 		icon = GFX_focus_generic_steel
 		prerequisite = { focus = ROM_invest_in_the_calan_steelworks }
 		relative_position_id = ROM_invest_in_the_calan_steelworks

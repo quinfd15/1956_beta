@@ -119,8 +119,8 @@
  #############################
  ###Historical & Democratic###
  #############################
- ROM_democracy_is_the_way:0 "Democracy is the Way!"
- ROM_democracy_is_the_way_desc:0 "N/A"
+ ROM_cement_democracy:0 "Cement Democracy"
+ ROM_cement_democracy_desc:0 "N/A"
  ROM_back_the_national_liberal_party:0 "Back the National Liberal Party"
  ROM_back_the_national_liberal_party_desc:0 "N/A"
  ROM_back_the_national_peasants_party:0 "Back the National Peasants' Party"

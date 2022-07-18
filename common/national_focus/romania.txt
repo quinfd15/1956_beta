@@ -1,21 +1,21 @@
-focus_tree = {
-	id = romanian_focus
-	
-	country = {
-		factor = 0
-		
-		modifier = {
-			add = 0
-			tag = ROM
-			always = no #DISABLING MEASURE
-			has_dlc = "Death or Dishonor"
-		}
-	}
-	
-	default = no
-
-	continuous_focus_position = { x = 50 y = 1100 }
-
+#ocus_tree = {
+#	id = romanian_focus
+#	
+#	country = {
+#		factor = 0
+#		
+#		modifier = {
+#			add = 0
+#			tag = ROM
+#			always = no #DISABLING MEASURE
+#			has_dlc = "Death or Dishonor"
+#		}
+#	}
+#	
+#	default = no
+#
+#	continuous_focus_position = { x = 50 y = 1100 }
+#
 #	focus = {
 #		id = ROM_
 #		icon = GFX_
