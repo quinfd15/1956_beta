@@ -897,7 +897,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_invest_in_the_calan_steelworks
-		icon = GFX_focus_generic_expansion_of_new_towns
+		icon = GFX_goal_ROM_steel_mill_investment
 		prerequisite = { focus = ROM_resita_works }
 		relative_position_id = ROM_resita_works
 		x = 2
@@ -930,7 +930,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_expand_nadrag_steelworks
-		icon = GFX_focus_generic_steel
+		icon = GFX_goal_ROM_steel_mill
 		prerequisite = { focus = ROM_invest_in_the_calan_steelworks }
 		relative_position_id = ROM_invest_in_the_calan_steelworks
 		x = 1
@@ -962,7 +962,7 @@ focus_tree = {
 
 	focus = {
 		id = ROM_expand_galati_steelworks
-		icon = GFX_focus_generic_steel
+		icon = GFX_goal_ROM_steel_mill
 		prerequisite = { focus = ROM_invest_in_the_calan_steelworks }
 		relative_position_id = ROM_invest_in_the_calan_steelworks
 		x = -1
@@ -1009,12 +1009,12 @@ focus_tree = {
 		completion_reward = {
 			add_resource = {
 				type = steel
-				amount = 12
+				amount = 10
 				state = 84
 			}
 			add_resource = {
 				type = steel
-				amount = 12
+				amount = 10
 				state = 81
 			}
 			add_resource = {
