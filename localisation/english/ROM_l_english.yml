@@ -222,3 +222,10 @@ national_peasants_party:0 "Partidul National Tărănesc"
 PNT:0 "PNT"
 national_liberal_party:0 "Partidul National Liberal"
 PNL:0 "PNL"
+
+#####################################
+###Decisions & Decision Categories###
+#####################################
+ROM_election_prc_category:0 "The Romanian Communist Party"
+ROM_prc_election_small_campaign:0 "Small Campaign"
+ROM_prc_election_big_campaign:0 "Big Campaign"

@@ -1,0 +1,52 @@
+ROM_election_prc_category = {
+    ROM_prc_election_small_campaign = {
+
+		icon = form_nation
+
+		allowed = {
+			original_tag = ROM
+		}
+
+		available = {
+			has_completed_focus = ROM_the_romanian_communist_party
+		}
+		cost = 15
+
+		visible = {
+			original_tag = ROM
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 30
+		remove_effect = {
+			add_popularity = { ideology = communism popularity = 0.01 }
+		}		
+	}
+    ROM_prc_election_big_campaign = {
+
+		icon = form_nation
+
+		allowed = {
+			original_tag = ROM
+		}
+
+		available = {
+			has_completed_focus = ROM_the_romanian_communist_party
+		}
+		cost = 30
+
+		visible = {
+			original_tag = ROM
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+		days_remove = 50
+		remove_effect = {
+			add_popularity = { ideology = communism popularity = 0.03 }
+		}		
+	}
+}
