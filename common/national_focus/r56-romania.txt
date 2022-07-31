@@ -394,6 +394,7 @@ focus_tree = {
 					traits = { }
 				}
 			}
+			unlock_decision_category_tooltip = ROM_election_prc_category
         }
 		search_filters = { FOCUS_FILTER_POLITICAL }
     }
