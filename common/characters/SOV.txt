@@ -660,17 +660,17 @@ characters = {
 		}
 	}
 
-	SOV_robert_eidemann = {		#Latvian-born officer, army commander and suppressor of rebeliions in later years, purged with Tuchachevsky in 1937
-		name = "Robert Eidemann"
+	SOV_robert_eideman = {		#Latvian-born officer, army commander and suppressor of rebeliions in later years, purged with Tuchachevsky in 1937
+		name = "Robert Eideman"
 		portraits = {
 			army = {
-				large = "gfx/leaders/SOV/r56_potrait_SOV_robert_eidemann.dds"
+				large = "gfx/leaders/SOV/r56_potrait_SOV_robert_eideman.dds"
 			}
 		}
 		advisor = {
 			cost = 100
 			slot = high_command
-			idea_token = SOV_robert_eidemann
+			idea_token = SOV_robert_eideman
 			ledger = army
 			allowed = {
 				original_tag = SOV
@@ -712,7 +712,7 @@ characters = {
 		advisor = {
 			cost = 100
 			slot = high_command
-			idea_token = SOV_robert_eidemann
+			idea_token = SOV_boris_feldman
 			ledger = army
 			allowed = {
 				original_tag = SOV

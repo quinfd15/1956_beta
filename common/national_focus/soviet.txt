@@ -8252,12 +8252,12 @@ focus_tree = {
 			#Historical	- more comrades of Tukhachevsky getting purged...
 			if = {
 				limit = {
-					has_character = SOV_robert_eidemann
-					SOV_robert_eidemann = {
+					has_character = SOV_robert_eideman
+					SOV_robert_eideman = {
 						SOV_character_can_be_purged = yes
 					}
 				}
-				SOV_robert_eidemann = {
+				SOV_robert_eideman = {
 					set_character_flag = SOV_targeted_for_purge_flag
 				}
 			}
@@ -9699,7 +9699,7 @@ focus_tree = {
 					remove_unit_leader_trait = trait_SOV_stalinist
 					set_character_flag = SOV_aligned_left_opposition_flag
 				}
-				SOV_robert_eidemann = {
+				SOV_robert_eideman = {
 					add_unit_leader_trait = trait_SOV_trotskyist
 					remove_unit_leader_trait = trait_SOV_stalinist
 					set_character_flag = SOV_aligned_left_opposition_flag

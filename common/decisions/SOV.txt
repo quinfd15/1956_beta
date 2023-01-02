@@ -17565,12 +17565,12 @@ SOV_soviet_civil_war_dec_cat = {
 			#Historical	- more comrades of Tukhachevsky getting purged...
 			if = {
 				limit = {
-					has_character = SOV_robert_eidemann
-					SOV_robert_eidemann = {
+					has_character = SOV_robert_eideman
+					SOV_robert_eideman = {
 						SOV_character_can_be_purged = yes
 					}
 				}
-				SOV_robert_eidemann = {
+				SOV_robert_eideman = {
 					set_character_flag = SOV_targeted_for_purge_flag
 				}
 			}
