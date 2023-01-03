@@ -3236,29 +3236,57 @@ country_event = {
 				long_name = YUG_royal_party
 				name = YUG_royal_party
 			}
-			create_country_leader = {
-				name = "Peter II"
-				desc = "POLITICS_PETER_II_DESC"
-				picture = "Portrait_Yugoslavia_Peter_II.dds"
-				expire = "1965.1.1"
-				ideology = despotism
-				traits = {
-					legitimate_heir
-					r56_trait_opposed_to_communism
+			YUG_peter_ii = {
+				set_portraits = {
+					civilian = {
+				    	large="GFX_portrait_yugoslavia_peter_ii_old"
+					}
 				}
-			}
-			create_country_leader = {
-				name = "Peter II"
-				desc = "POLITICS_PETER_II_DESC"
-				picture = "Portrait_Yugoslavia_Peter_II.dds"
-				expire = "1965.1.1"
+								
+			}	
+			remove_trait = {
+				character = YUG_peter_ii
 				ideology = conservatism
-				traits = {
-					legitimate_heir
-					r56_trait_opposed_to_communism
-				}
+				trait = underage_monarch
 			}
-			hidden_effect = { set_country_flag = peter_is_of_age }
+			add_trait = {
+				character = YUG_peter_ii
+				ideology = conservatism
+				trait = legitimate_heir
+			}
+			remove_trait = {
+				character = YUG_peter_ii
+				ideology = despotism
+				trait = underage_monarch
+			}
+			add_trait = {
+				character = YUG_peter_ii
+				ideology = despotism
+				trait = legitimate_heir
+			}					
+			set_country_flag = peter_is_of_age 
+			#create_country_leader = {
+			#	name = "Peter II"
+			#	desc = "POLITICS_PETER_II_DESC"
+			#	picture = "Portrait_Yugoslavia_Peter_II.dds"
+			#	expire = "1965.1.1"
+			#	ideology = despotism
+			#	traits = {
+			#		legitimate_heir
+			#		r56_trait_opposed_to_communism
+			#	}
+			#}
+			#create_country_leader = {
+			#	name = "Peter II"
+			#	desc = "POLITICS_PETER_II_DESC"
+			#	picture = "Portrait_Yugoslavia_Peter_II.dds"
+			#	expire = "1965.1.1"
+			#	ideology = conservatism
+			#	traits = {
+			#		legitimate_heir
+			#		r56_trait_opposed_to_communism
+			#	}
+			#}
 		}
 	}
 }
