@@ -33,6 +33,21 @@
 
 		allow_branch = {
 			has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_purge_the_kodoha_faction
+						has_completed_focus = JAP_support_the_kodoha_faction
+						has_completed_focus = JAP_strengthen_civilian_government
+					}
+				}
+			}
 		}
 
 		bypass = {
@@ -50,6 +65,7 @@
 				add_ideas = sanzo_nosaka
 			}
 			add_political_power = 200
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_STABILITY FOCUS_FILTER_POLITICAL }
 	}
@@ -215,7 +231,7 @@
 				ideology = ROOT
 				size = 0.45	#This was too much for AI
 				capital = 282
-				states = { 282 533 536 555 529 530 528 526 524 645 648 646 647 684 633 609 745 527 525 844 845 846 847 }
+				states = { 282 533 536 555 529 530 528 526 524 645 648 646 647 684 633 609 745 527 525 917 918 919 920 }
 				keep_unit_leaders = {
 					750 751 752
 				}
@@ -263,82 +279,82 @@
 				set_autonomy = { target = NKR autonomy_state = autonomy_free }
 			}
 			hidden_effect = {
-				division_template = { name = "Japanese People's Regiment" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
+				division_template = { name = "Kōdō Tai" division_names_group = JAP_INF_01 is_locked = yes regiments = { militia = { x = 0 y = 0 } militia = { x = 1 y = 0 } militia = { x = 1 y = 0 } militia = { x = 1 y = 1 } } }
 				532 = {
 					create_unit = {
-						division = "name = \"1. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"1. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"2. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"2. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"3. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"3. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"4. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"4. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"5. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"5. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				531 = {
 					create_unit = {
-						division = "name = \"6. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"6. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"7. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"7. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"8. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"8. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"9. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"9. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"10. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"10. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				534 = {
 					create_unit = {
-						division = "name = \"11. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"11. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"12. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"12. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				535 = {
 					create_unit = {
-						division = "name = \"13. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"13. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"14. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"14. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				537 = {
 					create_unit = {
-						division = "name = \"15. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"15. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"16. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"16. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}
 					create_unit = {
-						division = "name = \"17. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
+						division = "name = \"17. Kōdō Tai\" division_template = \"Kōdō Tai\" start_experience_factor = 0"
 						owner = ROOT
 					}										
 				}
@@ -352,68 +368,68 @@
 					#JAI as tag alias
 					set_country_flag = r56_JAP_fascist_rebel_check
 					hidden_effect = {
-						division_template = { name = "Japanese Loyalist Regiment" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
+						division_template = { name = "Keibitai" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } } }
 						529 = {
 							create_unit = {
-								division = "name = \"1. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"1. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"2. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"2. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"3. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"3. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"4. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"4. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"5. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"5. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 						}
 						530 = {
 							create_unit = {
-								division = "name = \"6. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"6. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"7. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"7. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 						}
 						533 = {
 							create_unit = {
-								division = "name = \"8. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"8. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"9. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"9. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 						}
 						282 = {
 							create_unit = {
-								division = "name = \"10. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"10. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"11. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"11. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"12. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"12. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}	
 							create_unit = {
-								division = "name = \"13. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"13. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}
 							create_unit = {
-								division = "name = \"14. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
+								division = "name = \"14. Keibitai\" division_template = \"Keibitai\" start_experience_factor = 0"
 								owner = PREV
 							}																				
 						}						
@@ -961,6 +977,21 @@
 		allow_branch = {
 			has_dlc = "La Resistance"
 			has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_support_the_kodoha_faction
+						has_completed_focus = JAP_purge_the_kodoha_faction
+						has_completed_focus = JAP_strengthen_civilian_government
+					}
+				}
+			}
 		}		
 		relative_position_id = JAP_red_pacific_fleet
 		x = 4
@@ -1550,6 +1581,23 @@
 		id = JAP_purge_the_kodoha_faction
 		icon = GFX_goal_JAP_tojo_purge
 		mutually_exclusive = { focus = JAP_the_unthinkable_option focus = JAP_support_the_kodoha_faction focus = JAP_strengthen_civilian_government }
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_the_unthinkable_option
+						has_completed_focus = JAP_support_the_kodoha_faction
+						has_completed_focus = JAP_strengthen_civilian_government
+					}
+				}
+			}
+		}
 		x = 10
 		y = 0
 		relative_position_id = JAP_the_unthinkable_option
@@ -1557,7 +1605,16 @@
 			x = -8
 			y = 0
 			trigger = {
-				NOT = { has_dlc = "Waking the Tiger" }
+				OR = {
+					NOT = { has_dlc = "Waking the Tiger" }
+					AND = {
+						has_game_rule = {
+							rule = obsolete_focus_branches_visibility
+							option = HIDE
+						}
+						has_completed_focus = JAP_purge_the_kodoha_faction
+					}
+				}
 			}
 		}
 
@@ -1600,6 +1657,7 @@
 					set_global_flag = aiyappan_recruited
 				}
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_STABILITY }
 	}
@@ -1657,6 +1715,8 @@
 				}
 				create_faction = JAP_greater_east_asian_co_prosperity_sphere
 			}
+			unlock_decision_category_tooltip = r56_chinese_gui_category
+			set_country_flag = chi_interested_in_china
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 	}
@@ -1945,7 +2005,7 @@
 				promote_leader = yes
 				country_leader = {
 			  		ideology = fascism_ideology
-				  	expire = "1965.1.1.1"
+				  	expire = "1965.1.1"
 				  	traits = {
 						imperial_sanction
 						r56_trait_opposed_to_communism
@@ -2396,7 +2456,7 @@
 									}
 								}
 							}
-							851 = {
+							924 = {
 								NOT = { 
 									OR = {
 										is_controlled_by = FRA 
@@ -2404,7 +2464,7 @@
 									}
 								}
 							}
-							852 = {
+							925 = {
 								NOT = { 
 									OR = {
 										is_controlled_by = FRA 
@@ -2412,7 +2472,7 @@
 									}
 								}
 							}
-							853 = {
+							926 = {
 								NOT = { 
 									OR = {
 										is_controlled_by = FRA 
@@ -2430,12 +2490,12 @@
 					OR = {
 						has_full_control_of_state = 333
 						has_full_control_of_state = 672
-						has_full_control_of_state = 905
+						has_full_control_of_state = 974
 						has_full_control_of_state = 334
-						has_full_control_of_state = 909
-						has_full_control_of_state = 910
+						has_full_control_of_state = 977
+						has_full_control_of_state = 978
 					}
-					has_full_control_of_state = 843
+					has_full_control_of_state = 916
 					has_full_control_of_state = 671
 				}
 			}
@@ -2450,7 +2510,7 @@
                 category = r56_jungle_infantry_tech
 			}
 			if = {
-				limit = { #Phillippones is included for the AI since can't really not declare war on the Phillippines first if route is taken. Messing up it's attack on the southern resourece area 9 times out of 10
+				limit = { #Phillippones is included for the AI since can't really not declare war on the Phillippines first if this route is taken. Messing up it's attack on the southern resourece area 9 times out of 10
 					NOT = { has_wargoal_against = PHI }
 					NOT = { has_war_with = PHI }
 					country_exists = PHI
@@ -2485,7 +2545,17 @@
 					add_ai_strategy = {
 						type = conquer
 						id = USA
-						value = 100
+						value = 250
+					}
+					add_ai_strategy = {
+						type = declare_war
+						id = USA
+						value = 250
+					}
+					add_ai_strategy = {
+						type = antagonize
+						id = USA
+						value = 500 
 					}
 				}
 			}		
@@ -2523,7 +2593,7 @@
 			if = {
 				limit = {
 					INS = { exists = no }
-					335 = {
+					976 = {
 						CONTROLLER = {
 							NOT = {
 								is_in_faction_with = ROOT
@@ -2532,7 +2602,7 @@
 					}
 					if = {
 						limit = {
-							335 = {
+							976 = {
 								CONTROLLER = {
 									tag = HOL
 								}
@@ -2544,14 +2614,14 @@
 						}
 					}
 				}
-				335 = {
+				976 = {
 					OWNER = {
 						ROOT = {
 							create_wargoal = {
 								target = PREV
 								expire = 0
 								type = take_state_focus
-								generator = { 335 334 672 673 668 667 669 738 905 906 909 910 }
+								generator = { 976 334 672 673 668 667 669 738 974 975 977 978 }
 							}
 							add_ai_strategy = {
 								type = conquer
@@ -2628,19 +2698,19 @@
 						741 = {
 							is_controlled_by = FRA
 						}
-						851 = {
+						924 = {
 							is_controlled_by = FRA
 						}
-						852 = {
+						925 = {
 							is_controlled_by = FRA
 						}
-						853 = {
+						926 = {
 							is_controlled_by = FRA
 						}
-						845 = {
+						918 = {
 							is_controlled_by = FRA
 						}
-						855 = {
+						928 = {
 							is_controlled_by = FRA
 						}
 					}
@@ -2652,7 +2722,7 @@
 					target = FRA
 					expire = 0
 					type = take_state_focus
-					generator = { 671 670 286 741 851 852 853 854 855 }
+					generator = { 671 670 286 741 924 925 926 927 928 }
 				}
 			}
 			if = {
@@ -2670,19 +2740,19 @@
 						741 = {
 							is_controlled_by = FRI
 						}
-						851 = {
+						924 = {
 							is_controlled_by = FRI
 						}
-						852 = {
+						925 = {
 							is_controlled_by = FRI
 						}
-						853 = {
+						926 = {
 							is_controlled_by = FRI
 						}
-						845 = {
+						918 = {
 							is_controlled_by = FRI
 						}
-						855 = {
+						928 = {
 							is_controlled_by = FRI
 						}
 					}
@@ -2694,7 +2764,7 @@
 					target = FRI
 					expire = 0
 					type = take_state_focus
-					generator = { 671 670 286 741 851 852 853 854 855 }
+					generator = { 671 670 286 741 924 925 926 927 928 }
 				}
 			}
 			if = { #AI handicap idea and equipment so they can pull this off
@@ -3072,18 +3142,18 @@
 			OR = {
 				has_full_control_of_state = 333
 				has_full_control_of_state = 672
-				has_full_control_of_state = 905
+				has_full_control_of_state = 974
 				has_full_control_of_state = 334
-				has_full_control_of_state = 909
-				has_full_control_of_state = 910
+				has_full_control_of_state = 977
+				has_full_control_of_state = 978
 			}
-			has_full_control_of_state = 843
+			has_full_control_of_state = 916
 			has_full_control_of_state = 671
 		}
 
 
 		completion_reward = {
-			843 = {
+			916 = {
 				add_resource = {
 					type = aluminium
 					amount = 12
@@ -3114,7 +3184,7 @@
 					}
 				}
 			}
-			905 = {
+			974 = {
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
@@ -3134,7 +3204,7 @@
 					}
 				}
 			}
-			909 = {
+			977 = {
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
@@ -3144,7 +3214,7 @@
 					}
 				}
 			}
-			910 = {
+			978 = {
 				if = {
 					limit = { is_fully_controlled_by = ROOT }
 					add_building_construction = {
@@ -3554,7 +3624,17 @@
 		x = 2
 		y = 1
 		relative_position_id = JAP_guide_the_zaibatsus
-
+		offset = {
+			x = -18
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_support_the_kodoha_faction
+			}
+		}
 		cost = 10
 
 		ai_will_do = {
@@ -3795,10 +3875,33 @@
 		}
 		allow_branch = {
 			has_dlc = "La Resistance"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = JAP_the_unthinkable_option
+					has_completed_focus = JAP_strengthen_civilian_government
+				}
+			}
 		}		
 		relative_position_id = JAP_purge_the_kodoha_faction
 		x = 3
 		y = 1
+		offset = {
+			x = -18
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_support_the_kodoha_faction
+			}
+		}
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -3831,6 +3934,7 @@
 
 		completion_reward = {
 			add_ideas = spiritual_mobilization_idea
+			custom_effect_tooltip = peace_conference_spiritual_mob_modifier_japan
 		}
 		search_filters = { FOCUS_FILTER_MANPOWER }
 	}
@@ -3893,8 +3997,17 @@
 			has_tech = rocket_engines
 		}
 		completion_reward = {
-			custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect
-			hidden_effect = { set_technology = { suicide_craft = 1 } }
+			if = {
+				limit = {
+					NOT = { has_dlc = "By Blood Alone" }
+				}
+				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect
+				hidden_effect = { set_technology = { suicide_craft = 1 } }
+			}
+			else = {
+				custom_effect_tooltip = JAP_strengthen_the_divine_wind_effect_bba
+				hidden_effect = { set_technology = { suicide_charge = 1 popup = no} }
+			}
 			add_war_support = 0.1
 		}
 	}
@@ -3902,11 +4015,38 @@
 	focus = {
 		id = JAP_support_the_kodoha_faction
 		icon = GFX_goal_JAP_kodoha
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_the_unthinkable_option
+						has_completed_focus = JAP_purge_the_kodoha_faction
+						has_completed_focus = JAP_strengthen_civilian_government
+					}
+				}
+			}
+		}
 		mutually_exclusive = { focus = JAP_purge_the_kodoha_faction focus = JAP_the_unthinkable_option focus = JAP_strengthen_civilian_government }
 		x = 8
 		y = 0
 		relative_position_id = JAP_purge_the_kodoha_faction
-
+		offset = {
+			x = -18
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_support_the_kodoha_faction
+			}
+		}
 		cost = 5
 
 		ai_will_do = {
@@ -3921,6 +4061,7 @@
 			    long_name = JAP_neutrality_party_kodoha_long
 			    name = JAP_neutrality_party_kodoha
 			}
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -4500,22 +4641,30 @@
 				remove_country_leader_trait = warrior_code
 			}
 			unlock_decision_category_tooltip = JAP_seek_alliances
-			every_other_country = {
-				limit = {
-					OR = {
-						has_war_with = JAP
-						JAP = { has_wargoal_against = ROOT }
-						is_neighbor_of = JAP
-					}
-				}
-				news_event = {id = r56.news_event.31 hours = 6 }
-			}
+			news_event = {id = r56.news_event.31 hours = 6 }
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 	}
 
 	focus = {
 		id = JAP_obtain_polish_cryptological_data
+		icon = GFX_focus_generic_cryptologic_bomb
+		prerequisite = { focus = JAP_seek_alliances focus = JAP_west_pacific_treaty_organization focus = JAP_rekindle_the_old_alliance }
+		x = 2
+		y = 1
+		relative_position_id = JAP_seek_alliances
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_strengthen_civilian_government
+			}
+		}
+		cost = 10
 		available = {
 			POL = {
 				is_in_faction_with = ROOT 
@@ -4549,12 +4698,6 @@
 				has_intelligence_agency = yes
 			}
 		}
-		prerequisite = { focus = JAP_seek_alliances focus = JAP_west_pacific_treaty_organization focus = JAP_rekindle_the_old_alliance }
-		relative_position_id = JAP_seek_alliances
-		icon = GFX_focus_generic_cryptologic_bomb
-		x = 2
-		y = 1
-		cost = 10
 		ai_will_do = {
 			factor = 3
 		}
@@ -4618,6 +4761,31 @@
 	focus = {
 		id = JAP_obtain_polish_cryptological_data2
 		text = JAP_obtain_polish_cryptological_data
+		icon = GFX_focus_generic_cryptologic_bomb
+		relative_position_id = JAP_seek_alliances
+		x = 2
+		y = 1
+		cost = 10
+		ai_will_do = {
+			factor = 3
+		}
+		allow_branch = {
+			NOT = {
+				has_dlc = "Waking the Tiger"
+			}
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = JAP_purge_the_kodoha_faction
+				}
+			}
+		}
+		prerequisite = { focus = JAP_seek_alliances }
 		available = {
 			POL = {
 				is_in_faction_with = ROOT 
@@ -4650,20 +4818,6 @@
 				}
 				has_intelligence_agency = yes
 			}
-		}
-		prerequisite = { focus = JAP_seek_alliances }
-		allow_branch = {
-			NOT = {
-				has_dlc = "Waking the Tiger"
-			}
-		}
-		relative_position_id = JAP_seek_alliances
-		icon = GFX_focus_generic_cryptologic_bomb
-		x = 2
-		y = 1
-		cost = 10
-		ai_will_do = {
-			factor = 3
 		}
 
 		available_if_capitulated = yes
@@ -4775,21 +4929,31 @@
 	focus = {
 		id = JAP_stimulate_mongol_traditions
 		icon = GFX_goal_generic_cavalry
+		allow_branch = {
+			#has_dlc = "La Resistance"
+		}
 		x = 1
 		y = 2
+		relative_position_id = JAP_preemptive_war
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_strengthen_civilian_government
+			}
+		}
+		cost = 10
 		prerequisite = {
 			focus = JAP_preemptive_war
 			focus = JAP_anti_communist_volunteers
 		}
-		relative_position_id = JAP_preemptive_war
-		cost = 10
 
 		ai_will_do = {
 			factor = 3
-		}
-
-		allow_branch = {
-			#has_dlc = "La Resistance"
 		}
 
 		available = {
@@ -4999,26 +5163,56 @@
 	focus = {
 		id = JAP_strengthen_civilian_government
 		icon = GFX_goal_JAP_strenghten_the_civilian_government
+		allow_branch = {
+			has_dlc = "Waking the Tiger"
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					OR = {
+						has_completed_focus = JAP_the_unthinkable_option
+						has_completed_focus = JAP_purge_the_kodoha_faction
+						has_completed_focus = JAP_support_the_kodoha_faction
+					}
+				}
+			}
+		}
 		mutually_exclusive = { focus = JAP_purge_the_kodoha_faction focus = JAP_support_the_kodoha_faction focus = JAP_the_unthinkable_option }
 		x = 6
 		y = 0
 		relative_position_id = JAP_support_the_kodoha_faction
-
+		offset = {
+			x = -25
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				OR = {
+					has_completed_focus = JAP_strengthen_civilian_government
+					#as the manchurian project and army/navy are linked to this focus, I can move them left by moving this one left even while it is hidden
+					has_completed_focus = JAP_the_unthinkable_option
+				}
+			}
+		}
 		cost = 10
 
 		ai_will_do = {
 			factor = 2
 		}
 
-		allow_branch = {
-			has_dlc = "Waking the Tiger"
-		}
 
 		completion_reward = {
 			add_political_power = 120
 			add_timed_idea = { idea = JAP_strengthen_civilian_government days = 1095 }
 			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = kijuro_shidehara		
+			show_ideas_tooltip = kijuro_shidehara
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -5727,16 +5921,7 @@
 		completion_reward = {
 			add_political_power = 50
 			unlock_decision_category_tooltip = JAP_alliance_expansion_plan	
-			every_other_country = {
-				limit = {
-					OR = {
-						has_war_with = JAP
-						JAP = { has_wargoal_against = ROOT }
-						is_neighbor_of = JAP
-					}
-				}
-				news_event = {id = r56.news_event.31 hours = 6 }
-			}										
+			news_event = {id = r56.news_event.31 hours = 6 }									
 		}
 		search_filters = { FOCUS_FILTER_ALLIANCE FOCUS_FILTER_POLITICAL }
 	}
@@ -5909,10 +6094,10 @@
 				limit = {
 					has_full_control_of_state = 525
 					has_full_control_of_state = 527
-					has_full_control_of_state = 844
-					has_full_control_of_state = 845
-					has_full_control_of_state = 846
-					has_full_control_of_state = 847
+					has_full_control_of_state = 917
+					has_full_control_of_state = 918
+					has_full_control_of_state = 919
+					has_full_control_of_state = 920
 					KOR = { exists = no }
 					NKR = { exists = no }
 				}
@@ -5925,17 +6110,17 @@
 						has_government = fascism
 						has_full_control_of_state = 525
 						has_full_control_of_state = 527
-						has_full_control_of_state = 844
-						has_full_control_of_state = 845
-						has_full_control_of_state = 846
-						has_full_control_of_state = 847
+						has_full_control_of_state = 917
+						has_full_control_of_state = 918
+						has_full_control_of_state = 919
+						has_full_control_of_state = 920
 					}
 				}
 				create_wargoal = {
 					type = take_state_focus
 					target = MAN
 					expire = 0
-					generator = { 525 527 844 845 846 847 }
+					generator = { 525 527 917 918 919 920 }
 				}
 			}
 		}
@@ -5993,20 +6178,20 @@
 						owns_state = 715
 						owns_state = 714
 						owns_state = 717
-						owns_state = 868
-						owns_state = 869
-						owns_state = 870
-						owns_state = 871
-						owns_state = 872
-						owns_state = 873
-						owns_state = 874
+						owns_state = 941
+						owns_state = 942
+						owns_state = 943
+						owns_state = 944
+						owns_state = 945
+						owns_state = 946
+						owns_state = 947
 					}
 				}
 				create_wargoal = {
 					target = SOV
 					expire = 0
 					type = take_state_focus
-					generator = { 610 716 328 715 714 717 868 869 870 871 872 873 874 }
+					generator = { 610 716 328 715 714 717 941 942 943 944 945 946 947 }
 				}
 			}
 			unlock_decision_tooltip = JAP_return_manchuria
@@ -6039,7 +6224,7 @@
 				is_in_faction_with = JAP
 			}
 		}
-
+		will_lead_to_war_with = PRC
 		completion_reward = {
 			create_wargoal = {
 				type = topple_government
@@ -6160,13 +6345,48 @@
 		y = 0
 		relative_position_id = JAP_strengthen_civilian_government
 		offset = {
-			x = -4
+			x = -8
 			y = 0
 			trigger = {
-				NOT = { has_dlc = "Waking the Tiger" }
+				NOT = {
+					has_dlc = "Waking the Tiger"
+					if = {
+						limit = {
+							has_game_rule = {
+								rule = obsolete_focus_branches_visibility
+								option = HIDE
+							}
+						}
+						OR = {
+							has_completed_focus = JAP_purge_the_kodoha_faction
+							has_completed_focus = JAP_support_the_kodoha_faction
+						}
+					}
+				}
 			}
 		}
-
+		offset = {
+			x = -14
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_purge_the_kodoha_faction
+			}
+		}
+		offset = {
+			x = -8
+			y = 0
+			trigger = {
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+				has_completed_focus = JAP_support_the_kodoha_faction
+			}
+		}
 		cost = 10
 
 		ai_will_do = {
@@ -7216,7 +7436,7 @@
 					}
 					create_equipment_variant = {
 						name = "O-I"
-						type = super_heavy_tank_chassis
+						type = super_heavy_tank_chassis_1
 						parent_version = 0
 						modules = {
 							main_armament_slot = tank_super_heavy_cannon
@@ -7242,7 +7462,7 @@
 					}
 					create_equipment_variant = {
 						name = "O-I"
-						type = super_heavy_tank_chassis
+						type = super_heavy_tank_chassis_1
 						parent_version = 0
 						modules = {
 							main_armament_slot = tank_super_heavy_cannon
@@ -7268,7 +7488,7 @@
 					}
 					create_equipment_variant = {
 						name = "O-I"
-						type = super_heavy_tank_chassis
+						type = super_heavy_tank_chassis_1
 						parent_version = 0
 						modules = {
 							main_armament_slot = tank_super_heavy_cannon
@@ -7291,7 +7511,7 @@
 				else = {
 					create_equipment_variant = {
 						name = "O-I"
-						type = super_heavy_tank_chassis
+						type = super_heavy_tank_chassis_1
 						parent_version = 0
 						modules = {
 							main_armament_slot = tank_super_heavy_cannon
@@ -7555,7 +7775,11 @@
 				bonus = 1.0
 				uses = 1
 				category = r56_special_forces_training_tech 
-			}			
+			}	
+			hidden_effect = {
+				set_country_flag = cite_an_airborne_unit_flag
+			}
+			unlock_decision_tooltip = { decision = cite_an_airborne_unit show_effect_tooltip = yes }					
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -7991,6 +8215,10 @@
 			factor = 1
 		}
 
+		available = {
+			has_tech = interwar_antiair
+		}
+
 		completion_reward = {
 			random_owned_controlled_state = {
 				prioritize = { 282 }
@@ -8091,7 +8319,7 @@
 			any_enemy_country = {
 				is_major = yes
 				stockpile_ratio = { 
-					archetype = strat_bomber_equipment
+					archetype = large_plane_airframe
 					ratio > 1
 				}
 			}
@@ -8107,8 +8335,8 @@
 		id = JAP_prepare_for_an_invasion
 		icon = GFX_focus_generic_coastal_fort
 		prerequisite = { focus = JAP_protect_our_islands_skies }
-		x = 0
-		y = 3
+		x = 1
+		y = 1
 		relative_position_id = JAP_protect_our_islands_skies
 
 		cost = 20
@@ -8219,6 +8447,7 @@
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
+				name = JAP_range_focus
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
@@ -8227,7 +8456,46 @@
 			show_ideas_tooltip = aichi
 		}
 	}
+	focus = {
+		id = JAP_showa_aircraft_industry #created in 1937, made licensed transport planes
+		icon = GFX_focus_generic_copy_plane_designs
+		text = "Showa Aircraft Industry"
+		prerequisite = { focus = JAP_range_focus }
+		x = -1
+		y = 1
+		relative_position_id = JAP_range_focus
 
+		cost = 5
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+			has_full_control_of_state = 282
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				prioritize = { 282 }
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}				
+			}
+			air_experience = 10
+			if = {
+				limit = {
+					has_dlc = "Death or Dishonor"
+				}
+				add_ideas = HUN_license_foreign		
+			}
+				
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_ALUMINIUM}
+	}
 	focus = {
 		id = JAP_agility_focus
 		icon = GFX_goal_JAP_naval_aviation
@@ -8248,6 +8516,7 @@
 
 		completion_reward = {
 			add_doctrine_cost_reduction = {
+				name = JAP_agility_focus
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
@@ -8279,13 +8548,36 @@
 		bypass = {
 			has_tech = cv_fighter2
 		}
-
+		
 		completion_reward = {
 			air_experience = 10
-			navy_experience = 5
+			navy_experience = 5			
 			custom_effect_tooltip = JAP_the_zero_tt
-			hidden_effect = { set_technology = { cv_fighter2 = 1 } }
-		}
+			hidden_effect = { 
+				if = {
+					limit = {
+						NOT = {
+							has_dlc = "By Blood Alone"
+						}
+					}
+					set_technology = { cv_fighter2 = 1 } 
+				}
+				else = {
+					create_equipment_variant = {
+						name = "A6M Zero-Sen"
+						type = cv_small_plane_airframe_2
+						modules = {
+							fixed_main_weapon_slot = light_mg_2x
+							fixed_auxiliary_weapon_slot_1 = aircraft_cannon_1_2x
+							engine_type_slot = engine_3_1x
+							special_type_slot_1 = drop_tanks
+							special_type_slot_2 = fuel_tanks_small
+						}
+						icon = "GFX_JAP_cv_fighter2_medium"
+					}
+				}
+			}
+		}		
 	}
 
 	focus = {
@@ -8608,6 +8900,7 @@
 					category = amphibious_armor_tech
 				}
 			}
+			unlock_decision_tooltip = { decision = cite_a_marine_unit show_effect_tooltip = yes } 
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -8739,7 +9032,7 @@
 
 	focus = {
 		id = JAP_the_ultimate_battleship
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_focus_ETH_an_ethiopian_navy_in_exile
 		prerequisite = { focus = JAP_supremacy_of_the_battlefleet }
 		x = 0
 		y = 2
@@ -9120,14 +9413,10 @@
 		}
 
 		allow_branch = {
-			
+			has_dlc = "No Step Back"
 		}		
 
 		available_if_capitulated = yes
-
-		available = {
-			has_dlc = "No Step Back"
-		}
 
 		completion_reward = {
 			if = {
@@ -9213,7 +9502,6 @@
 			factor = 2
 		}
 
-		search_filters = { FOCUS_FILTER_RESEARCH }
 		completion_reward = {
 			if = {
 				limit = {

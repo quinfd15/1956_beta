@@ -1,4 +1,45 @@
 ideas = {
+	economy = {
+		law = yes
+		
+		TUR_etatism_economy_law_idea = {
+
+			allowed = {
+				original_tag = TUR
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			available = {
+				if = {
+					limit = {
+						has_global_flag = tur_bftb_focus_tree
+					}
+					NOT = {
+						has_completed_focus = TUR_fully_integrate_the_is_bank
+					}
+				}
+			}
+
+			picture = TUR_etatism_economy_law_idea
+				
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.1
+				consumer_goods_factor = 0.25
+				production_speed_infrastructure_factor = 0.05
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.15
+				production_speed_dockyard_factor = 0.05
+				economy_cost_factor = 2
+				max_fuel_factor = -0.2
+				fuel_gain_factor = -0.3
+			}
+		}
+	}
 
 country = {
 	TUR_kemalist_army_officers_powerful_loyal = { 
@@ -1318,7 +1359,7 @@ country = {
 			consumer_goods_factor = -0.1
 			political_power_factor = 0.25
 			stability_weekly = -0.01
-			war_support_weekly = -0.005
+			war_support_factor = -0.20
 		}
 	}
 
@@ -1655,6 +1696,11 @@ country = {
 			production_speed_arms_factory_factor = 0.05
 			consumer_goods_factor = -0.05
 			min_export = 0.15
+		}
+		targeted_modifier = {		#not only benefits from it, pal!
+			tag = GER
+			extra_trade_to_target_factor = 0.2
+			cic_to_target_factor = 0.1
 		}
 	}
 
@@ -2281,25 +2327,6 @@ country = {
 		}
 	}
 
-	TUR_financing_private_enterprise = { 
-
-		allowed = {
-			original_tag = TUR
-		}
-
-		allowed_civil_war = {
-			always = no
-		}
-
-		picture = generic_foreign_capital
-			
-		removal_cost = -1
-			
-		modifier = {
-			political_power_factor = -0.15
-		}
-	}
-
 	TUR_debt_repayments = { 
 
 		allowed = {
@@ -2735,7 +2762,7 @@ country = {
 		picture = generic_manpower_bonus
 
 		modifier = {
-			conscription = 0.025
+			conscription = 0.015
 			resistance_damage_to_garrison = -0.1
 		}
 	}
@@ -2788,6 +2815,7 @@ country = {
 		picture = generic_intel_bonus
 
 		modifier = {
+			conscription = 0.01
 			justify_war_goal_time = -0.25
 			generate_wargoal_tension = -0.4
 		}
@@ -2875,6 +2903,31 @@ country = {
 			political_power_factor = 0.25
 			production_speed_buildings_factor = 0.1
 			production_factory_efficiency_gain_factor = 0.15
+		}
+	}
+
+	TUR_consolidating_minister_cabinet = {
+
+		allowed = {
+			always = yes
+		}
+
+		allowed_civil_war = {
+			NOT = {
+				has_government = communism
+				has_government = democratic
+			}
+		}
+
+		removal_cost = -1
+
+		picture = HUN_treaty_of_triannon
+
+		modifier = {
+			stability_factor = 0.1
+			consumer_goods_factor = 0.03
+			political_power_factor = -0.05
+			political_advisor_cost_factor = 0.5
 		}
 	}
 }

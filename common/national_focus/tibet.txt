@@ -66,12 +66,10 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		available = {
-		
-		}
 		completion_reward = {
 			unlock_decision_tooltip = TIB_apply_neames_guidelines
 			army_experience = 10
+			add_command_power = 20	#just so that they can hire at least some advisor with that low war support
 			add_doctrine_cost_reduction = {
 				name = land_doc_bonus
 				cost_reduction = 0.5
@@ -283,13 +281,9 @@ focus_tree = {
 				name = bomber_bonus
 				bonus = 1
 				uses = 1
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
+				category = heavy_air
 				category = tactical_bomber
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3				
+				category = cat_heavy_fighter				
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -461,10 +455,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 3
-		}		
-		
-		available = {
-		
 		}
 		completion_reward = {
 			random_owned_controlled_state = {
@@ -519,6 +509,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_ideas = deterrence		
+			if = {
+				limit = {
+					CHI = {
+						has_war_with = JAP
+					}
+					ROOT = {
+						NOT = {
+							is_in_faction_with = JAP
+							has_war_with = CHI
+						}
+					}
+				}
+				add_ideas = GEN_Intervene_I
+			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}	
@@ -543,10 +547,7 @@ focus_tree = {
 				}				
 			}
 		}
-
-		available = {
-			
-		}
+		
 		completion_reward = {
 			create_country_leader = {
 				name = "Ngawang Sungrab Thutob"
@@ -679,10 +680,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}		
-		
-		available = {
-		
 		}
 		completion_reward = {
 			add_ideas = TIB_military_faction
@@ -732,10 +729,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 5
-		}		
-		
-		available = {
-		
 		}
 		completion_reward = {
 			TIB_monasteries_level_down = yes
@@ -868,10 +861,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 7
-		}		
-		
-		available = {
-		
 		}
 		completion_reward = {
 			add_war_support = 0.1
@@ -1067,10 +1056,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 20
-		}		
-		
-		available = {
-		
 		}
 		completion_reward = {
 			TIB_monasteries_level_up = yes
@@ -1091,6 +1076,7 @@ focus_tree = {
 		}
 		
 		available = {
+			is_subject = no
 			NOT = {
 				owns_state = 604
 			}
@@ -1098,10 +1084,10 @@ focus_tree = {
 		completion_reward = {
 			604 = { add_claim_by = TIB }
 			random_country = {
-				limit = { owns_state = 604 }
+				limit = { controls_state = 604 }
 				TIB = {
 					create_wargoal = {
-						type = take_core_state
+						type = take_claimed_state
 						target = PREV
 						expire = 0
 						generator = { 604 }
@@ -1136,7 +1122,7 @@ focus_tree = {
 				popularity = 0.15
 			}
 			custom_effect_tooltip = available_political_advisor
-				show_ideas_tooltip = TIB_phuntsok_wangyal
+			show_ideas_tooltip = TIB_bapa_phuntsog_wangyal
 		}
 	}
 	focus = {
@@ -1196,8 +1182,7 @@ focus_tree = {
 	focus = {
 		id = TIB_invite_chinese_commissars
 		prerequisite = { focus = TIB_get_rid_of_the_spiritual_opiates focus = TIB_red_monasteries}
-		relative_position_id = TIB_get_rid_of_the_spiritual_opiates	
-		mutually_exclusive = { focus = TIB_invite_soviet_advisors}
+		relative_position_id = TIB_get_rid_of_the_spiritual_opiates
 		icon = GFX_focus_chi_cooperation_with_the_communists
 		
 		x = 0
@@ -1231,8 +1216,7 @@ focus_tree = {
 	focus = {
 		id = TIB_invite_soviet_advisors
 		prerequisite = { focus = TIB_get_rid_of_the_spiritual_opiates focus = TIB_red_monasteries}
-		relative_position_id = TIB_get_rid_of_the_spiritual_opiates	
-		mutually_exclusive = { focus = TIB_invite_chinese_commissars}
+		relative_position_id = TIB_get_rid_of_the_spiritual_opiates
 		icon = GFX_goal_soviet_military_advisors
 		
 		x = 2
@@ -1272,6 +1256,10 @@ focus_tree = {
 		x = 0
 		y = 1
 		cost = 10
+
+		mutually_exclusive = {
+			focus = TIB_great_socialist_tibet
+		}
 		
 		available = {
 			is_subject = no
@@ -1299,8 +1287,8 @@ focus_tree = {
 		y = 1
 		cost = 10
 
-		available = {
-		
+		mutually_exclusive = {
+			focus = TIB_accept_the_unity_of_china
 		}
 		ai_will_do = {
 			factor = 15
@@ -2332,9 +2320,9 @@ focus_tree = {
 		}
 
 		completion_reward = {
-			add_tech_bonus = {
+			add_doctrine_cost_reduction = {
 				name = sub_op_bonus
-				bonus = 1
+				cost_reduction = 0.5
 				uses = 2
 				category = submarine_doctrine
 			}

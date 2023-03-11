@@ -11,8 +11,11 @@ characters={
 		}
 		country_leader={
 			ideology=socialism
-			expire="1965.1.1.1"
+			expire="1965.1.1"
 			id=-1
+			traits={
+				r56_trait_opposed_to_fascism
+			}				
 		}
 		advisor={ #He was more than just the Prime Minister.
 			slot = high_command
@@ -36,8 +39,12 @@ characters={
 		}
 		country_leader={
 			ideology=nazism
-			expire="1965.1.1.1"
-			id=-1			
+			expire="1965.1.1"
+			id=-1	
+			traits={
+				fascist_militia_leader
+				r56_trait_opposed_to_communism
+			}			
 		}
 	}
 	ICE_brynjolfur_bjarnason={
@@ -49,7 +56,7 @@ characters={
 		}
 		country_leader={
 			ideology=stalinism
-			expire="1965.1.1.1"
+			expire="1965.1.1"
 			id=-1			
 		}
 	}
@@ -62,7 +69,7 @@ characters={
 		}
 		country_leader={
 			ideology=moderatism
-			expire="1965.1.1.1"
+			expire="1965.1.1"
 			id=-1			
 		}
 	}
@@ -75,10 +82,10 @@ characters={
 		}
 		country_leader={
 			ideology=socialism
-			expire="1965.1.1.1"
+			expire="1965.1.1"
 			id=-1
 			traits = { 
-				POL_Bank_President
+				bank_president_trait
 			}
 		}
 	}
@@ -91,7 +98,7 @@ characters={
 		}
 		country_leader={
 			ideology=moderatism
-			expire="1965.1.1.1"
+			expire="1965.1.1"
 			id=-1			
 		}
 	}

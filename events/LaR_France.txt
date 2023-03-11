@@ -21,10 +21,16 @@ country_event = {
 	option = {
 		name = lar_congress_of_paris.1.a
 		add_state_claim = 558
+		add_state_claim = 900
+		add_state_claim = 901
+		add_state_claim = 902
 		add_state_claim = 274
 		add_state_claim = 700
 		add_state_claim = 701
 		add_state_claim = 538
+		add_state_claim = 890
+		add_state_claim = 888
+		add_state_claim = 889
 		add_state_claim = 718
 		add_state_claim = 768
 		add_state_claim = 769
@@ -1410,9 +1416,9 @@ country_event = {
 			transfer_state = 670
 			transfer_state = 671
 			transfer_state = 741
-			transfer_state = 851
-			transfer_state = 852
-			transfer_state = 853
+			transfer_state = 924
+			transfer_state = 925
+			transfer_state = 926
 		}
 	}
 }
@@ -2150,7 +2156,7 @@ country_event = {
 				add_state_claim = 7
 				add_state_claim = 35
 				add_state_claim = 36
-				add_state_claim =  893
+				add_state_claim =  965
 				#add_to_faction = FROM
 			}
 			FROM = {
@@ -2202,7 +2208,7 @@ country_event = {
 			add_state_claim = 7
 			add_state_claim = 35
 			add_state_claim = 36
-			add_state_claim =  893
+			add_state_claim =  965
 			#add_to_faction = ROOT
 			diplomatic_relation = {
 				country = ROOT
@@ -2252,7 +2258,7 @@ country_event = {
 		add_state_claim = 7
 		add_state_claim = 35
 		add_state_claim = 36
-		add_state_claim =  893
+		add_state_claim =  965
 	}
 }
 
@@ -2394,8 +2400,8 @@ country_event = {
 			}
 			transfer_state = 34
 			GER = {
-				transfer_state = 893
-				add_state_core = 893
+				transfer_state = 965
+				add_state_core = 965
 			}						
 		}
 		if = {
@@ -2404,8 +2410,8 @@ country_event = {
 			}
 			transfer_state = 34
 			GER = {
-				transfer_state = 893
-				add_state_core = 893
+				transfer_state = 965
+				add_state_core = 965
 			}						
 		}
 		if = {
@@ -2451,8 +2457,8 @@ country_event = {
 		effect_tooltip = {
 			transfer_state = 34
 			GER = {
-				transfer_state = 893
-				add_state_core = 893
+				transfer_state = 965
+				add_state_core = 965
 				puppet = FLA
 			}	
 		}
@@ -3633,7 +3639,7 @@ country_event = {
 
 add_namespace = lar_arms_purchases
 
-#intial event for US - France wants to buy weapons
+#intial event for US/UK - FROM wants to buy weapons
 country_event = {
 	id = lar_arms_purchases.1
 	title = lar_arms_purchases.1.t
@@ -3643,12 +3649,9 @@ country_event = {
 	option = {
 		name = lar_arms_purchases.1.a #agree
 		ai_chance = {
-			factor = 40
+			factor = 60
 		}
-		trigger = {
-			USA_can_sell_weapons_trigger = yes
-		}
-		FRA = {
+		FROM = {
 			country_event = lar_arms_purchases.2
 		}
 		army_experience = 10
@@ -3657,13 +3660,21 @@ country_event = {
 	option = {
 		name = lar_arms_purchases.1.b #refuse
 		ai_chance = {
-			factor = 60
+			factor = 1
 			modifier = {
-				FRA = { has_war = yes }
-				factor = 0.5
+				AND = {
+					FROM = { has_war = yes }
+					NOT = {
+						OR = {
+							has_war_together_with = FROM
+							has_completed_focus = USA_lend_lease_act
+						}
+					}
+				}
+				factor = 0.1
 			}
 		}
-		FRA = {
+		FROM = {
 			country_event = lar_arms_purchases.3
 		}
 	}
@@ -3673,7 +3684,22 @@ country_event = {
 country_event = {
 	id = lar_arms_purchases.2
 	title = lar_arms_purchases.2.t
-	desc = lar_arms_purchases.2.desc
+	desc = {
+        trigger = {
+            FROM = {
+				original_tag = USA
+			}
+        }
+        text = lar_arms_purchases.2.desc
+    }
+	desc = {
+        trigger = {
+            FROM = {
+				original_tag = ENG
+			}
+        }
+        text = lar_arms_purchases.2.eng.desc
+    }
 	picture = GFX_report_event_merchant_ship_01
 	is_triggered_only = yes
 	option = {
@@ -3681,7 +3707,17 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		set_country_flag = FRA_arms_purchases_permitted
+		if = {
+			limit = {
+				FROM = {
+					original_tag = USA
+				}
+			}
+			set_country_flag = FRA_arms_purchases_permitted
+		}
+		else = {
+			set_country_flag = SOV_arms_purchases_permitted
+		}
 	}
 }
 #response event for France - US refuse

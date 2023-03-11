@@ -69,7 +69,6 @@ country_event = {
 			limit = {
 				561 = { 
 					is_owned_by = SOV 
-
 					any_neighbor_state = { 
 						OR = {
 							is_owned_by = JAP							
@@ -85,7 +84,6 @@ country_event = {
 				NOT = { 
 					561 = { 
 						is_owned_by = SOV 
-
 						any_neighbor_state = { 
 							OR = {
 								is_owned_by = JAP
@@ -126,7 +124,6 @@ country_event = {
 			limit = {
 				561 = { 
 					is_owned_by = SOV 
-
 					any_neighbor_state = { 
 						OR = {
 							is_owned_by = JAP
@@ -142,7 +139,6 @@ country_event = {
 				NOT = { 
 					561 = { 
 						is_owned_by = SOV 
-
 						any_neighbor_state = { 
 							OR = {
 								is_owned_by = JAP
@@ -234,7 +230,7 @@ country_event = {
 			}
 		}
 		hidden_effect = {
-			news_event = { id = news.10 days = 1 }
+		#	news_event = { id = news.10 days = 1 }
 		}
 	}
 }
@@ -253,7 +249,8 @@ country_event = {
 		ROOT = {
 			create_wargoal = {
 				target = FROM
-				type = take_state_focus
+				type = take_state
+				generator = { 78 }
 				expire = 0
 			}
 		}
@@ -2169,8 +2166,7 @@ country_event = {
 	
 	fire_only_once = yes
 
-	trigger = {
-		always = no
+	trigger = {	#why was it disabled? Huh?
 		tag = SOV
 		has_global_flag = sov_yes_pact
 		NOT = { #should avoid the soviets giving Poland to Germany after yalta when peace AI is wonky
@@ -2391,36 +2387,6 @@ country_event = {
 		}
 		if = {
 			limit = {
-				70 = {
-					OR = {
-						is_controlled_by = SOV
-						any_other_country = {
-							controls_state = 70
-							is_in_faction_with = SOV
-							SOV = { is_faction_leader = yes }
-						}
-					}
-				}
-			}
-			GER = { transfer_state = 70 }
-		}
-		if = {
-			limit = {
-				664 = {
-					OR = {
-						is_controlled_by = SOV
-						any_other_country = {
-							controls_state = 664
-							is_in_faction_with = SOV
-							SOV = { is_faction_leader = yes }
-						}
-					}
-				}
-			}
-			GER = { transfer_state = 664 }
-		}
-		if = {
-			limit = {
 				72 = {
 					OR = {
 						is_controlled_by = SOV
@@ -2625,83 +2591,6 @@ country_event = {
 	immediate = {
 		drop_cosmetic_tag = yes
 		clr_global_flag = SOV_became_russia
-	}
-}
-country_event = {
-	id = soviet.91
-	title = soviet.91.t
-	desc = soviet.91.d
-	picture = GFX_report_event_stalin_propaganda
-	
-	fire_only_once = yes
-
-	is_triggered_only = yes
-
-	option = {
-		name = soviet.91.a
-		
-		GER = {
-			create_faction = "Anti-Soviet Alliance"
-			add_to_faction = GER
-			add_to_faction = ENG
-			add_to_faction = ITA
-			add_to_faction = CZE
-			if = {
-				limit = {
-					POL = { exists = no }
-				}
-				POL = {
-					add_to_faction = POL
-				}
-			}
-			
-			declare_war_on = {
-				target = SOV
-				type = puppet_wargoal_focus
-			}
-			
-			add_threat = 10
-		}
-		ENG = {
-			declare_war_on = {
-				target = SOV
-				type = puppet_wargoal_focus
-			}
-		}
-		ITA = {
-			declare_war_on = {
-				target = SOV
-				type = puppet_wargoal_focus
-			}
-		}
-		CZE = {
-			declare_war_on = {
-				target = SOV
-				type = puppet_wargoal_focus
-			}
-		}
-		if = {
-			limit = {
-				FRA = { has_government = democratic }
-				FRA = { has_government = fascism }
-			}
-			GER = {
-				add_to_faction = FRA
-			}
-			FRA = {
-				declare_war_on = {
-					target = SOV
-					type = puppet_wargoal_focus
-				}
-			}
-		}
-		
-		USA = { 
-			create_faction = "North American Defense Initiative"
-			add_to_faction = CAN
-			add_to_faction = AST
-			add_to_faction = NZL
-		}
 	}
 }
 

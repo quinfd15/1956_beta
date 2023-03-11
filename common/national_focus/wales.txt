@@ -34,21 +34,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-			#
-		}
-
-		
-		
-		
-
-
-
 		completion_reward = {
 			army_experience = 5
 			add_doctrine_cost_reduction = {
@@ -105,14 +90,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-			#
-		}
-
 		completion_reward = {
 			122 = {
 				add_extra_state_shared_building_slots = 2
@@ -138,6 +115,24 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			hidden_effect = {
+				division_template = {
+					name = "Motorised Division"
+				
+					regiments = {
+						motorized = { x = 0 y = 0 }
+						motorized = { x = 0 y = 1 }
+						motorized = { x = 0 y = 2 }
+						motorized = { x = 1 y = 0 }
+						motorized = { x = 1 y = 1 }
+						motorized = { x = 1 y = 2 }
+					}
+					support = {
+						 engineer = { x = 0 y = 0 }
+						recon = { x = 0 y = 1 }
+					}
+				}
+			}			
 			add_tech_bonus = {
 				name = motorized_bonus
 				bonus = 2
@@ -166,18 +161,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-
-		available = {
-
-		}
-		
-		bypass = {
-			
-		}
-
-		
-		
-		
 
 		complete_tooltip = {
 			add_tech_bonus = {
@@ -565,7 +548,11 @@ focus_tree = {
                 bonus = 1.0
                 uses = 2
                 category = r56_special_forces_training_tech 
-            }								
+            }						
+            hidden_effect = {
+                set_country_flag = cite_an_airborne_unit_flag
+            }
+            unlock_decision_tooltip = { decision = cite_an_airborne_unit show_effect_tooltip = yes }					
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}	
@@ -582,21 +569,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-			#
-		}
-
-		
-		
-		
-
-
-
 		completion_reward = {
             add_ideas = special_forces
             add_tech_bonus = {
@@ -626,21 +598,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-			#
-		}
-
-		
-		
-		
-
-
-
 		completion_reward = {
 			122 = {
 				add_extra_state_shared_building_slots = 2
@@ -879,14 +836,6 @@ focus_tree = {
 			factor = 10
 		}
 
-		available = {
-			
-		}
-		
-		bypass = {
-			#
-		}
-
 		
 		
 		
@@ -921,14 +870,6 @@ focus_tree = {
 
 		ai_will_do = {
 			factor = 10
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-			#
 		}
 
 		

@@ -71,7 +71,7 @@ FRA_controls_north_africa = {
 			}
 		}
 	}
-	860 = {
+	933 = {
 		OR = {
 			is_controlled_by = ROOT
 			CONTROLLER = {
@@ -284,16 +284,30 @@ is_owned_or_subject_trigger = {
 }
 
 USA_can_sell_weapons_trigger = {
-	NOT = { 
+	country_exists = USA
+	NOT = {
 		USA = {
-			AND = {
-				has_completed_focus = USA_neutrality_act 
-				NOT = { has_completed_focus = USA_lend_lease_act } #Can't sell weapons if US has declared neutrality without passing Lend-Lease Act
+			OR = {
+				NOT = { has_completed_focus = USA_limited_intervention }
+				AND = {
+					has_completed_focus = USA_neutrality_act 
+					NOT = { has_completed_focus = USA_lend_lease_act } #Can't sell weapons if US has declared neutrality without passing Lend-Lease Act
+				}
 			}
-			has_war_with = FRA
+			has_war_with = ROOT
 		}
 	}
 	USA = { has_civil_war = no }
+}
+
+ENG_can_sell_weapons_trigger = {
+	country_exists = ENG
+	NOT = { 
+		ENG = {
+			has_war_with = ROOT
+		}
+	}
+	ENG = { has_civil_war = no }
 }
 
 has_any_occupation_cost_trigger = {
@@ -303,4 +317,8 @@ has_any_occupation_cost_trigger = {
 		has_idea = FRA_occupation_costs_3
 		has_idea = FRA_occupation_costs_4
 	}
+}
+
+is_vichy_france = {
+	has_country_flag = vichy_france	
 }

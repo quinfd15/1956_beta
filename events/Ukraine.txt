@@ -4,334 +4,334 @@
 
 add_namespace = ukraine
 
-country_event = {
-	id = ukraine.1
-	title = ukraine.1.t
-	desc = ukraine.1.d
-	picture = GFX_report_event_ukraine_war_of_independence
+# country_event = {
+# 	id = ukraine.1
+# 	title = ukraine.1.t
+# 	desc = ukraine.1.d
+# 	picture = GFX_report_event_ukraine_war_of_independence
 
-	fire_only_once = yes
+# 	fire_only_once = yes
 	
-	trigger = {
-		tag = SOV
-		has_civil_war = yes
-		has_government = communism
-		UKR = {
-			exists = no
-		}
-		controls_state = 202
-	}
+# 	trigger = {
+# 		tag = SOV
+# 		has_civil_war = yes
+# 		has_government = communism
+# 		UKR = {
+# 			exists = no
+# 		}
+# 		controls_state = 202
+# 	}
 	
-	option = {
-		name = ukraine.1.a
-		activate_mission = SOV_put_down_the_ukrainian_revolt
+# 	option = {
+# 		name = ukraine.1.a
+# 		activate_mission = SOV_put_down_the_ukrainian_revolt
 
-		every_country = {
-			limit = {
-				original_tag = SOV
-			}
-			every_owned_state = {
-				limit = { is_core_of = UKR }
-				force_enable_resistance = {
-					occupier = PREV.PREV
-					occupied = UKR
-				}
-				start_resistance = UKR
-			}
-		}
-		SOV = {
-			set_country_flag = r56_UKR_revolt_active
-		}		
-		UKR = {
-			transfer_state = 202
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 201
-					}
-				}
-				transfer_state = 201	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 199
-					}
-				}
-				transfer_state = 199	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 198
-					}
-				}
-				transfer_state = 198	 
-			}						
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 203
-					}
-				}
-				transfer_state = 203	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 192
-					}
-				}
-				transfer_state = 192	 
-			}			
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 197
-					}
-				}
-				transfer_state = 197	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 226
-					}
-				}
-				transfer_state = 226 
-			}			
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 259
-					}
-				}
-				transfer_state = 259	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 193
-					}
-				}
-				transfer_state = 193
-			}			
-			load_oob = "UKR_revolt"			
-			create_country_leader = {
-				name = "Provisional Government of Free Ukraine"
-				desc = ""
-				picture = "gfx/leaders/UKR/r56_portrait_UKR_provisional_government_of_free_ukraine.dds"
-				expire = "1965.1.1"
-				ideology = moderatism
-				traits = {
-					undecided
-				}
-			}
-			add_popularity = {
-				ideology = neutrality
-				 popularity = 0.15
-			 }
-			 add_war_support = 0.15			
-			 create_field_marshal = {
-				name = "Pavlo Skoropadskyi"
-				portrait_path = "gfx/leaders/UKR/r56_portrait_UKR_Pavlo_Skoropadskyi.dds"
-				traits = { politically_connected old_guard  caring_leader  }
-				skill = 3
-				attack_skill = 3
-				defense_skill = 3
-				planning_skill = 1
-				logistics_skill = 3
-			}
-			create_corps_commander = {
-				name = "Mykhailo Omelianovych-Pavlenko"
-				portrait_path = "gfx/leaders/RUT/r56_portrait_UKR_Mykhailo_Omelianovych_Pavlenko.dds"
-				traits = { decided_planner career_officer harsh_leader }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 2
-			}
-			create_corps_commander = {
-				name = "Viktor Kurmanovych"
-				portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-				traits = { infantry_officer meticulous }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 2
-			}
-			declare_war_on = {
-			    target = SOV
-			    type = take_core_state
-			}
-		}
-		every_country = {
-			limit = {
-				original_tag = SOV
-			}
-			add_ai_strategy = {
-				type = antagonize       
-				id = UKR        
-				value = 200
-			}				
-		}		
-	}
+# 		every_country = {
+# 			limit = {
+# 				original_tag = SOV
+# 			}
+# 			every_owned_state = {
+# 				limit = { is_core_of = UKR }
+# 				force_enable_resistance = {
+# 					occupier = PREV.PREV
+# 					occupied = UKR
+# 				}
+# 				start_resistance = UKR
+# 			}
+# 		}
+# 		SOV = {
+# 			set_country_flag = r56_UKR_revolt_active
+# 		}		
+# 		UKR = {
+# 			transfer_state = 202
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 201
+# 					}
+# 				}
+# 				transfer_state = 201	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 199
+# 					}
+# 				}
+# 				transfer_state = 199	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 198
+# 					}
+# 				}
+# 				transfer_state = 198	 
+# 			}						
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 203
+# 					}
+# 				}
+# 				transfer_state = 203	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 192
+# 					}
+# 				}
+# 				transfer_state = 192	 
+# 			}			
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 197
+# 					}
+# 				}
+# 				transfer_state = 197	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 226
+# 					}
+# 				}
+# 				transfer_state = 226 
+# 			}			
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 259
+# 					}
+# 				}
+# 				transfer_state = 259	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 193
+# 					}
+# 				}
+# 				transfer_state = 193
+# 			}			
+# 			load_oob = "UKR_revolt"			
+# 			create_country_leader = {
+# 				name = "Provisional Government of Free Ukraine"
+# 				desc = ""
+# 				picture = "gfx/leaders/UKR/r56_portrait_UKR_provisional_government_of_free_ukraine.dds"
+# 				expire = "1965.1.1"
+# 				ideology = moderatism
+# 				traits = {
+# 					undecided
+# 				}
+# 			}
+# 			add_popularity = {
+# 				ideology = neutrality
+# 				 popularity = 0.15
+# 			 }
+# 			 add_war_support = 0.15			
+# 			 create_field_marshal = {
+# 				name = "Pavlo Skoropadskyi"
+# 				portrait_path = "gfx/leaders/UKR/r56_portrait_UKR_Pavlo_Skoropadskyi.dds"
+# 				traits = { politically_connected old_guard  caring_leader  }
+# 				skill = 3
+# 				attack_skill = 3
+# 				defense_skill = 3
+# 				planning_skill = 1
+# 				logistics_skill = 3
+# 			}
+# 			create_corps_commander = {
+# 				name = "Mykhailo Omelianovych-Pavlenko"
+# 				portrait_path = "gfx/leaders/RUT/r56_portrait_UKR_Mykhailo_Omelianovych_Pavlenko.dds"
+# 				traits = { decided_planner career_officer harsh_leader }
+# 				skill = 3
+# 				attack_skill = 2
+# 				defense_skill = 3
+# 				planning_skill = 3
+# 				logistics_skill = 2
+# 			}
+# 			create_corps_commander = {
+# 				name = "Viktor Kurmanovych"
+# 				portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+# 				traits = { infantry_officer meticulous }
+# 				skill = 3
+# 				attack_skill = 2
+# 				defense_skill = 3
+# 				planning_skill = 3
+# 				logistics_skill = 2
+# 			}
+# 			declare_war_on = {
+# 			    target = SOV
+# 			    type = take_core_state
+# 			}
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				original_tag = SOV
+# 			}
+# 			add_ai_strategy = {
+# 				type = antagonize       
+# 				id = UKR        
+# 				value = 200
+# 			}				
+# 		}		
+# 	}
 
-	option = {
-		name = ukraine.1.b
-		SOV = {
-			set_country_flag = r56_UKR_revolt_active
-		}
-		UKR = {
-			transfer_state = 202
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 201
-					}
-				}
-				transfer_state = 201	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 199
-					}
-				}
-				transfer_state = 199	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 198
-					}
-				}
-				transfer_state = 198	 
-			}						
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 203
-					}
-				}
-				transfer_state = 203	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 192
-					}
-				}
-				transfer_state = 192	 
-			}			
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 197
-					}
-				}
-				transfer_state = 197	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 226
-					}
-				}
-				transfer_state = 226 
-			}			
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 259
-					}
-				}
-				transfer_state = 259	 
-			}
-			if = {
-				limit = {
-					any_country = {
-						original_tag = SOV
-						controls_state = 193
-					}
-				}
-				transfer_state = 193
-			}			
+# 	option = {
+# 		name = ukraine.1.b
+# 		SOV = {
+# 			set_country_flag = r56_UKR_revolt_active
+# 		}
+# 		UKR = {
+# 			transfer_state = 202
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 201
+# 					}
+# 				}
+# 				transfer_state = 201	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 199
+# 					}
+# 				}
+# 				transfer_state = 199	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 198
+# 					}
+# 				}
+# 				transfer_state = 198	 
+# 			}						
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 203
+# 					}
+# 				}
+# 				transfer_state = 203	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 192
+# 					}
+# 				}
+# 				transfer_state = 192	 
+# 			}			
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 197
+# 					}
+# 				}
+# 				transfer_state = 197	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 226
+# 					}
+# 				}
+# 				transfer_state = 226 
+# 			}			
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 259
+# 					}
+# 				}
+# 				transfer_state = 259	 
+# 			}
+# 			if = {
+# 				limit = {
+# 					any_country = {
+# 						original_tag = SOV
+# 						controls_state = 193
+# 					}
+# 				}
+# 				transfer_state = 193
+# 			}			
 
-			load_oob = "UKR_revolt"
-			create_country_leader = {
-				name = "Provisional Government Of Free Ukraine"
-				desc = ""
-				picture = "gfx/leaders/UKR/r56_portrait_UKR_provisional_government_of_free_ukraine.dds"
-				expire = "1965.1.1"
-				ideology = liberalism
-				traits = {
-					undecided
-				}
-			}
-			create_field_marshal = {
-				name = "Pavlo Skoropadskyi"
-				portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
-				traits = { politically_connected old_guard  caring_leader  }
-				skill = 3
-			    attack_skill = 3
-			    defense_skill = 3
-			    planning_skill = 1
-			    logistics_skill = 3
-			}
-			create_corps_commander = {
-				name = "Mykhailo Omelianovych-Pavlenko"
-				portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
-				traits = { decided_planner career_officer harsh_leader }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 2
-			}
-			create_corps_commander = {
-				name = "Viktor Kurmanovych"
-				portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
-				traits = { infantry_officer meticulous }
-				skill = 3
-				attack_skill = 2
-				defense_skill = 3
-				planning_skill = 3
-				logistics_skill = 2
-			}
-			change_tag_from = ROOT
-		}
-		every_country = {
-			limit = {
-				original_tag = SOV
-			}
-			add_ai_strategy = {
-				type = antagonize       
-				id = UKR        
-				value = 200
-			}				
-		}		
-	}
-}
+# 			load_oob = "UKR_revolt"
+# 			create_country_leader = {
+# 				name = "Provisional Government Of Free Ukraine"
+# 				desc = ""
+# 				picture = "gfx/leaders/UKR/r56_portrait_UKR_provisional_government_of_free_ukraine.dds"
+# 				expire = "1965.1.1"
+# 				ideology = liberalism
+# 				traits = {
+# 					undecided
+# 				}
+# 			}
+# 			create_field_marshal = {
+# 				name = "Pavlo Skoropadskyi"
+# 				portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_4.dds"
+# 				traits = { politically_connected old_guard  caring_leader  }
+# 				skill = 3
+# 			    attack_skill = 3
+# 			    defense_skill = 3
+# 			    planning_skill = 1
+# 			    logistics_skill = 3
+# 			}
+# 			create_corps_commander = {
+# 				name = "Mykhailo Omelianovych-Pavlenko"
+# 				portrait_path = "gfx/leaders/Europe/portrait_europe_generic_land_13.dds"
+# 				traits = { decided_planner career_officer harsh_leader }
+# 				skill = 3
+# 				attack_skill = 2
+# 				defense_skill = 3
+# 				planning_skill = 3
+# 				logistics_skill = 2
+# 			}
+# 			create_corps_commander = {
+# 				name = "Viktor Kurmanovych"
+# 				portrait_path = "gfx/leaders/Europe/Portrait_Europe_Generic_land_5.dds"
+# 				traits = { infantry_officer meticulous }
+# 				skill = 3
+# 				attack_skill = 2
+# 				defense_skill = 3
+# 				planning_skill = 3
+# 				logistics_skill = 2
+# 			}
+# 			change_tag_from = ROOT
+# 		}
+# 		every_country = {
+# 			limit = {
+# 				original_tag = SOV
+# 			}
+# 			add_ai_strategy = {
+# 				type = antagonize       
+# 				id = UKR        
+# 				value = 200
+# 			}				
+# 		}		
+# 	}
+# }
 
 
 country_event = {
@@ -424,7 +424,7 @@ country_event = { #suggest condominium eastern poland
 	option = {
 		name = ukraine.3.a
 		ai_chance = {
-		 factor = 15
+		 factor = 50
 		}
 		DOU = {
 			add_state_core = 93
@@ -454,21 +454,46 @@ country_event = { #suggest condominium eastern poland
 			inherit_technology = POL 
 			add_political_power = 300
 			set_cosmetic_tag = DOU_CONDOMINIUM
+			add_ideas = POL_henryk_jozewski # spoke Ukrainian and believed in Ukrainian autonomy as part of the "Volhynia Experiment"
+			add_ai_strategy = {
+				type = befriend
+				id = "UKR"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "UKR"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = befriend
+				id = "POL"
+				value = 200
+			}
+			add_ai_strategy = {
+				type = alliance
+				id = "POL"
+				value = 200
+			}						
 		}
 		POL = {
 			puppet = DOU
+			add_political_power = 50
 		}
 		UKR = {
-			country_event = { id = ukraine.4 days = 1 }
+			country_event = { id = ukraine.4 hours = 6 }
 		}
-		
+		news_event = {
+			id = r56.news_event.45
+			days = 1
+		}		
 
 	}
 
 	option = {
 		name = ukraine.3.b
 		ai_chance = {
-		 factor = 10
+		 factor = 5
 		}
 		UKR = {
 			country_event = { id = ukraine.5 days = 1 }
@@ -534,5 +559,172 @@ country_event = { #UKR integrated army command
 		 factor = 10
 		}
 		add_political_power = -10
+	}
+}
+
+# UKR demands Romanian claims
+country_event = {
+	id = ukraine.7
+	title = ukraine.7.t
+	desc = ukraine.7.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Accept demands
+		name = ukraine.7.a
+		save_event_target_as = bessarabia_ultimatum_victim
+		set_country_flag = bessarabia_ultimatum_victim		
+		ai_chance = {
+			factor = 70
+			modifier = { # Don't accept if in a faction that can protect them
+				factor = 0
+				NOT = { is_in_faction_with = FROM }
+				any_other_country = {
+					is_major = yes
+					NOT = { tag = UKR }
+					OR = {
+						is_in_faction_with = ROOT
+						has_guaranteed = ROOT
+					}
+				}
+
+			}
+			modifier = {
+				factor = 0.3
+				is_historical_focus_on = no #Romania will still cede on historical
+			}
+		}
+		FROM = {
+			country_event = { days = 1 id = ukraine.8 }	
+		}
+		#set_country_flag = bessarabia_ceded
+	}
+
+	option = { # Refuse
+		name = ukraine.7.b
+		ai_chance = {
+			base = 0
+			modifier = {
+				add = 10
+				is_in_faction = yes
+				NOT = { is_in_faction_with = FROM }
+			}
+			modifier = {
+				is_historical_focus_on = yes
+				factor = 0
+			}
+			modifier = {
+				factor = 0
+				is_in_faction_with = FROM
+			}
+		}
+		FROM = {
+			country_event = { days = 1 id = ukraine.9 }
+			effect_tooltip = {
+				create_wargoal = {
+					type = take_state
+					target = ROM
+					generator = { 80 766 834 }
+				}
+			}
+		}
+	}
+}
+
+country_event = {
+	id = ukraine.8
+	title = ukraine.8.t
+	desc = ukraine.8.d
+	picture = GFX_report_event_soviet_army_greeted
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ukraine.8.a
+		if = {
+			limit = {
+				FROM = {
+					controls_state = 80	#Bucovina
+				}
+			}
+			UKR = { 
+				transfer_state = 80
+			}
+			hidden_effect = {
+				UKR = { #if those territories were claimed, perhaps one should core them too?
+					remove_state_claim = 80
+					add_state_core = 80
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					controls_state = 766	#Southern Bessarabia
+				}
+			}
+			UKR = { 
+				transfer_state = 766
+			}
+			hidden_effect = {
+				set_province_name = { id = 6727 name = "Bilhorod-Dnistrovskyi"} #russification of names
+				UKR = { #if those territories were claimed, perhaps one should core them too?
+					remove_state_claim = 766
+					add_state_core = 766
+				}
+			}
+		}
+		if = {
+			limit = {
+				FROM = {
+					controls_state = 834
+				}
+			}
+			UKR = { 
+				transfer_state = 834
+			}
+			hidden_effect = {
+				UKR = { #if those territories were claimed, perhaps one should core them too?
+					remove_state_claim = 834
+					add_state_core = 834
+				}
+			}
+		}		
+		hidden_effect = {
+		#	news_event = { id = news.10 days = 1 }
+		}
+	}
+}
+
+# Bessarabian controller (one of three states) refuses to surrender Bessarabia
+country_event = {
+	id = ukraine.9
+	title = ukraine.9.t
+	desc = ukraine.9.d
+	picture = GFX_report_event_stalin_02
+	
+	is_triggered_only = yes
+	
+	option = {
+		name = ukraine.9.a
+		ROOT = {
+			create_wargoal = {
+				target = FROM
+				type = take_state
+				generator = { 80 766 }
+				expire = 0
+			}
+		}
+		hidden_effect = {	#Only triggers once since otherwise strange
+			if = {
+				limit = {
+					FROM = {
+						controls_state = 766
+					}
+				}
+				news_event = { id = news.11 days = 1 }
+			}
+		}
 	}
 }
