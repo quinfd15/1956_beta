@@ -487,7 +487,7 @@ country_event = {
 		}
 		if = {
 			limit = {
-				has_country_leader = { ruling_only = yes name = "Peljidiin Genden" }
+				has_country_leader = { character = MON_peljidiin_genden ruling_only = yes }
 			}
 			remove_country_leader_trait = out_of_office_trait
 			add_political_power = 20
@@ -2889,9 +2889,9 @@ country_event = {
 				}
 			}
 			create_country_leader = {
-				name = "Anandyn Amar"
+				name = "Dansranbilegiin Dogsom"
 				desc = ""
-				picture = "gfx/leaders/MON/portrait_mon_anandyn_amar.dds"
+				picture = "gfx/leaders/MON/r56_portrait_MON_dansranbilegiin_dogsom.dds"
 				expire = "1965.1.1"
 				ideology = marxism
 				traits = {
@@ -2899,9 +2899,9 @@ country_event = {
 				}
 			}
 			create_country_leader = {
-				name = "Anandyn Amar"
+				name = "Dansranbilegiin Dogsom"
 				desc = ""
-				picture = "gfx/leaders/MON/portrait_mon_anandyn_amar.dds"
+				picture = "gfx/leaders/MON/r56_portrait_MON_dansranbilegiin_dogsom.dds"
 				expire = "1965.1.1"
 				ideology = despotism
 				traits = {

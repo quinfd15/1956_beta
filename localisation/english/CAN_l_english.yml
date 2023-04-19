@@ -790,8 +790,8 @@
  r56_CAN_arms_exports:0 "Arms Exports"
  r56_CAN_arms_exports_desc:0 "We may not want to send out our young [CAN.GetAdjective]s to die in foreign fields, but we can always send out [CAN.GetAdjective] products to set the playing field to nations friendly to our interests."
  
- r56_CAN_supress_the_separatists:0 "Suppress the Separatists"
- r56_CAN_supress_the_separatists_desc:0 "We will never recognize the rebel state of Quebec. Quebec is [CAN.GetAdjective] land, and that is the end of it."
+ r56_CAN_suppress_the_separatists:0 "Suppress the Separatists"
+ r56_CAN_suppress_the_separatists_desc:0 "We will never recognize the rebel state of Quebec. Quebec is [CAN.GetAdjective] land, and that is the end of it."
  
  r56_CAN_strengthen_british_ties:0 "Strengthen [ENG.GetAdjective] Ties"
  r56_CAN_strengthen_british_ties_desc:0 "Our loyalties lie with the Mother Country. We will ensure that our policies and actions will march in lockstep with theirs."
@@ -823,7 +823,7 @@
  #Events
  r56_canada.1.t:0 "Change in Laws"
  r56_canada.1.d:0 "Due to our recent change in government, our laws and policies have been updated to reflect our new government."
- r56_canada.1.a:0 "Okay."
+ r56_canada.1.a:0 "A necessary change."
  
  r56_canada.4.t:0 "Quebec Conscription Issue"
  r56_canada.4.d:0 "We desperately need manpower in our army, navy, and air force, but the French-Canadians are not budging on the issue and do not consent to forced conscription."
@@ -898,7 +898,7 @@
  r56.news_event.1001.d:0 "For the first time in Canadian history, a reigning monarch of Canada has come to visit this country, as King George VI and Queen Elizabeth have undertaken a tour of [CAN.GetNameDef]. The royal couple arrived on the Canadian Pacific liner "Empress of Australia" escorted by two destroyers and two cruisers of the Royal Canadian Navy.\n\nTheir tour via the blue and silver royal train is planned to cover all Canadian provinces starting with Quebec City, followed by the Dominion of Newfoundland with their further travel to the Western regions of Canada such as Vancouver and Victoria. [CAN.GetLeader] will accompany the royal couple on their journey across the country. The tour will end with paying a visit to [USA.GetNameDef]."
  r56.news_event.1001.a:0 "We are honored by such a visit."
  r56.news_event.1001.b:0 "We hope the visit is a pleasant one!"
- r56.news_event.1001.c:0 "Okay."
+ r56.news_event.1001.c:0 "Not the time to be touring"
  
  r56.news_event.1002.t:0 "If Day"
  r56.news_event.1002.d:0 "Organized by the Greater Winnipeg Victory Loan organization, a simulated invasion of [CAN.GetNameDef] by [GER.GetAdjective] forces has been done today. Being the most important military exercise in Winnipeg, they managed to raise $3 Million in a day for the war effort. The event included several mock bombings, firefights, arrests of people who objected, [GER.GetAdjective] parades, and many other things. The day ended with the release of the "Prisoners", parades, and speeches. Ambassador de Morgenstierne spoke of his experiences with the [GER.GetAdjective] occupation and said the simulation of the invasion and occupation was an authentic glimpse of [GER.GetAdjective] occupation."
@@ -995,3 +995,5 @@
 
  CAN_howard_reid:0 "Howard Reid"
  CAN_james_prentice:0 "James Prentice"
+
+  CAN_frogmen_tech:0 "Combat Frogmen"

@@ -1,7 +1,5 @@
 ﻿capital = 172
 
-oob = "EUS_1936"
-
 set_research_slots = 4
 
 recruit_character = NAV_joxe_antonio_aguirre
@@ -26,7 +24,7 @@ set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-	transport_plane1 = 1	
+	
 	
 	infantry_weapons = 1
 	infantry_weapons1 = 1
@@ -35,12 +33,50 @@ set_technology = {
 	tech_engineers = 1
 	tech_mountaineers = 1
 	gw_artillery = 1
-	early_fighter = 1
-	early_bomber = 1
-	naval_bomber1 = 1
+
+	
+}
+if = {
+	limit = { has_dlc = "By Blood Alone" }
+		set_technology = {
+			iw_small_airframe = 1
+			iw_large_airframe = 1
+			engines_1 = 1
+			aa_lmg = 1
+			early_bombs = 1
+		}
+	else = {
+		set_technology = {	
+			early_fighter = 1
+			early_bomber = 1
+			naval_bomber1 = 1
+		}
+	}
 }
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
+	create_equipment_variant = {
+		name = "C Class"
+		type = submarine_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			sub_engine_upgrade = 1
+			sub_stealth_upgrade = 1
+			sub_torpedo_upgrade = 1
+		}
+	}
+	
+	create_equipment_variant = {
+		name = "Principe Alfonso Class"
+		type = light_cruiser_1
+		upgrades = {
+			ship_reliability_upgrade = 1
+			ship_engine_upgrade = 1
+			ship_gun_upgrade = 1
+			ship_anti_air_upgrade = 1
+		}
+	
+	}	
 	set_technology = {
 		early_submarine = 1
 		early_destroyer = 1
@@ -196,28 +232,7 @@ set_popularities = {
 #}
 ### Ship Variants ###
 
-create_equipment_variant = {
-	name = "C Class"
-	type = submarine_1
-	upgrades = {
-		ship_reliability_upgrade = 1
-		sub_engine_upgrade = 1
-		sub_stealth_upgrade = 1
-		sub_torpedo_upgrade = 1
-	}
-}
 
-create_equipment_variant = {
-	name = "Principe Alfonso Class"
-	type = light_cruiser_1
-	upgrades = {
-		ship_reliability_upgrade = 1
-		ship_engine_upgrade = 1
-		ship_gun_upgrade = 1
-		ship_anti_air_upgrade = 1
-	}
-
-}
 
 #Manuel de Irujo liberal alternative? silent workhorse?
 #Telesforo Monzón war industrialist

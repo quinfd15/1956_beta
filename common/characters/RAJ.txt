@@ -21,7 +21,6 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_PRASAD_DESC"
 			ideology=socialism
 			expire="1965.1.1"
 			id=-1
@@ -35,11 +34,53 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_KHAN_DESC"
 			ideology=oligarchism
 			traits={ landowner }
 			expire="1965.1.1"
 			id=-1
+		}
+	}
+	RAJ_chakravarti_rajagopalachari={
+		name="Chakravarti Rajagopalachari"
+		portraits={
+			civilian={
+				small="GFX_idea_RAJ_chakravarti_rajagopalachari" #small="GFX_idea_generic_political_advisor_arab_3"
+				large="gfx/leaders/RAJ/r56_portrait_RAJ_Chakravarti_Rajagopalachari.dds"
+			}
+		}
+		country_leader={
+			desc="POLITICS_KHAN_DESC"
+			ideology = liberalism
+			expire = "1965.1.1.1"
+			traits = { liberal_reformer }
+		}
+		advisor={
+			slot = political_advisor
+			idea_token = RAJ_chakravarti_rajagopalachari
+			allowed = {
+				original_tag = RAJ
+			}
+			traits = {
+				liberal_reformer  
+			}
+			available = {
+				has_government = democratic
+				NOT = { 
+					has_country_leader = {
+						character = RAJ_chakravarti_rajagopalachari
+						ruling_only = yes
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = "Socialist elements of the INC are not in power."
+					NOT = { 
+						has_country_leader = {
+							character = RAJ_Jawaharlal_Nehru_advisor
+							ruling_only = yes
+						}
+					}
+				}
+			}
 		}
 	}
 	RAJ_malik_tiwana={
@@ -50,7 +91,6 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_KHAN_DESC"
 			ideology=oligarchism
 			traits={  }
 			expire="1965.1.1"
@@ -64,12 +104,6 @@ characters={
 				large="gfx/leaders/RAJ/Portrait_British_Raj_Lord_Linlithgow.dds"
 			}
 		}
-		country_leader={
-			desc="POLITICS_LORD_LINLITHGOW_DESC"
-			ideology=despotism
-			expire="1952.1.1.1"
-			id=-1
-		}
 	}
 	RAJ_lord_willingdon={
 		name="Lord Willingdon"
@@ -79,10 +113,12 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_LORD_Willingdon_DESC"
 			ideology=despotism
 			expire="1965.1.1"
 			id=-1
+			traits = {
+				viceroy_harsh_legacy
+			}
 		}
 	}
 	RAJ_v._d._savarkar={
@@ -93,8 +129,7 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_VD_SAVARKAR_DESC"
-			ideology=falangism
+			ideology=clerical_fascism
 			expire="1965.1.1"
 			id=-1
 		}
@@ -107,7 +142,6 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_NARAYAN_DESC"
 			ideology=marxism
 			expire="1965.1.1"
 			id=-1
@@ -131,7 +165,7 @@ characters={
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Krishna Pillai"
+						character = RAJ_p_krishna_pillai
 						ruling_only = yes
 					}
 				}
@@ -432,8 +466,8 @@ characters={
 				OR = {
 					has_government = communism
 					has_country_leader = {
+						character = RAJ_subhas_chanda_bose
 						ruling_only = yes
-						name = "Subhas Chandra Bose"
 					}
 				}
 			}
@@ -1088,7 +1122,7 @@ characters={
 				}
 				NOT = {
 					has_country_leader = {
-						name = "Louis Mountbatten"
+						character = RAJ_louis_mountbatten
 						ruling_only = yes
 					}
 				}
@@ -1101,7 +1135,6 @@ characters={
 			}
 		}
 		country_leader={
-			desc="POLITICS_LORD_Willingdon_DESC"
 			ideology=despotism
 			expire="1965.1.1"
 			id=-1
@@ -1144,12 +1177,6 @@ characters={
 			civilian={
 				large="gfx/leaders/RAJ/r56_portrait_RAJ_Archibald_Wavell.dds"
 			}
-		}
-		country_leader={
-			desc="POLITICS_WAVELL_DESC"
-			ideology=despotism
-			expire="1965.1.1"
-			id=-1
 		}
 	}
 	RAJ_Shripad_Amrit_Dange={
@@ -1360,7 +1387,7 @@ characters={
 				has_government = democratic
 				NOT = {
 					has_country_leader = {
-						name = "Jawaharlal Nehru"
+						character = RAJ_Jawaharlal_Nehru_advisor
 						ruling_only = yes
 					}
 					has_idea = RAJ_Indian_National_Congress_Reigning
@@ -1377,6 +1404,17 @@ characters={
 		portraits={
 			army={
 				small="GFX_idea_RAJ_Jawaharlal_Nehru_advisor"
+			}
+		}
+	}
+
+	#BBA characters
+	RAJ_orde_wingate = {
+		name=RAJ_orde_wingate
+		portraits={
+			army={
+				large="GFX_RAJ_orde_wingate"
+				small=GFX_portrait_RAJ_orde_wingate_small
 			}
 		}
 	}

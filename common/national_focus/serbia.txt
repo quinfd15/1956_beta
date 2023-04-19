@@ -505,7 +505,11 @@ focus_tree = {
                 bonus = 1.0
                 uses = 2
                 category = r56_special_forces_training_tech 
-            }			
+            }	
+			hidden_effect = {
+				set_country_flag = cite_an_airborne_unit_flag
+			}
+			unlock_decision_tooltip = { decision = cite_an_airborne_unit show_effect_tooltip = yes }				
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -918,13 +922,8 @@ focus_tree = {
 				name = fighter_bonus
 				bonus = 1
 				uses = 1
-				technology = early_fighter
-				technology = fighter1
-				technology = fighter2
-				technology = fighter3
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = light_fighter
+				category = cat_heavy_fighter
 			}
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
@@ -949,9 +948,7 @@ focus_tree = {
 				name = bomber_bonus
 				bonus = 1
 				uses = 1
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
+				category = heavy_air
 				category = tactical_bomber
 			}
 		}
@@ -2552,7 +2549,7 @@ focus_tree = {
 			}
 			add_state_claim = 102
 			add_state_claim = 956
-			add_state_claim = 957
+			add_state_claim = 853
 			if = {
 				limit = {
 					SLV = {
@@ -2938,7 +2935,7 @@ focus_tree = {
 			}
 			add_state_core = 102
 			add_state_core = 956
-			add_state_core = 957
+			add_state_core = 853
 			add_state_core = 109
 			add_state_core = 959
 			add_state_core = 952
@@ -3063,8 +3060,8 @@ focus_tree = {
 		}
 
 		completion_reward = {
+			add_timed_idea = { idea = democratic_influence days = 1295 }
 			add_ideas = liberty_ethos_focus
-			add_ideas = democratic_influence
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}

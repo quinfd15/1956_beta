@@ -6,6 +6,13 @@ if = {
 	limit = { has_dlc = "By Blood Alone" }
 		set_oob = "SWI_1936_BBA"
 		set_air_oob = "SWI_1936_air_bba"
+		set_technology = {
+			early_bombs = 1
+			aa_lmg = 1
+			engines_1 = 1
+			iw_small_airframe = 1
+			iw_large_airframe = 1
+		}
 	else = {
 		set_oob = "SWI_1936"
 		set_air_oob = "SWI_1936_air_legacy"
@@ -26,7 +33,7 @@ set_technology = {
 	
 	#Extended Technologies
 	camo = 1
-	transport_plane1 = 1	
+		
 	etax_doctrine = 1
 	winter_clothes_gw = 1
 	
@@ -94,7 +101,11 @@ set_politics = {
 	elections_allowed = yes
 }
 
+give_guarantee = LIE # We're like best friends, you know?
+
 set_variable = { SWI_manpower_pool = 250000 }
+
+country_event = { id = BBA_switzerland.1 days = 15 random_days = 20 }	#starting event for the guilding principles, bop setup - was 35 day focus, turned into random one
 
 #removed some vanilla ones since they were convenient to turn into similar r56 entries
 recruit_character = SWI_federal_council			#adjusted and added BBA instance
@@ -145,8 +156,6 @@ recruit_character = SWI_oscar_frey				#political, figurehead
 #recruit_character = SWI_rene_von_graffenried	#navy chief, air defense
 #recruit_character = SWI_ernst_laur				#army chief
 #recruit_character = SWI_j_d_de_montenach		#air chief, safety
-#recruit_character = SWI_henri_guisan			#commander not in r56
-
 
 #Vanilla characters without any checks applied
 recruit_character = SWI_max_leo_keller
@@ -192,6 +201,8 @@ if = { #########   By Blood Alone Stuff
 	recruit_character = SWI_clara_thalmann
 	recruit_character = SWI_christian_gasser
 	recruit_character = SWI_lucien_tronchet
+	recruit_character = SWI_henri_guisan			#commander not in r56
+	
 	
 	####### Militarry Readiness Setup
 

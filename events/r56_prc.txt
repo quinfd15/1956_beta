@@ -232,17 +232,17 @@ country_event = {
 				PRC = {
 					is_ai = yes
 				}
-				date > 1953.3.1
+				date > 1952.3.1
 			}
 			AND = {
-				date > 1945.10.15
+				date > 1944.10.15
 				has_war = no
 				PRC = {
 					is_ai = no
 				}
 			}
 			AND = {
-				date > 1948.5.1
+				date > 1947.5.1
 				has_war = yes
 				PRC = {
 					is_ai = no
@@ -252,9 +252,13 @@ country_event = {
 		original_tag = SOV
 		NOT = { has_country_flag = counter_purge }
 		has_government = communism
+		has_country_leader = {				#making sure Stalin is dying!
+			character = SOV_iosif_stalin
+			ruling_only = yes
+		}
 	}
 
-	mean_time_to_happen = { days = 120 }
+	mean_time_to_happen = { days = 365 }	#was 120, why though?!
 
 	fire_only_once = yes
 
@@ -1031,43 +1035,6 @@ country_event = {
 			promote_leader = yes
 		}
 		set_country_flag = lin_biao
-	}
-}
-#peace with xsm?
-country_event = {
-	id = prc.24
-	title = prc.24.t
-	desc = prc.24.d
-	picture = GFX_report_event_dead_soldiers
-
-	trigger = {
-		has_global_flag = west_expedition_started
-		NOT = {
-			has_global_flag = no_more_failed_event
-		}
-		tag = PRC
-		has_offensive_war_with = XSM
-		NOT = {
-			CHI = {
-				has_completed_focus = KMT_north_west_insurgence
-			}
-		}
-		XSM = {
-			surrender_progress < 0.25
-		}
-	}
-
-	mean_time_to_happen = { days = 120 }
-
-	option = {
-		ai_chance = { factor = 50 }
-		name = prc.24.a
-		white_peace = XSM
-	}
-
-	option = {
-		ai_chance = { factor = 50 }
-		name = prc.24.b
 	}
 }
 
@@ -1913,7 +1880,6 @@ country_event = {
 			}
 			is_core_of = ROOT
 		}
-		has_idea = PRC_create_partisan
 		tag = PRC
 	}
 
@@ -1947,55 +1913,6 @@ country_event = {
 			}
 		}
 		country_event = { id = prc.52 days = 30 }
-	}
-
-	option = {
-	}
-}
-
-#set flag no more fail west expedition
-country_event = {
-	id = prc.53
-	hidden = yes
-
-	trigger = {
-		has_global_flag = west_expedition_started
-		OR = {
-			PRC = {
-				NOT = {
-					has_war_with = XSM
-				}
-			}
-			AND = {
-				PRC = {
-					is_in_faction = yes
-				}
-				any_country = {
-					is_in_faction_with = PRC
-					has_war_with = XSM
-					has_war_together_with = PRC
-				}
-			}
-			AND = {
-				XSM = {
-					is_in_faction = yes
-				}
-				any_country = {
-					is_in_faction_with = XSM
-					has_war_with = PRC
-					has_war_together_with = XSM
-				}
-			}
-		}
-
-		original_tag = PRC
-
-	}
-
-	mean_time_to_happen = { days = 120 }
-
-	immediate = {
-		set_global_flag = no_more_failed_event
 	}
 
 	option = {
@@ -2685,32 +2602,32 @@ country_event = {
 	}
 }
 
-#xu lanzhou
-country_event = {
-	id = prc.70
-	title = prc.70.t
-	desc = prc.70.d
-
-	picture = GFX_report_event_chinese_officers
-
-	is_triggered_only = yes
-
-	fire_only_once = yes
-
-	option = {
-		name = prc.70.a
-
-		add_stability = 0.05
-		add_political_power = 150
-	}
-
-	option = {
-		name = prc.70.b
-		set_country_flag = PRC_enable_xlz
-		custom_effect_tooltip = available_military_high_command
-		show_ideas_tooltip = PRC_xu_lanzhou
-	}
-}
+#xu lanzhou, no( working, already retired etc.
+#country_event = {
+#	id = prc.70
+#	title = prc.70.t
+#	desc = prc.70.d
+#
+#	picture = GFX_report_event_chinese_officers
+#
+#	is_triggered_only = yes
+#
+#	fire_only_once = yes
+#
+#	option = {
+#		name = prc.70.a
+#
+#		add_stability = 0.05
+#		add_political_power = 150
+#	}
+#
+#	option = {
+#		name = prc.70.b
+#		set_country_flag = PRC_enable_xlz
+#		custom_effect_tooltip = available_military_high_command
+#		show_ideas_tooltip = PRC_xu_lanzhou
+#	}
+#}
 
 #nwndg seek alliance against jap
 country_event = {
@@ -4314,27 +4231,6 @@ country_event = {
 	}
 }
 
-#prc burn bridge
-country_event = {
-	id = prc.107
-	hidden = yes
-
-	trigger = {
-		NOT = {
-			has_idea = PRC_revanchism
-		}
-		has_idea = PRC_anti_jap_sentiment
-		has_war_with = JAP
-	}
-
-	mean_time_to_happen = { days = 2 }
-
-	immediate = {
-		add_ideas = PRC_revanchism
-	}
-	option = {}
-}
-
 #rescue zxl?
 country_event = {
 	id = prc.108
@@ -4874,7 +4770,7 @@ country_event = {
 country_event = {
 	id = prc.123
 	title = prc.123.t
-	desc = prc.123.t
+	desc = prc.123.d
 
 	picture = GFX_report_event_generic_sign_treaty2
 

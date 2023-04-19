@@ -64,7 +64,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = available_designer
-			show_ideas_tooltip = AUS_strabag_construction
+			show_ideas_tooltip = AUS_strabag
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
 	}
@@ -452,8 +452,21 @@ focus_tree = {
 			controls_state = 152
 			controls_state = 153
 		}
-		
-		
+
+		bypass = {
+			4 = {
+				infrastructure > 4
+				is_controlled_by = ROOT
+			}
+			152 = {
+				infrastructure > 4
+				is_controlled_by = ROOT
+			}
+			153 = {
+				infrastructure > 4
+				is_controlled_by = ROOT
+			}
+		}
 		
 		completion_reward = {
 			4 = {
@@ -498,10 +511,7 @@ focus_tree = {
 			controls_state = 154
 			controls_state = 913
 		}
-		
-		
-		
-		
+			
 		
 		completion_reward = {
 			155 = {
@@ -531,6 +541,12 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
+			}
+			build_railway = {
+				level = 4
+				build_only_on_allied = yes
+				start_province = 11666
+				target_province = 9660
 			}
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY }
@@ -834,7 +850,24 @@ focus_tree = {
 		}
 		
 		
-		
+		bypass = {
+			82 = {
+				infrastructure > 4
+				is_controlled_by = ROOT
+			}
+			83 = {
+				infrastructure > 4
+				is_controlled_by = ROOT
+			}
+			76 = {
+				infrastructure > 4
+				is_controlled_by = ROOT
+			}
+			84 = {
+				infrastructure > 4
+				is_controlled_by = ROOT
+			}
+		}
 		
 		
 		completion_reward = {
@@ -1363,7 +1396,7 @@ focus_tree = {
 		
 		available = {
 			controls_state = 956
-			controls_state = 957
+			controls_state = 853
 			controls_state = 102
 			controls_state = 958
 			controls_state = 103
@@ -1386,7 +1419,7 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			957 = {
+			853 = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
@@ -2810,7 +2843,7 @@ focus_tree = {
 						}
 					}
 				}
-				957 = {
+				853 = {
 					if = {
 						limit = { is_controlled_by = AUS }
 						add_building_construction = {
@@ -3502,7 +3535,22 @@ focus_tree = {
 		}
 		
 		available = {
-			NOT = { has_war_with = GER }
+			GER = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			NOT = {	#none exist? bypass
+				OR = {
+					country_exists = GER
+					country_exists = ENG
+					country_exists = SOV
+				}
+			}
 		}
 		
 		completion_reward = {
@@ -3513,9 +3561,38 @@ focus_tree = {
 				category = armor
 			}
 			army_experience = 25
-			add_timed_idea = {
-				idea = fascist_influence
-				days = 100
+			if = {
+				limit = {
+					GER = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					GER = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 100
+				}
 			}
 			add_ideas = AUS_german_armour_tech
 		}
@@ -3536,7 +3613,22 @@ focus_tree = {
 		}
 		
 		available = {
-			NOT = { has_war_with = ENG }
+			ENG = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			NOT = {	#none exist? bypass
+				OR = {
+					country_exists = GER
+					country_exists = ENG
+					country_exists = SOV
+				}
+			}
 		}
 
 		completion_reward = {
@@ -3547,9 +3639,38 @@ focus_tree = {
 				category = armor
 			}
 			army_experience = 25
-			add_timed_idea = {
-				idea = democratic_influence
-				days = 100
+			if = {
+				limit = {
+					ENG = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					ENG = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 100
+				}
 			}
 			add_ideas = AUS_british_armour_tech
 		}
@@ -3570,7 +3691,22 @@ focus_tree = {
 		}
 		
 		available = {
-			NOT = { has_war_with = SOV }
+			SOV = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+
+		bypass = {
+			NOT = {	#none exist? bypass
+				OR = {
+					country_exists = GER
+					country_exists = ENG
+					country_exists = SOV
+				}
+			}
 		}
 		
 		completion_reward = {
@@ -3581,9 +3717,38 @@ focus_tree = {
 				category = armor
 			}
 			army_experience = 25
-			add_timed_idea = {
-				idea = communist_influence
-				days = 100
+			if = {
+				limit = {
+					SOV = {
+						has_government = fascism
+					}
+				}
+				add_timed_idea = {
+					idea = fascist_influence
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_government = communism
+					}
+				}
+				add_timed_idea = {
+					idea = communist_influence
+					days = 100
+				}
+			}
+			if = {
+				limit = {
+					SOV = {
+						has_government = democratic
+					}
+				}
+				add_timed_idea = {
+					idea = democratic_influence
+					days = 100
+				}
 			}
 			add_ideas = AUS_soviet_armour_tech
 		}
@@ -3660,7 +3825,11 @@ focus_tree = {
 				bonus = 1.0
 				uses = 1
 				category = r56_special_forces_training_tech 
-			}			
+			}		
+            hidden_effect = {
+                set_country_flag = cite_an_airborne_unit_flag
+            }
+            unlock_decision_tooltip = { decision = cite_an_airborne_unit show_effect_tooltip = yes }					
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}
@@ -3708,6 +3877,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_popularity = { ideology = neutrality popularity = 0.2 }
+			mark_focus_tree_layout_dirty = yes
 		}
 	}
 	
@@ -3722,7 +3892,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 5
 		}
-		
+		allow_branch = {
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = obsolete_focus_branches_visibility
+						option = HIDE
+					}
+				}
+				NOT = {
+					has_completed_focus = AUS_repeal_the_abolition_of_nobility
+				}
+			}
+		}
 		completion_reward = {
 			add_popularity = { ideology = fascism popularity = 0.2 }
 		}
@@ -3751,8 +3933,11 @@ focus_tree = {
 		id = AUS_propose_the_alps_defence_pact
 		icon = GFX_goal_generic_befriend_italy
 		prerequisite = { focus = AUS_repeal_the_abolition_of_nobility }
-		x = 44
-		y = 2
+		x = -1
+		y = 1
+		relative_position_id = AUS_repeal_the_abolition_of_nobility
+
+		mutually_exclusive = { focus = AUS_bolster_nations_defences }
 		cost = 5
 		ai_will_do = {
 			factor = 4
@@ -3761,23 +3946,131 @@ focus_tree = {
 		available_if_capitulated = yes
 		
 		available = {
-			NOT = { has_war_with = ITA }
 			OR = {
 				has_government = fascism
 				has_government = neutrality
 			}
 			ITA = { 
+				#has_completed_focus = ITA_foreign_affairs		#fascist or monarchist branch - disabled, AI takes way too long to make a choice
 				NOT = {
+					has_war_with = ROOT
 					is_in_faction_with = GER
+					has_completed_focus = ITA_unite_the_opposition
+					has_completed_focus = ITA_defy_the_duce
+					has_completed_focus = ITA_pact_of_steel
+					AND = {	#youre allowed the buffs at least if youre already in their faction
+						has_completed_focus = ITA_militarize_the_rome_protocols
+						NOT = {
+							is_in_faction_with = ROOT
+						}
+					}
 				}
 			}
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = AUS_propose_the_alps_defence_pact_tt
 			ITA = { country_event = { id = austria.5000 days = 1 } }
+			# IF THEY ACCEPT
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ITA = {
+					add_opinion_modifier = { target = AUS modifier = alps_defence_member }
+					complete_national_focus = ITA_guarantee_austrian_independence		#can intervene in Anschluss from now on
+				}
+				AUS = {
+					add_opinion_modifier = { target = ITA modifier = alps_defence_member }
+					give_guarantee = ITA
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 300
+						producer = ITA
+					}
+				}
+			}
+			# IF THEY REFUSE
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				add_political_power = 120
+				add_war_support = 0.1
+			}
+			custom_effect_tooltip = backslashn
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = AUS_alfred_jansa
+		}
+	}
+
+	
+	focus = {
+		id = AUS_bolster_nations_defences
+		icon = GFX_goal_our_fate_is_our_own
+		prerequisite = { focus = AUS_repeal_the_abolition_of_nobility }
+		x = 1
+		y = 1
+		relative_position_id = AUS_repeal_the_abolition_of_nobility
+
+		mutually_exclusive = { focus = AUS_propose_the_alps_defence_pact }
+		cost = 7.2
+		ai_will_do = {
+			factor = 4
+		}
+		
+		available_if_capitulated = yes
+		
+		available = {
+			OR = {
+				has_government = fascism
+				has_government = neutrality
+			}
+		}
+		select_effect = {
+			add_timed_idea = {
+				idea = RAJ_Running_Fort_Construction
+				days = 50
+			}
+		}
+
+		completion_reward = {
+			custom_effect_tooltip = SOV_focus_select_effect_tt
+			effect_tooltip = {
+				add_timed_idea = {
+					idea = RAJ_Running_Fort_Construction
+					days = 50
+				}
+			}
+			custom_effect_tooltip = backslashn
+			add_country_leader_trait = anti_german_personality
+			GER = { 
+				custom_effect_tooltip = SWI_add_forts_bordering
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = large_decrease
+				}
+				add_ai_strategy = {
+					type = antagonize
+					id = ROOT
+					value = 100
+				}
+			}
+			hidden_effect = {
+				every_controlled_state = {
+					limit = {
+						any_neighbor_state = {
+							controller = {
+								original_tag = GER
+							}
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 2
+						instant_build = yes
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+					}
+				}
+			}
 		}
 	}
 	
@@ -3806,20 +4099,60 @@ focus_tree = {
 		}
 		
 		bypass = {
-			OR = {
-				NOT = { country_exists = GER }
-				GER = {
+			GER = {
+				OR = {
+					exists = no
 					NOT = {
 						has_government = fascism
 					}
 				}
 			}
-			
 		}
 		
 		completion_reward = {
-			custom_effect_tooltip = AUS_the_austrian_compromise_tt
 			GER = { country_event = { id = austria.1111 days = 1 } }
+			# IF THEY ACCEPT
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				GER = {
+					if = {
+						limit = { 
+							NOT = { has_dlc = "Together for Victory" }
+							NOT = { has_dlc = "Death or Dishonor" }
+						}
+						puppet = ROOT
+					}
+					if = {
+						limit = { 
+							has_dlc = "Together for Victory"
+							NOT = { has_dlc = "Death or Dishonor" } 
+						}
+						set_autonomy = { target = ROOT autonomy_state = autonomy_dominion freedom_level = 0.75 }
+					}
+					if = {
+						limit = {
+							has_dlc = "Death or Dishonor" 
+						}
+						set_autonomy = { target = ROOT autonomy_state = autonomy_satellite freedom_level = 0.75 }
+					}
+				}
+				if = {
+					limit = {
+						has_idea = AUS_austrian_neutrality
+					}
+					remove_ideas = AUS_austrian_neutrality
+				}
+				add_ideas = AUS_nationalist_sentiment
+			}
+			# IF THEY REFUSE
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				effect_tooltip = {
+					ROOT = {
+						add_ideas = AUS_austrian_resistance
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -3898,6 +4231,29 @@ focus_tree = {
 		
 		completion_reward = {
 			ITA = { country_event = { id = austria.5000 days = 1 } }
+			# IF THEY ACCEPT
+			custom_effect_tooltip = if_they_accept_tt
+			effect_tooltip = {
+				ITA = {
+					add_opinion_modifier = { target = AUS modifier = alps_defence_member }
+				}
+				AUS = {
+					add_opinion_modifier = { target = ITA modifier = alps_defence_member }
+					give_guarantee = ITA
+					add_equipment_to_stockpile = {
+						type = light_tank_chassis
+						amount = 300
+						producer = ITA
+					}
+				}
+			}
+			# IF THEY REFUSE
+			custom_effect_tooltip = if_they_refuse_tt
+			effect_tooltip = {
+				add_political_power = 120
+				add_war_support = 0.1
+			}
+			custom_effect_tooltip = backslashn
 			custom_effect_tooltip = available_chief_of_army
 			show_ideas_tooltip = AUS_alfred_jansa
 		}
@@ -3913,9 +4269,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 5
-		}
-		available = {
-
 		}
 		
 		available_if_capitulated = yes
@@ -4019,9 +4372,10 @@ focus_tree = {
 	focus = {
 		id = AUS_repeal_ban_on_political_parties
 		icon = GFX_goal_generic_election_chaos
-		prerequisite = { focus = AUS_propose_the_alps_defence_pact }
-		x = 38
-		y = 3
+		prerequisite = { focus = AUS_propose_the_alps_defence_pact focus = AUS_bolster_nations_defences }
+		x = 1
+		y = 1
+		relative_position_id = AUS_propose_the_alps_defence_pact
 		cost = 10
 		ai_will_do = {
 			factor = 0
@@ -4038,7 +4392,7 @@ focus_tree = {
 	
 	focus = {
 		id = AUS_liechtenstein_treaty
-		icon = GFX_goal_AUS_liechtenstein_treaty
+		icon = GFX_goal_LIE_swiss_cooperation
 		prerequisite = { focus = AUS_repeal_ban_on_political_parties }
 		x = 40
 		y = 4 
@@ -4051,23 +4405,60 @@ focus_tree = {
 		
 		available = {
 			GER = {
-				NOT = {
-					has_government = ROOT
+				NOT = {	#description pro-Kaiser (this is an imperialist path), and Switzerland probably shouldnt sign a defense pact against democratic Germany
+					OR = { #unnecessary but makes the tooltip easier to read
+						has_government = neutrality
+						has_government = democratic
+					}
 				}
 			}
-			SWI = {
-				exists = yes
-				is_subject = no
-				NOT = {
-					has_government = ROOT
+			OR = {
+				SWI = {
+					exists = yes
+					is_subject = no
+					NOT = {
+						has_government = fascism #was ROOT which makes no sense, description is specifically anti-fascist, other check already checks German ideology
+					}
+				}
+				LIE = {
+					exists = yes
+					is_subject = no
+					NOT = {
+						has_government = fascism
+					}
 				}
 			}
 			threat > 0.15
 		}
 		
 		completion_reward = {
-			SWI = {
-				country_event = { id = austria.5006 days = 1 }
+			if = {
+				limit = {
+					SWI = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_government = fascism #was ROOT which makes no sense, description is specifically anti-fascist, other check already checks German ideology
+						}
+					}
+				}
+				SWI = {
+					country_event = { id = austria.5006 days = 1 }
+				}
+			}
+			if = {
+				limit = {
+					LIE = {
+						exists = yes
+						is_subject = no
+						NOT = {
+							has_government = fascism #was ROOT which makes no sense, description is specifically anti-fascist, other check already checks German ideology
+						}
+					}
+				}
+				LIE = {
+					country_event = { id = austria.5006 days = 1 }
+				}
 			}
 		}
 	}
@@ -4233,7 +4624,7 @@ focus_tree = {
 				start_civil_war = { 
 					ideology = neutrality
 					size = 0.5
-					states = { 39 912 160 159 161 158 162 }
+					states = { 39 912 160 159 161 158 162 850 }	#Trentino added so there is no gap
 					capital = 159
 				}
 			}
@@ -4426,7 +4817,7 @@ focus_tree = {
 		completion_reward = {
 			HUN = {
 				if = {
-					limit = { has_country_leader = { name = "Miklós Horthy" ruling_only = yes } }
+					limit = { has_country_leader = { character = HUN_miklos_horthy ruling_only = yes } }
 					kill_country_leader = yes
 					set_global_flag = horthy_died
 				}
@@ -5032,18 +5423,18 @@ focus_tree = {
 		bypass = {
 			owns_state = 102
 			owns_state = 956
-			owns_state = 957
+			owns_state = 853
 		}
 		completion_reward = {
 			if = {
 				limit = {
 					NOT = {
-						owns_state = 957
+						owns_state = 853
 					}
 				}
 				random_country = {
 					limit = {
-						owns_state = 957
+						owns_state = 853
 					}
 					country_event = { id = austria.5014 days = 1 }
 				}				
@@ -5221,8 +5612,8 @@ focus_tree = {
 	}
 	
 	focus = {
-		id = AUS_supress_serbian_nationalists
-		icon = GFX_goal_AUS_supress_serbian_nationalists
+		id = AUS_suppress_serbian_nationalists
+		icon = GFX_goal_AUS_suppress_serbian_nationalists
 		prerequisite = { focus = AUS_war_for_the_balkans }
 		mutually_exclusive = { focus = AUS_establish_autonomous_serbian_puppet }
 		relative_position_id = AUS_war_for_the_balkans
@@ -5259,7 +5650,7 @@ focus_tree = {
 		id = AUS_establish_autonomous_serbian_puppet
 		icon = GFX_goal_AUS_establish_autonomous_serbian_puppet
 		prerequisite = { focus = AUS_war_for_the_balkans }
-		mutually_exclusive = { focus = AUS_supress_serbian_nationalists }
+		mutually_exclusive = { focus = AUS_suppress_serbian_nationalists }
 		relative_position_id = AUS_war_for_the_balkans
 		x = 1
 		y = 2
@@ -5739,9 +6130,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 10
 		}
-		available = {
-			is_subject = no
-		}
 		
 		available_if_capitulated = yes
 		
@@ -5755,7 +6143,7 @@ focus_tree = {
 		id = AUS_establish_the_frontmilliz
 		icon = GFX_goal_generic_army_mobilization
 		prerequisite = { focus = AUS_past_glories }
-		x = -5
+		x = -4
 		y = 1
 		relative_position_id = AUS_past_glories
 		cost = 10
@@ -5942,38 +6330,41 @@ focus_tree = {
 		}
 		
 		available = {
-			NOT = { has_war_with = YUG }
+			any_other_country = {
+				controls_state = 102
+				NOT = { has_war_with = ROOT }
+			}
 			controls_state = 155
 			controls_state = 4
 			controls_state = 152
-			YUG = {
-				controls_state = 102
-				controls_state = 956
-				controls_state = 957
+			102 = {
+				controller = {
+					OR = {
+						original_tag = YUG
+						is_subject_of = YUG
+					}
+				}
 			}
-			AUS = {
-				has_army_manpower = { size > 174999 }
-			}
+			has_army_manpower = { size > 174999 }
 		}
 		
 		bypass = {
 			OR = {
 				controls_state = 102
 				controls_state = 956
-				controls_state = 957
-				NOT = { country_exists = YUG }
-				YUG = { is_in_faction_with = AUS }
+				controls_state = 853
+				any_other_country = {
+					controls_state = 102
+					is_in_faction_with = ROOT
+				}
 			}
 		}
-		
-		
-		
 		
 
 		completion_reward = {
 			random_country = {
 				limit = {
-					owns_state = 102
+					controls_state = 102
 				}
 				custom_effect_tooltip = AUS_pressure_for_slovenia_tt
 				country_event = { id = austria.1125 days = 1 }
@@ -5998,7 +6389,7 @@ focus_tree = {
 			controls_state = 913
 			controls_state = 102
 			controls_state = 956
-			controls_state = 957
+			controls_state = 853
 			AUS = {
 				has_army_manpower = { size > 199999 }
 			}
@@ -6038,13 +6429,53 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = AUS_restore_the_liechtenstein_potectorate
+		icon = GFX_goal_generic_attack_liechtenstein
+		prerequisite = { focus = AUS_past_glories }
+		relative_position_id = AUS_past_glories
+		x = 2
+		y = 1
+		cost = 5
+		ai_will_do = {
+			factor = 0.5
+		}
+		
+		available = {
+			LIE = {
+				NOT = { is_in_faction_with = AUS is_subject_of = ROOT }
+			}
+		}
+		
+		bypass = {
+			OR = {
+				has_war_with = LIE
+				NOT = { country_exists = LIE }
+				is_in_faction_with = AUS 
+				is_subject_of = ROOT
+			}
+		}
+		
+		
+		
+		
+		
+		completion_reward = {
+			add_state_claim = 997
+			create_wargoal = { type = puppet_wargoal_focus target = LIE
+				expire = 0}
+		}
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+	}
 	
 	focus = {
 		id = AUS_the_way_to_france
 		icon = GFX_focus_attack_switzerland
-		prerequisite = { focus = AUS_past_glories }
-		x = 51
-		y = 4
+		prerequisite = { focus = AUS_restore_the_liechtenstein_potectorate }
+		relative_position_id = AUS_restore_the_liechtenstein_potectorate
+		x = 0
+		y = 1
 		cost = 5
 		ai_will_do = {
 			factor = 0.5
@@ -6083,9 +6514,10 @@ focus_tree = {
 		id = AUS_our_oldest_enemy
 		icon = GFX_focus_attack_france
 		prerequisite = { focus = AUS_the_way_to_france }
-		x = 51
-		y = 5
-		cost = 5
+		relative_position_id = AUS_the_way_to_france
+		x = 0
+		y = 1
+		cost = 10
 		ai_will_do = {
 			factor = 0.1
 		}
@@ -6161,7 +6593,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_deal
 		prerequisite = { focus = AUS_request_slovakia }
 		x = 53
-		y = 6
+		y = 5
 		cost = 5
 		ai_will_do = {
 			factor = 4
@@ -6327,7 +6759,7 @@ focus_tree = {
 		
 		available = {
 			is_subject = no
-			controls_state = 957
+			controls_state = 853
 			controls_state = 102
 			controls_state = 958
 			is_in_faction_with = GER
@@ -6419,25 +6851,11 @@ focus_tree = {
 			create_faction = austria_fascist_faction
 			if = {
 				limit = {
-					has_idea = AUS_german_overseers
+					has_idea = AUS_nationalist_sentiment
 				}
-				remove_ideas = AUS_german_overseers
+				remove_ideas = AUS_nationalist_sentiment
 			}
 			add_research_slot = 1
-			every_state = {
-				limit = {
-					is_core_of = GER
-					NOT = { is_controlled_by = ROOT }
-				}
-				add_core_of = ROOT
-			}
-			every_state = {
-				limit = {
-					is_claimed_by = GER
-					NOT = { is_controlled_by = ROOT }
-				}
-				add_claim_by = ROOT
-			}
 		}
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_RESEARCH FOCUS_FILTER_POLITICAL }
 	}
@@ -6614,9 +7032,6 @@ focus_tree = {
 		}
 		
 		
-		
-		
-		
 		completion_reward = {
 			create_wargoal = { type = annex_everything target = TUR 
 				expire = 0}
@@ -6683,6 +7098,9 @@ focus_tree = {
 		}
 		
 		available = {
+			ROOT = { #just discovered this focus can be done while dead? 
+				exists = yes
+			}
 			has_army_manpower = { size > 449999 }
 			is_in_faction = yes
 			is_faction_leader = yes
@@ -6701,12 +7119,12 @@ focus_tree = {
 		}
 		
 		bypass = {
-			NOT = { country_exists = SOV }
+			OR = {
+				NOT = { country_exists = SOV }
+				country_exists = UKR
+			}
+	
 		}
-		
-		
-		
-		
 		
 		completion_reward = {
 			custom_effect_tooltip = AUS_start_the_uprising_tt
@@ -6800,10 +7218,10 @@ focus_tree = {
 		completion_reward = {
 			if = {
 				limit = {
-					has_idea = AUS_german_overseers
+					has_idea = AUS_nationalist_sentiment
 				}
 				swap_ideas = {
-					remove_idea = AUS_german_overseers
+					remove_idea = AUS_nationalist_sentiment
 					add_idea = AUS_germanic_brotherhood
 				}
 				GER = {
@@ -6909,7 +7327,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_start_the_uprising }
 		mutually_exclusive = { focus = AUS_the_kiev_annex }
 		x = 47
-		y = 12
+		y = 11
 		cost = 10
 		ai_will_do = {
 			factor = 5
@@ -6936,7 +7354,7 @@ focus_tree = {
 		prerequisite = { focus = AUS_start_the_uprising }
 		mutually_exclusive = { focus = AUS_strengthen_ties_with_ukraine }
 		x = 49
-		y = 12
+		y = 11
 		cost = 10
 		ai_will_do = {
 			factor = 2
@@ -6980,9 +7398,6 @@ focus_tree = {
 		cost = 10
 		ai_will_do = {
 			factor = 1
-		}
-		available = {
-			is_subject = no
 		}
 		
 		available_if_capitulated = yes
@@ -7044,8 +7459,8 @@ focus_tree = {
 		
 		available = {
 			OR = {
-				GER = { NOT = { has_government = fascism } }
-				GER = { is_in_faction = no }
+				is_subject_of = GER
+				is_in_faction = no
 				AND = {
 					is_in_faction_with = GER
 					GER = {
@@ -7140,9 +7555,9 @@ focus_tree = {
 				}
 				if = {
 					limit = {
-						has_idea = AUS_german_overseers
+						has_idea = AUS_nationalist_sentiment
 					}
-					remove_ideas = AUS_german_overseers
+					remove_ideas = AUS_nationalist_sentiment
 				}
 			}
 		}
@@ -7151,7 +7566,7 @@ focus_tree = {
 	
 	focus = {
 		id = AUS_free_the_balkans
-		icon = GFX_goal_generic_occupy_states_ongoing_war
+		icon = GFX_focus_BUL_free_balkan_states
 		prerequisite = { focus = AUS_break_the_compromise }
 		x = 63
 		y = 6
@@ -7427,13 +7842,8 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
-		available = {
-			is_subject = no
-		}
 		
 		available_if_capitulated = yes
-		
-		
 		
 		completion_reward = {
 			add_ideas = AUS_raterepubliks
@@ -7748,13 +8158,22 @@ focus_tree = {
 				ideology = communism
 				popularity = 0.05
 			}
-			152 = {
+			random_owned_controlled_state = {
+				prioritize = { 4 }
 				add_building_construction = {
 					type = infrastructure
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
+			random_owned_controlled_state = {
+				prioritize = { 152 }
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}			
 		}
 		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STABILITY }
 	}
@@ -7812,11 +8231,13 @@ focus_tree = {
 				leave_faction = yes
 				if = {
 					limit = {
-						has_idea = AUS_german_overseers
+						has_idea = AUS_nationalist_sentiment
 					}
-					remove_ideas = AUS_german_overseers
+					remove_ideas = AUS_nationalist_sentiment
 				}
-				kill_country_leader = yes
+				
+
+				kill_ideology_leader = fascism
 				retire_ideology_leader = neutrality
 				create_country_leader = {
 					name = "Ernst Rüdiger Starhemberg"
@@ -7840,7 +8261,23 @@ focus_tree = {
 					}
 				}
 			}
-
+			if = {
+				limit = {
+					GER = {
+						OR = {
+							has_government = neutrality
+							has_government = fascism
+						}
+						
+					}
+				}
+				GER = {
+					add_opinion_modifier = {
+						target = AUS
+						modifier = large_decrease
+					}
+				}
+			}
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -7926,6 +8363,10 @@ focus_tree = {
 			factor = 0
 		}
 		
+		available = {
+			has_completed_focus = AUS_a_new_rote_garde
+		}
+
 		available_if_capitulated = yes
 		
 		
@@ -7951,7 +8392,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 0
 		}
-		
+		available = {
+			has_completed_focus = AUS_a_new_rote_garde
+		}
 		available_if_capitulated = yes
 		
 		
@@ -8014,23 +8457,46 @@ focus_tree = {
 		mutually_exclusive = { focus = AUS_assist_the_allies }
 		x = -2
 		y = 2
-		cost = 10
+		cost = 5
 		ai_will_do = {
 			factor = 0
 		}
 		
 		available_if_capitulated = yes
 		
+		available = {
+
+		}
 		
-		
-		completion_reward = {
-			SOV = {
-				country_event = {
-					id = generic.2
-					days = 1
+        completion_reward = {
+            if = {
+				limit = {
+					SOV = {
+						has_government = communism
+						is_faction_leader = yes
+						has_capitulated = no
+						has_civil_war = no
+						NOT = { has_war_with = ROOT }
+					}
+					NOT = {
+						any_other_country = {
+							is_in_faction_with = SOV
+							has_war_with = ROOT
+						}
+					}
+				}
+				SOV = {
+					country_event = { id = generic.2 }
 				}
 			}
-		}
+            else = {
+                get_best_alliance_match_communism_effect = yes
+				var:best_leader = {
+					country_event = generic.2
+				}
+            }
+
+        }
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
 

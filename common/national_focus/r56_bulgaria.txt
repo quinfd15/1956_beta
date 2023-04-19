@@ -612,7 +612,7 @@ focus_tree = {
 					NOT = {
 						has_idea = BUL_ivan_krystev_marinov
 					}
-					has_country_flag = vladimir_zaimov_killed
+					#has_country_flag = vladimir_zaimov_killed		#unused flag - Fantom
 				}
 				add_ideas = BUL_ivan_krystev_marinov
 			}
@@ -2268,7 +2268,7 @@ focus = {
 				has_full_control_of_state = 184
 				has_full_control_of_state = 731
 			}
-			has_country_leader = { ruling_only = yes name = "Boris III" }
+			has_country_leader = { ruling_only = yes character = BUL_boris_iii }
 		}
 
 		completion_reward = {
@@ -4964,10 +4964,7 @@ focus = {
 				name = fighter_bonus
 				bonus = 1
 				uses = 2
-				technology = early_bomber
-				technology = heavy_fighter1
-				technology = heavy_fighter2
-				technology = heavy_fighter3
+				category = cat_heavy_fighter
 			}
 				ROOT = { set_country_flag = aviation_effort_AB }
 		}
@@ -5128,7 +5125,11 @@ focus = {
                 bonus = 1.0
                 uses = 2
                 category = r56_special_forces_training_tech 
-            }			
+            }	
+            hidden_effect = {
+                set_country_flag = cite_an_airborne_unit_flag
+            }
+            unlock_decision_tooltip = { decision = cite_an_airborne_unit show_effect_tooltip = yes }					
         }
         search_filters = { FOCUS_FILTER_RESEARCH }
     }

@@ -174,7 +174,7 @@ focus_tree = {
 		completion_reward = {
 			army_experience = 10
 			add_doctrine_cost_reduction = {
-				name = SWI_army_review
+				name = SWI_army
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
@@ -248,7 +248,7 @@ focus_tree = {
 		completion_reward = {
 			air_experience = 15
 			add_doctrine_cost_reduction = {
-				name = SWI_reorganized_af
+				name = SWI_reorganise_af
 				cost_reduction = 0.5
 				uses = 1
 				category = air_doctrine
@@ -609,6 +609,55 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_ANNEXATION FOCUS_FILTER_POLITICAL }
 	}
 	focus = {
+		id = SWI_intervention_in_liechtenstein_r56
+		text = SWI_intervention_in_liechtenstein
+		icon = GFX_goal_SWI_intervention_in_liechtenstein
+		prerequisite = { focus = SWI_support_friends focus = SWI_anti_communism }
+		relative_position_id = SWI_support_friends
+		x = 1
+		y = 1
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+		allow_branch = {
+			LIE = {
+				num_occupied_states < 2
+			}
+		}
+		available = {
+			owns_state = 151
+			country_exists = LIE
+			is_neighbor_of = LIE
+			NOT = {
+				is_in_faction_with = LIE
+				has_non_aggression_pact_with = LIE
+			}
+			LIE = {
+				custom_trigger_tooltip = {
+					tooltip = lie_popularities_tt
+					set_temp_variable = {
+						lie_pop_calc = party_popularity@fascism
+					}
+					add_to_temp_variable = {
+						lie_pop_calc = party_popularity@communism
+					}
+					check_variable = {
+						lie_pop_calc > 0.4
+					}
+				}
+			}
+		}
+		search_filters = {FOCUS_FILTER_ANNEXATION}
+
+		completion_reward = {
+			unlock_decision_category_tooltip = SWI_border_war_liechtenstein_category
+							
+		}
+	}
+	focus = {
 		id = SWI_pro_company
 		icon = GFX_focus_generic_industry_2
 		cost = 10.00
@@ -745,7 +794,7 @@ focus_tree = {
 				create_country_leader = {
 					name = "Tagsatzung"
 					desc = "POLITICS_TAGSATZUNG_DESC"
-					picture = "Portrait_Switzerland_Federal_council.dds"
+					picture = "portrait_SWI_federal_building.dds"
 					expire = "1965.1.1"
 					ideology = fascism_ideology
 					
@@ -765,7 +814,7 @@ focus_tree = {
 				create_country_leader = {
 					name = "Tagsatzung"
 					desc = "POLITICS_TAGSATZUNG_DESC"
-					picture = "Portrait_Switzerland_Federal_council.dds"
+					picture = "portrait_SWI_federal_building.dds"
 					expire = "1965.1.1"
 					ideology = fascism_ideology
 					
@@ -782,7 +831,7 @@ focus_tree = {
 				create_country_leader = {
 					name = "Tagsatzung"
 					desc = "POLITICS_TAGSATZUNG_DESC"
-					picture = "Portrait_Switzerland_Federal_council.dds"
+					picture = "portrait_SWI_federal_building.dds"
 					expire = "1965.1.1"
 					ideology = fascism_ideology
 					
@@ -824,6 +873,20 @@ focus_tree = {
 				elections_allowed = yes
 			}
 			set_cosmetic_tag = SWI_old_confederacy
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				create_operative_leader = {
+					name = "Franz Riedweg"
+					GFX = GFX_portrait_SWI_franz_riedweg
+					traits = { operative_infiltrator  }
+					bypass_recruitment = no
+					available_to_spy_master = yes
+					nationalities = { ENG }
+				}
+
+			}			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL }
 	}
@@ -874,6 +937,20 @@ focus_tree = {
 			set_rule = { can_create_factions = yes }
 			add_political_power = 50
 			#set_cosmetic_tag = SWI_mori_union
+			if = {
+				limit = {
+					has_dlc = "La Resistance"
+				}
+				create_operative_leader = {
+					name = "Franz Riedweg"
+					GFX = GFX_portrait_SWI_franz_riedweg
+					traits = { operative_infiltrator  }
+					bypass_recruitment = no
+					available_to_spy_master = yes
+					nationalities = { ENG }
+				}
+
+			}			
 		}
 	}
 	focus = {
@@ -1352,7 +1429,7 @@ focus_tree = {
 			}
 			else = {
 				add_tech_bonus = {
-					name = SWI_extra_tech
+					name = SWI_ger_tech
 					bonus = 1
 					uses = 2
 					category = electronics
@@ -2062,13 +2139,13 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_update_infantry
+				name = SWI_update_army
 				bonus = 1
 				uses = 1
 				category = infantry_weapons
 			}
 			add_doctrine_cost_reduction = {
-				name = SWI_update_infantry_2
+				name = SWI_update_army
 				cost_reduction = 0.5
 				uses = 1
 				category = land_doctrine
@@ -2094,7 +2171,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_modern_arty_tech
+				name = SWI_modern_arty
 				bonus = 1
 				uses = 2
 				category = artillery
@@ -3250,7 +3327,7 @@ focus_tree = {
 				add_research_slot = 1
 				else = {
 					add_tech_bonus = {
-						name = SWI_agri_tech
+						name = SWI_agri
 						bonus = 1
 						uses = 2
 						category = industry
@@ -3326,7 +3403,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_fuel_tech
+				name = SWI_fuel_ration
 				bonus = 0.5
 				uses = 1
 				category = synth_resources
@@ -3478,7 +3555,7 @@ focus_tree = {
 			if = {
 				limit = { NOT = { amount_research_slots < 5 } }
 				add_tech_bonus = {
-					name = SWI_extra_tech_2
+					name = SWI_italian_tech
 					bonus = 1
 					uses = 2
 					category = electronics
@@ -3516,7 +3593,7 @@ focus_tree = {
 			if = {
 				limit = { is_in_faction_with = GER }
 				add_tech_bonus = {
-					name = SWI_ger_air_inno
+					name = SWI_air_inno
 					bonus = 1
 					ahead_reduction = -0.75
 					uses = 2
@@ -3526,7 +3603,7 @@ focus_tree = {
 			if = {
 				limit = { is_in_faction_with = ITA }
 				add_doctrine_cost_reduction = {
-					name = SWI_ita_air_inno
+					name = SWI_air_inno
 					cost_reduction = 0.5
 					uses = 3
 					category = air_doctrine
@@ -3557,14 +3634,14 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_soviet_weapons
+				name = SWI_sov_weapons
 				bonus = 1
 				uses = 2
 				ahead_reduction = -1
 				category = infantry_weapons
 			}
 			add_tech_bonus = {
-				name = SWI_soviet_weapons_2
+				name = SWI_sov_weapons
 				bonus = 1
 				uses = 2
 				ahead_reduction = -1
@@ -3618,7 +3695,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_doctrine_cost_reduction = {
-				name = SWI_air_defence_tech
+				name = SWI_defend_homeskies
 				cost_reduction = 0.5
 				uses = 2
 				category = air_doctrine
@@ -3644,7 +3721,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_rocket_tech
+				name = SWI_interceptors
 				bonus = 1
 				ahead_reduction = -1
 				uses = 2
@@ -3669,7 +3746,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_alt_air
+				name = SWI_other_air
 				bonus = 1
 				uses = 2
 				category = cas_bomber
@@ -3697,7 +3774,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_nav_air
+				name = SWI_naval_air
 				bonus = 1
 				uses = 2
 				category = naval_air
@@ -3724,7 +3801,7 @@ focus_tree = {
 		
 		completion_reward = {
 			add_tech_bonus = {
-				name = SWI_wunder
+				name = SWI_secret_wunderwaffe
 				bonus = 1
 				uses = 2
 				category = nuclear

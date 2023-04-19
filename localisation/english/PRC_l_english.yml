@@ -162,8 +162,6 @@
  propaganda_recruits:0 "Propaganda Recruits"
  propaganda_recruits_desc:0 "We are currently relying on our propaganda to attract new bloods into our ranks, this is not very efficient but it will strengthen our people's will nonetheless.\n"
 
- unyielding_spirit:0 "Unyielding Spirit"
-
  PRC_mc_corporation:0 "Military Civilian Cooperation"
 
  PRC_wrongly_purged_comrades:0 "Overcorrection"
@@ -232,7 +230,7 @@
 
  PRC_military_knowledge:0 "Shared Military Knowledge"
 
- PRC_influence:0 "Communism Pressure"
+ PRC_influence:0 "Communist Pressure"
 
  PRC_sov_experts:0 "Soviet Expert Teams"
 
@@ -263,8 +261,6 @@
  KMT_no_aid_famine_comm:0 "Refuse To Send Aid"
 
  KMT_aid_famine:0 "Battling Famine"
-
- KMT_privilege_to_proletarians_idea:0 "Privilege To Proletarians"
 
  KMT_baihua_stage_1_idea:0 "Soft Comments"
  KMT_baihua_stage_1_finished:0 "Rightist Citizens Arrested"
@@ -1281,7 +1277,7 @@
  prc.122.a:0 "Arrogant scum!"
 
  prc.123.t:0 "Send Invitation To [SIK.GetLeader]?"
- prc.123.d:0 "To get supplies from [SOV.GetName], gaining access to the Sinkiang region is important. We could invite them to our faction and gain their trust."
+ prc.123.d:0 "To get supplies from [SOV.GetNameDef], gaining access to the Sinkiang region is important. We could invite them to our faction and gain their trust."
  prc.123.a:0 "Send it."
  prc.123.b:0 "It is unnecessary."
 

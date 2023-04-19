@@ -11,12 +11,10 @@ set_technology = {
 
 	# Extended Technologies
 	etax_doctrine = 1
-	camo = 1
-	transport_plane1 = 1	
+	camo = 1	
 	
 	infantry_weapons = 1
 }
-
 add_ideas = {
 	limited_conscription
 }

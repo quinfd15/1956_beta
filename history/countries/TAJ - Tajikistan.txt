@@ -7,7 +7,7 @@ set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-	transport_plane1 = 1	
+	
 
 	infantry_weapons = 1
 }
@@ -42,7 +42,4 @@ create_country_leader = {
 	picture = "gfx/leaders/SOV/Portrait_Soviet_Generic_land_2.dds"
 	expire = "1965.1.1"
 	ideology = stalinism
-	traits = {
-		#
-	}
 }

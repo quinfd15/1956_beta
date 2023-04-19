@@ -3,6 +3,23 @@
 
 l_english:
 
+ AA_rocket_rails:0 "Air-Air Rocket Rails"
+ guided_AA_rocket_rails:0 "Guided Air-Air Rocket Rails"
+
+ improved_rocket_rails:0 "Improved Rocket Rails"
+
+ jet_engine_1x_2:0 "2x Jet Engine II"
+ jet_engine_2x_2:0 "2x Jet Engine II"
+ jet_engine_3x_2:0 "3x Jet Engine II"
+ jet_engine_4x_2:0 "4x Jet Engine II"
+ jet_engine_6x_2:0 "6x Jet Engine II"
+
+ jet_engine_1x_3:0 "2x Jet Engine III"
+ jet_engine_2x_3:0 "2x Jet Engine III"
+ jet_engine_3x_3:0 "3x Jet Engine III"
+ jet_engine_4x_3:0 "4x Jet Engine III"
+ jet_engine_6x_3:0 "6x Jet Engine III"
+
  maritime:0 "Maritime Patrol Aircrafts"
 
 #-> Transport planes <><>
@@ -4843,6 +4860,31 @@ l_english:
  FRI_jet_strat_bomber_equipment_1:0 "SNCASO SO.4000 Vautour"
  FRI_jet_strat_bomber_equipment_1_short:0 "Vautour"
 
+###--->  PRU  <><> <><> <><>
+#-> Light fighters <><> 
+PRU_fighter_equipment_0:0 "Caproni ca 114"
+PRU_fighter_equipment_0_short:0 "ca 114"
+PRU_fighter_equipment_1:0 "Torito NA-50A"
+PRU_fighter_equipment_1_short:0 "NA-50A"
+PRU_fighter_equipment_2:0 "Torito T-6 Texan"
+PRU_fighter_equipment_2_short:0 "T-6 Texan"
+
+#-> Dive bombers <><>
+ PRU_CAS_equipment_1:0 "Douglas 8A-3P"
+ PRU_CAS_equipment_1_short:0 "8A-3P"
+ PRU_CAS_equipment_2:0 "Douglas A-33"
+ PRU_CAS_equipment_2_short:0 "A-33"
+ PRU_CAS_equipment_3:0 "Douglas A-26 Invader"
+ PRU_CAS_equipment_3_short:0 "A-26 Invader"
+
+ #-> Heavy fighters <><>
+ 
+ PRU_heavy_fighter_equipment_2:0 "Republica P-47D Thunderbolt"
+ PRU_heavy_fighter_equipment_2_short:0 "P-47D T-bolt"
+
+#-> Medium bomber <><>
+ PRU_tac_bomber_equipment_0:0 "Caproni ca 111"
+ PRU_tac_bomber_equipment_0_short:0 "ca 111"
 
 ###--->  GER  <><> <><> <><>
 #-> Scout planes <><>

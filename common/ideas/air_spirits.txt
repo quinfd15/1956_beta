@@ -3,6 +3,7 @@ ideas = {
 		independent_air_force_spirit = {
 			ledger = air
 			available = {
+				has_air_academy = yes
 				OR = {
 					has_tech = air_superiority
 					has_tech = formation_flying
@@ -28,17 +29,19 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes
 			}
 			visible = { has_tech = air_superiority }
 			research_bonus = {
-				heavy_air = 0.05
+				heavy_air = 0.1
 			}
 			modifier = {
-				strat_bomber_equipment_design_cost_factor = -0.75
-				jet_strat_bomber_equipment_design_cost_factor = -0.75
+				large_plane_airframe_design_cost_factor = -0.85
+				#strat_bomber_equipment_design_cost_factor = -0.75
+				#jet_strat_bomber_equipment_design_cost_factor = -0.75
 			}
 			ai_will_do = {
-				factor = 1.5
+				factor = 0.5
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -53,17 +56,20 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes
 			}
 			visible = { has_tech = formation_flying }
 			research_bonus = {
 				cas_bomber = 0.05
 			}
 			modifier = {
-				CAS_equipment_design_cost_factor = -0.75
-				cv_CAS_equipment_design_cost_factor = -0.75
+				small_plane_cas_airframe_design_cost_factor = -0.75
+				cv_small_plane_cas_airframe_design_cost_factor = -0.75
+				#CAS_equipment_design_cost_factor = -0.75
+				#cv_CAS_equipment_design_cost_factor = -0.75
 			}
 			ai_will_do = {
-				factor = 1.5
+				factor = 1
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -78,14 +84,16 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes
 			}
 			visible = { has_tech = force_rotation }
 			research_bonus = {
 				tactical_bomber = 0.05
 			}
 			modifier = {
-				tac_bomber_equipment_design_cost_factor = -0.75
-				jet_tac_bomber_equipment_design_cost_factor = -0.75
+				medium_plane_airframe_design_cost_factor = -0.75
+				#tac_bomber_equipment_design_cost_factor = -0.75
+				#jet_tac_bomber_equipment_design_cost_factor = -0.75
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -103,6 +111,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes 
 			}
 			research_bonus = {
 				light_air = 0.15
@@ -127,9 +136,10 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes 
 			}
 			modifier = {
-				air_training_xp_gain_factor = 0.25
+				air_training_xp_gain_factor = 1 #25% was absurdly low
 			}
 			ai_will_do = {
 				factor = 1
@@ -147,10 +157,11 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes 
 			}
 			modifier = {
-				experience_gain_air = 0.1
-				airforce_intel_to_others = -5
+				experience_gain_air = 0.2
+				airforce_intel_to_others = -10
 			}
 			ai_will_do = {
 				factor = 1
@@ -168,9 +179,10 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes 
 			}
 			modifier = {
-				air_doctrine_cost_factor = -0.15
+				air_doctrine_cost_factor = -0.10
 				air_accidents_factor = -0.25
 			}
 			ai_will_do = {
@@ -189,6 +201,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes 
 			}
 			research_bonus = {
 				transport_plane_tech = 0.25
@@ -217,10 +230,11 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_academy = yes 
 			}
 			modifier = {
 				ground_attack_factor = 0.05
-				air_escort_efficiency = 0.05
+				air_escort_efficiency = 0.15 #boosted from 5% waffle
 			}
 			ai_will_do = {
 				factor = 1
@@ -238,10 +252,12 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_force_command = yes
 			}
-			visible = { tag = ENG }
+			visible = { original_tag = ENG }
 			modifier = {
 				air_carrier_night_penalty_reduction_factor = 0.33
+				carrier_night_traffic = 0.5
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -259,6 +275,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_force_command = yes
 			}
 			modifier = {
 				air_wing_xp_loss_when_killed_factor = -0.25
@@ -279,6 +296,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_force_command = yes
 			}
 			modifier = {
 				air_superiority_detect_factor = 0.1
@@ -300,10 +318,11 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_force_command = yes
 			}
 			visible = { has_government = communism }
 			modifier = {
-				air_untrained_pilots_penalty_factor = -0.33
+				air_untrained_pilots_penalty_factor = -0.5
 			}
 			ai_will_do = {
 				factor = 1.5
@@ -321,6 +340,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				has_air_force_command = yes
 			}
 			modifier = {
 				air_home_defence_factor = 0.1
@@ -341,12 +361,13 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				 has_air_force_command = yes
 			}
 			modifier = {
 				air_power_projection_factor = 0.1
 			}
-			ai_will_do = {
-				factor = 1
+			ai_will_do = { #good for paratroopers
+				factor = 0
 				modifier = {
 					factor = 0
 					NOT = { has_dlc = "No Step Back" }
@@ -361,6 +382,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				 has_air_force_command = yes
 			}
 			visible = { has_tech = force_rotation }
 			modifier = {
@@ -382,6 +404,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				 has_air_force_command = yes
 			}
 			visible = { has_tech = formation_flying }
 			modifier = {
@@ -403,6 +426,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				 has_air_force_command = yes
 			}
 			visible = { has_tech = air_superiority }
 			modifier = {
@@ -424,6 +448,7 @@ ideas = {
 					has_tech = formation_flying
 					has_tech = force_rotation
 				}
+				 has_air_force_command = yes
 			}
 			#paratrooper = {
 			#	max_organisation = 5

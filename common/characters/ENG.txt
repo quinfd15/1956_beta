@@ -3,7 +3,7 @@ characters={
 		name=ENG_winston_churchill
 		portraits={
 			civilian={
-				large="gfx/leaders/ENG/Portrait_Britain_Winston_Churchill.dds"
+				large="gfx/leaders/ENG/r56_portrait_ENG_Winston_Churchill.dds"
 			}
 			army={
 				small="GFX_idea_ENG_winston_churchill"
@@ -60,6 +60,25 @@ characters={
 			id=-1
 		}
 	}
+
+	ENG_george_vi={	# will become leader through event
+		name=ENG_george_vi
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/Portrait_Britain_George_VI.dds"
+			}
+		}
+	}
+
+	ENG_elizabeth_ii={	# will become leader through event
+		name=ENG_elizabeth_ii
+		portraits={
+			civilian={
+				large="gfx/leaders/ENG/portrait_eng_elizabeth_ii.dds"
+			}
+		}
+	}
+
 
 	ENG_oswald_mosley={
 		name=ENG_oswald_mosley
@@ -354,6 +373,7 @@ characters={
 			}
 		}
 		corps_commander={
+			traits={ artillerist }
 			skill=4
 			attack_skill=4
 			defense_skill=1
@@ -391,6 +411,7 @@ characters={
 			}
 		}
 		corps_commander={
+			traits={ war_hero trickster }
 			skill=4
 			attack_skill=2
 			defense_skill=4
@@ -409,6 +430,7 @@ characters={
 			}
 		}
 		corps_commander={
+			traits={ infantry_officer }
 			skill=3
 			attack_skill=2
 			defense_skill=2
@@ -474,7 +496,7 @@ characters={
 		}
 		
 		corps_commander={
-			traits={ politically_connected }
+			traits={ war_hero politically_connected infantry_officer }
 			skill=5
 			attack_skill=4
 			defense_skill=4
@@ -774,7 +796,7 @@ characters={
 		}
 	}
 
-	ENG_thomas_moore = {
+	ENG_thomas_moore = { # Really shouldn't be here
 		name = ENG_thomas_moore
 		portraits={
 			army={
@@ -906,7 +928,7 @@ characters={
 		}
 		
 		corps_commander = {
-			traits = { career_officer talented }
+			traits = { career_officer } #talented trait does not exist! What is it supposed to be? -Fantom
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -1659,7 +1681,7 @@ characters={
 			}
 		}
 		corps_commander = {
-			traits = { }
+			traits = { war_hero infantry_officer }
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -1860,6 +1882,9 @@ characters={
 			army={
 				small="GFX_idea_clement_attlee"
 			}
+			civilian = {
+				large="gfx/leaders/ENG/r56_portrait_ENG_Clement_Attlee.dds"
+			}
 		}
 		advisor={
 			slot = political_advisor
@@ -1896,7 +1921,12 @@ characters={
 			ai_will_do  = {
 				factor  = 0.000
 			}
-		}		
+		}
+		country_leader = {
+			ideology = socialism
+			expire = "1967.1.1.1"
+			traits = { social_reformer }
+		}
 	}
 	
 	ENG_john_beckett={
@@ -2242,7 +2272,19 @@ characters={
 				if = {
 					limit = { has_dlc = "Man the Guns" }	
 					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}	
+				if = {
+					limit = { has_completed_focus = ENG_a_change_in_course }	
+
+					custom_trigger_tooltip  = {
+						tooltip  = ENG_harold_harmsworth_tt
+						check_variable = {
+							var_ENG_count_blackshirt_marches > 4
+						}
+					}					
 				}				
+				
+
 			}
 			allowed  = {
 				original_tag  = ENG
@@ -2253,6 +2295,14 @@ characters={
 			}
 			ai_will_do  = {
 				factor  = 1.000
+				modifier  = {
+					has_completed_focus = ENG_organize_the_blackshirts
+					NOT = {
+						has_government = fascism
+					}
+					is_puppet = no
+					factor  = 70.000
+				}				
 			}
 		}
 	}	
@@ -2538,13 +2588,13 @@ characters={
 				has_government  = neutrality 
 				has_completed_focus  = ENG_the_kings_party 
 				has_country_leader  = {
-					name = "Elizabeth II"
+					character = ENG_elizabeth_ii
 					ruling_only  = yes 
 				}
 			}
 			visible  = {
 				has_country_leader  = {
-					name = "Elizabeth II"
+					character = ENG_elizabeth_ii
 					ruling_only  = yes 
 				}
 			}
@@ -2575,13 +2625,13 @@ characters={
 				has_government  = neutrality 
 				has_completed_focus  = ENG_the_kings_party 
 				has_country_leader  = {
-					name = "Elizabeth II"
+					character = ENG_elizabeth_ii
 					ruling_only  = yes 
 				}
 			}
 			visible  = {
 				has_country_leader  = {
-					name = "Elizabeth II"
+					character = ENG_elizabeth_ii
 					ruling_only  = yes 
 				}
 			}
@@ -2612,13 +2662,13 @@ characters={
 				has_government  = neutrality 
 				has_completed_focus  = ENG_the_kings_party 
 				has_country_leader  = {
-					name = "Elizabeth II"
+					character = ENG_elizabeth_ii
 					ruling_only  = yes 
 				}
 			}
 			visible  = {
 				has_country_leader  = {
-					name = "Elizabeth II"
+					character = ENG_elizabeth_ii
 					ruling_only  = yes 
 				}
 			}

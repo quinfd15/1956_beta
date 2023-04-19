@@ -17,8 +17,7 @@ set_technology = {
 
 	# Extended Technologies
 	etax_doctrine = 1
-	camo = 1
-	transport_plane1 = 1	
+	camo = 1	
 		
 	infantry_weapons = 1
 }
@@ -57,9 +56,6 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/PAL/r56_portrait_PAL_ahmad_hilmi_pasha.dds"
 	ideology = liberalism
-	traits = {
-		#
-	}
 }
 
 create_country_leader = {
@@ -67,9 +63,6 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/PAL/r56_portrait_Amin_al-Husseini.dds"
 	ideology = fascism_ideology
-	traits = {
-		#
-	}
 }
 
 create_country_leader = {
@@ -77,9 +70,6 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/PAL/Portrait_Arabia_Generic_2.dds"
 	ideology = leninism
-	traits = {
-		#
-	}
 }
 
 create_corps_commander = {

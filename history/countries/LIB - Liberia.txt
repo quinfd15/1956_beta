@@ -47,11 +47,10 @@ set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-	transport_plane1 = 1	
+	
 	
 	infantry_weapons = 1
 }
-
 add_ideas = LIB_supernatural_warfare
 
 
@@ -67,13 +66,9 @@ set_popularities = {
 
 create_country_leader = {
 	name = "Edwin Barclay"
-	desc = "POLITICS_EDWIN_BARCLAY_DESC"
 	picture = "gfx/leaders/LIB/r56_portrait_LIB_edwin_barclay.dds"
 	expire = "1965.1.1"
 	ideology = oligarchic_democracy
-	traits = {
-		#
-	}
 }
 
 

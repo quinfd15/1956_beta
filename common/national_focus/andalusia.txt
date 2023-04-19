@@ -26,8 +26,8 @@ country = {
 	shared_focus = ABC_establish_a_general_staff
 	shared_focus = GEN_Aviation_Effort
 	shared_focus = GEN_Naval_Effort
-	shared_focus = GEN_Industrial_Start
-	shared_focus = GEN_Industrial_Boom
+	shared_focus = GEN_begin_industrial_buildup
+	shared_focus = GEN_industrial_boom
 	shared_focus = SYR_UNIFIED_arab_unification
 	
 	focus = {
@@ -124,15 +124,15 @@ country = {
 				ideology = fascism
 				popularity = 0.1
 			}				
-			create_country_leader = {
-				name = "Hassan al-Banna"
-				desc = ""
-				picture = "gfx/leaders/r56_generic/r56_portrait_Turkey_Generic_land_1.dds"
-				ideology = clerical_fascism
-				traits = {
-					indomitable_perseverance
-				}
-			}			
+		#	create_country_leader = {
+		#		name = "Hassan al-Banna"
+		#		desc = ""
+		#		picture = GFX_portrait_r56_TUR_land_1
+		#		ideology = clerical_fascism
+		#		traits = {
+		#			indomitable_perseverance
+		#		}
+		#	}			
 		}
 		search_filters = { FOCUS_FILTER_POLITICAL}
 	}	

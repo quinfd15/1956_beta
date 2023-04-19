@@ -212,7 +212,7 @@ ROM_change_sides = {
 			}
 			OR = {
 				has_country_leader = {
-					name = "Michael I"
+					character = ROM_king_michael
 					ruling_only = yes
 				}
 				has_government = neutrality
@@ -363,7 +363,7 @@ ROM_change_sides = {
 			}
 			OR = {
 				has_country_leader = {
-					name = "Michael I"
+					character = ROM_king_michael
 					ruling_only = yes
 				}
 				has_government = communism
@@ -479,7 +479,7 @@ ROM_change_sides = {
 			}
 			OR = {
 				has_country_leader = {
-					name = "Michael I"
+					character = ROM_king_michael
 					ruling_only = yes
 				}
 				has_government = fascism
@@ -964,7 +964,11 @@ ROM_dividing_yugo = {
 			}
 		}
 		
-		highlight_states = { state = FROM }
+		highlight_states = { 
+			highlight_state_targets = {
+				state = FROM
+			} 
+		}
 
 		on_map_mode = map_and_decisions_view
 

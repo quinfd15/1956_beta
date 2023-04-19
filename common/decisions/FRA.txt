@@ -292,7 +292,7 @@ FRA_vichy_france = {
 		available = {
 			OR = {
 				original_tag = FRA
-				original_tag = EFR
+				original_tag = VIC
 			}
 			has_government = fascism
 			NOT = {
@@ -317,7 +317,7 @@ FRA_vichy_france = {
 		visible = {
 			OR = {
 				original_tag = FRA
-				original_tag = EFR
+				original_tag = VIC
 			}
 			has_government = fascism
 			has_country_flag = case_anton
@@ -541,7 +541,6 @@ category_test_decisions = {
 				set_cosmetic_tag = VICHY_FRANCE
 				create_country_leader = {
 					name = "Philippe Pétain"
-					desc = "POLITICS_PHILIPPE_PETAIN_DESC"
 					picture = "Portrait_France_Philippe_Petain.dds"
 					expire = "1965.1.1"
 					ideology = fascism_ideology
@@ -577,7 +576,7 @@ FRA_weapons_purchases_category = {
 			USA_can_sell_weapons_trigger = yes
 		}
 		days_remove = 60
-		cost = 50
+		cost = 25
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -599,6 +598,7 @@ FRA_weapons_purchases_category = {
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
+				producer = USA
 				amount = 2500
 			}
 			USA = {
@@ -615,7 +615,7 @@ FRA_weapons_purchases_category = {
 			USA_can_sell_weapons_trigger = yes
 		}
 		days_remove = 60
-		cost = 75
+		cost = 25
 		ai_will_do = {
 			factor = 5
 			modifier = {
@@ -631,26 +631,27 @@ FRA_weapons_purchases_category = {
 		}
 		complete_effect = {
 			USA = {
-				add_offsite_building = { type = industrial_complex level = 3 }
+				add_offsite_building = { type = industrial_complex level = 2 }
 			}
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
 				type = artillery_equipment
-				amount = 75
+				producer = USA
+				amount = 100
 			}
 			USA = {
-				add_offsite_building = { type = industrial_complex level = -3 }
+				add_offsite_building = { type = industrial_complex level = -2 }
 			}
 		}
 	}
 	FRA_order_tanks_in_USA = {
-		icon = generic_air
+		icon = generic_tank
 		visible = {
 			USA_can_sell_weapons_trigger = yes
 		}
 		days_remove = 60
-		cost = 100
+		cost = 50
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -689,6 +690,7 @@ FRA_weapons_purchases_category = {
 				}
 				add_equipment_to_stockpile = {
 					type = light_tank_chassis
+					producer = USA
 					amount = 50
 				}
 			}
@@ -705,6 +707,7 @@ FRA_weapons_purchases_category = {
 				}
 				add_equipment_to_stockpile = {
 					type = medium_tank_chassis
+					producer = USA
 					amount = 50
 				}
 			}
@@ -722,7 +725,7 @@ FRA_weapons_purchases_category = {
 			USA_can_sell_weapons_trigger = yes
 		}
 		days_remove = 60
-		cost = 100
+		cost = 50
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -745,7 +748,8 @@ FRA_weapons_purchases_category = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = fighter_equipment
+				type = small_plane_airframe
+				producer = USA
 				amount = 50
 			}
 			USA = {
@@ -762,7 +766,7 @@ FRA_weapons_purchases_category = {
 			USA_can_sell_weapons_trigger = yes
 		}
 		days_remove = 60
-		cost = 100
+		cost = 50
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -786,7 +790,8 @@ FRA_weapons_purchases_category = {
 		}
 		remove_effect = {
 			add_equipment_to_stockpile = {
-				type = tac_bomber_equipment
+				type = medium_plane_airframe
+				producer = USA
 				amount = 25
 			}
 			USA = {
@@ -2968,7 +2973,12 @@ FRA_economic_reforms = {
 		}
 
 		days_remove = 120
-		days_re_enable = 0
+		days_re_enable = 1 #insta re-enable looks bad
+		
+		custom_cost_trigger = {
+			command_power > 14
+		}
+		custom_cost_text = TUR_decision_cost_kurd_rebels
 
 		cost = 0
 		ai_will_do = {
@@ -2986,6 +2996,9 @@ FRA_economic_reforms = {
 		}
 
 		complete_effect = {
+			hidden_effect = {
+				add_command_power = -15
+			}
 			if = {
 				limit = {
 					has_idea = FRA_deflation5
@@ -3038,6 +3051,7 @@ FRA_economic_reforms = {
 
 		fire_only_once = yes
 
+		days_remove = 7
 		cost = 100
 		ai_will_do = {
 			factor = 100
@@ -3105,6 +3119,7 @@ FRA_economic_reforms = {
 
 		fire_only_once = yes
 
+		days_remove = 7
 		cost = 100
 		ai_will_do = {
 			factor = 100
@@ -3172,6 +3187,7 @@ FRA_economic_reforms = {
 
 		fire_only_once = yes
 
+		days_remove = 7
 		cost = 100
 		ai_will_do = {
 			factor = 100
@@ -3239,6 +3255,7 @@ FRA_economic_reforms = {
 
 		fire_only_once = yes
 
+		days_remove = 7
 		cost = 25
 		ai_will_do = {
 			factor = 100

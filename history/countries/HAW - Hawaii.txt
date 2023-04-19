@@ -7,11 +7,9 @@ set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-	transport_plane1 = 1	
 
 	infantry_weapons = 1
 }
-
 set_convoys = 20
 
 set_politics = {
@@ -31,9 +29,6 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
 	ideology = despotism
-	traits = {
-		#
-	}
 }
 
 create_country_leader = {
@@ -41,9 +36,6 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_land_5.dds"
 	ideology = fascism_ideology
-	traits = {
-		#
-	}
 }
 
 create_country_leader = {
@@ -51,9 +43,6 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/USA/Portrait_USA_Generic_land_1.dds"
 	ideology = liberalism
-	traits = {
-		#
-	}
 }
 
 create_country_leader = {
@@ -61,7 +50,4 @@ create_country_leader = {
 	desc = ""
 	picture = "gfx/leaders/Asia/Portrait_Asia_Generic_1.dds"
 	ideology = marxism
-	traits = {
-		#
-	}
 }

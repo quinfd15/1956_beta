@@ -4,7 +4,9 @@
  NZL_ford_munitions_company:0 "Ford Munitions Company"
  NZL_morrison_motor_mower_company:0 "Morrison Motor Mower Company"
  NZL_generic_light_aircraft_manufacturer:0 "Whenuapai Workshop"
-
+ NZL_generic_artillery_manufacturer:0 "Hillside Railway Workshops" #made mortars, best thing available for nz
+ NZL_generic_electronics_concern:0 "Radio Ltd"
+ NZL_refining_nz:0 "Moturoa Oilfields"
  ################
 
 
@@ -90,8 +92,6 @@
  NZL_form_the_new_zealand_air_force_desc:0 "It is time for our aerial forces to go from an extension of the RAF to it's own fighting force."
  NZL_air_training_progam:0 "Air Training Program"
  NZL_air_training_progam_desc:0 "Collaboration with the commonwealth on training our pilots could prove useful."
- NZL_defend_our_islands:0 "Try to Filed Artillery"
- NZL_defend_our_islands_desc:0 "Artillery can be useful in any conflict, it would be beneficial to attempt and try to field it."
  NZL_trust_in_the_opposition:0 "Trust in the Opposition"
  NZL_trust_in_the_opposition_desc:0 "McMillan has been chosen to lead the Labour Party, for him to succed he needs the nation's faith."
  NZL_public_health_service:0 "Public Health Service"

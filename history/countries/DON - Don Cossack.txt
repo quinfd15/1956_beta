@@ -1,7 +1,5 @@
 ﻿capital = 218 #Rostov
 
-oob = "DON_1936"
-
 set_research_slots = 3
 set_stability = 0.40
 set_war_support = 0.90
@@ -14,7 +12,6 @@ set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-	transport_plane1 = 1	
 
 	winter_clothes_gw = 1
 	tech_support = 1
@@ -26,7 +23,6 @@ set_technology = {
 	tech_recon = 1
 	gw_artillery = 1
 }
-
 if = {
 	limit = { not = { has_dlc = "Man the Guns" } }
 	set_technology = {

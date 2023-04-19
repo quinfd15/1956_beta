@@ -262,17 +262,11 @@ country_event = {
 		name = france.107.a
 		set_global_flag = FRA_popular_front_was_dealth_with
 		swap_ideas = {
-			add_idea = FRA_reforms_failed
 			remove_idea = FRA_disjointed_government
+			add_idea = FRA_reforms_failed
 		}
 		retire_country_leader = yes
-		create_country_leader = {
-			name = "Camille Chautemps"
-			desc = "POLITICS_CAMILLE_CHAUTEMPS_DESC"
-			picture = "r56_portrait_FRA_Camille_Chautemps.dds"
-			expire = "1936.1.24"
-			ideology = conservatism
-		}	
+		promote_character = FRA_camille_chautemps
 		hidden_effect = {	
 			set_global_flag = front_explosed
 		}
@@ -889,6 +883,16 @@ country_event = {
 	option = {
 		name = france.129.c
 		ai_chance = { factor = 50 }
+		trigger = {	#no embargoing instead of buffs when youre literally at war with them
+			NOT = {
+				ROOT = {
+					has_war_with = GER
+				}
+				ENG = {
+					has_war_with = GER
+				}
+			}
+		}
 		ROOT = {
 			send_embargo = GER
 			custom_effect_tooltip = embargo_relation_tt
@@ -931,7 +935,7 @@ country_event = {
 	option = {
 		name = france.130.e
 		ai_chance = { factor = 50 }
-		add_political_power = 120	
+		add_political_power = 75
 	}
 }
 
@@ -965,7 +969,7 @@ country_event = {
 	option = {
 		name = france.131.e
 		ai_chance = { factor = 50 }
-		add_political_power = 120	
+		add_political_power = 75
 	}
 }
 
@@ -1767,11 +1771,12 @@ country_event = {
 			}
 			FRA = {
 				puppet = FLA
+				transfer_state = 34
+				34 = {
+					add_compliance = 30
+				}				
 			}
-			transfer_state = 34
-			34 = {
-				add_compliance = 30
-			}
+
 						
 			GER = {
 				transfer_state = 965
@@ -2448,7 +2453,13 @@ country_event = {
 			add_victory_points = {
 				province = 6103
 				value = 50    
-			}				
+			}		
+			every_other_country = {
+				limit = {
+					is_puppet_of = FRA
+				}
+				puppet = PREV
+			}		
 		}
 		custom_effect_tooltip = FRA_franco_british_cores
 		hidden_effect = {
@@ -2720,6 +2731,7 @@ country_event = {
 					set_state_controller = 25
 					set_state_controller = 20
 					set_state_controller = 33
+					set_state_controller = 851	#Var
 					#tunisia
 					if = {
 						limit = {
@@ -2821,7 +2833,7 @@ country_event = {
 				ideology = fascism
 				size = 0.9
 				capital = 26
-				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 933 459 460 665 553 272 556 543 706 708 713 268 557 514 515 776 777 778 779 780 781 782 786 694 }
+				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 933 459 460 665 553 272 556 543 706 708 713 268 557 514 515 776 777 778 779 780 781 782 786 694 851 }
 				states_filter = {
 					owner = { original_tag = FRA }
 					OR = {		
@@ -3057,7 +3069,7 @@ country_event = {
 					set_state_controller = 25
 					set_state_controller = 20
 					set_state_controller = 33
-
+					set_state_controller = 851	#Var
 					#tunisia
 					if = {
 						limit = {
@@ -3159,7 +3171,7 @@ country_event = {
 				ideology = neutrality
 				size = 0.5
 				capital = 26
-				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 933 459 460 665 553 272 556 543 706 708 713 268 557 514 515 694 }
+				states = { 26 21 22 31 25 20 32 33 1 735 677 680 554 458 462 461 513 933 459 460 665 553 272 556 543 706 708 713 268 557 514 515 694 851 }
 				states_filter = {
 					owner = { original_tag = FRA }
 					OR = {		
@@ -3294,6 +3306,7 @@ country_event = {
 							state = 25
 							state = 33
 							state = 1
+							state = 851 #Var
 						}
 						CONTROLLER = { 
 							OR = {

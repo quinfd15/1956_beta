@@ -18,7 +18,7 @@ set_technology = {
 	# Extended Technologies
 	etax_doctrine = 1
 	camo = 1
-	transport_plane1 = 1	
+	
 	
 	infantry_weapons = 1
 	jngdst_clothes_gw = 1
@@ -59,9 +59,6 @@ create_country_leader = {
 	desc = ""
 	picture = "Portrait_Arabia_Generic_democratic1.dds"
 	ideology = liberalism
-	traits = {
-		#
-	}
 }
 
 #create_country_leader = {
@@ -78,10 +75,7 @@ create_country_leader = {
 	name = "Idris Senussi"
 	desc = ""
 	picture = "r56_portrait_LBA_Idris_Al_Senussi.dds"
-	ideology = despotism
-	traits = {
-		#
-	}
+	ideology = absolute_monarchism
 }
 
 create_country_leader = {
@@ -89,7 +83,4 @@ create_country_leader = {
 	desc = ""
 	picture = "Portrait_Arabia_Generic_communism1.dds"
 	ideology = leninism
-	traits = {
-		#
-	}
 }

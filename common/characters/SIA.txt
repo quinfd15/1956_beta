@@ -613,7 +613,7 @@ characters={
 		name="Charun Rattanakun Seriroengrit"
 		portraits={
 			army={
-				small="GFX_idea_generic_army_asia_4"
+				small="GFX_idea_charun_rattanakun_seriroengrit"
 				large="GFX_Portrait_Siam_Charun_Rattanakun_Seriroengrit"
 			}
 		}
@@ -777,7 +777,7 @@ characters={
 		}
 		#a bit random traits
 		corps_commander = {
-			traits = { promising cautious harsh_leader }
+			traits = { promising trait_cautious harsh_leader }
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1

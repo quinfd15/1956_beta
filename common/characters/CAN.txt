@@ -183,7 +183,7 @@ characters={
 			planning_skill=4
 			logistics_skill=3
 			legacy_id=-1
-			traits={ trait_fortunate infantry_officer trait_cautious }
+			traits={ lucky infantry_officer trait_cautious }
 		}
 	}
 	CAN_andrew_mcnaughton={
@@ -2071,7 +2071,7 @@ characters={
 		}
 		advisor={
 			slot = theorist
-			idea_token = CAN_george_croil
+			idea_token = r56_CAN_gm_croil
 			ledger = air
 			allowed = {
 				original_tag = CAN

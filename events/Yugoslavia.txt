@@ -86,7 +86,6 @@ country_event = {
 		#}
 		create_country_leader = {
 			name = "Dušan Simović"
-			desc = "POLITICS_PRINCE_PAUL_DESC"
 			picture = "gfx/leaders/YUG/r56_portrait_YUG_Dusan_Simovic.dds"
 			expire = "1965.1.1"
 			ideology = despotism
@@ -170,7 +169,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 956 957 }
+					generator = { 102 956 853 }
 				}
 			}
 		}
@@ -193,7 +192,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 956 957 }
+					generator = { 102 956 853 }
 				}
 			}
 		}
@@ -247,7 +246,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 956 957 }
+					generator = { 102 956 853 }
 				}
 			}
 		}
@@ -271,7 +270,7 @@ country_event = {
 				create_wargoal = {
 					type = take_state_focus
 					target = YUG
-					generator = { 102 956 957 }
+					generator = { 102 956 853 }
 				}
 			}
 		}

@@ -363,7 +363,7 @@ leader_traits = {
 		cavalry_attack_factor = 0.05
 		unit_cavalry_design_cost_factor = -0.25
 		equipment_bonus = {
-			nav_bomber_equipment = {
+			small_plane_naval_bomber_airframe = {
 				air_range = 0.1 
 				naval_strike_attack = 0.1
 			}
@@ -394,6 +394,21 @@ leader_traits = {
 		random = no
 		production_speed_buildings_factor = 0.01
 	}
+
+	marshal_of_the_league = {
+		random = no
+		stability_factor = 0.05
+		war_support_factor = 0.05
+		political_power_factor = -0.05
+		army_org_factor = 0.08
+	}
+
+	emperor_of_china = {
+		random = no
+		stability_factor = 0.15
+		political_power_factor = 0.15
+	}
+	
 	
 	#ESPIONAGE IDEAS#
 	
@@ -1272,7 +1287,7 @@ leader_traits = {
 
 	jefe = {
 		random = no
-		war_support_weekly = 0.005
+		war_support_factor = 0.20
 	}
 
 	caudillo_1 = {
@@ -2678,9 +2693,9 @@ leader_traits = {
 	#THE SOLDIER KING
 	the_soldier_king = {
 		random = no
-		command_power_gain_mult = 0.05
 		stability_factor = 0.05
 		experience_gain_army_factor = 0.05
+		army_core_attack_factor = 0.1 #Player Civil War Advantage	- replaced this part of trait from vanilla character
 	}
 
 	king_of_albania = {
@@ -2780,6 +2795,7 @@ leader_traits = {
 		stability_factor = 0.05
 		political_power_factor = -0.05
 		custom_modifier_tooltip = indisposed_political_scientist_tt
+		fascism_acceptance = -80
 	}
 
 	cultural_hegemony_theorist = {
@@ -2799,6 +2815,7 @@ leader_traits = {
 		democratic_acceptance = 50
 		stability_factor = 0.1
 		war_support_factor = -0.05
+		fascism_acceptance = -80
 	}
 
 	#PERTINI
@@ -2807,6 +2824,7 @@ leader_traits = {
 		opinion_gain_monthly_same_ideology_factor = 0.25
 		war_support_factor = 0.1
 		political_power_factor = 0.1
+		fascism_acceptance = -80
 	}
 
 	#THE GRAND COUNCIL
@@ -3577,7 +3595,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.05
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.05
 		civilian_intel_to_others = -5
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_locked_tt
@@ -3587,7 +3605,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.05
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.05
 		civilian_intel_to_others = -5
 		custom_modifier_tooltip = SOV_head_of_the_nkvd_yagoda_tt
@@ -3598,7 +3616,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.05
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.05
 		civilian_intel_to_others = -5
 	}
@@ -3607,7 +3625,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.1
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.1
 		civilian_intel_to_others = -10
 		agency_upgrade_time = -0.1
@@ -3618,7 +3636,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.1
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.1
 		civilian_intel_to_others = -10
 		agency_upgrade_time = -0.1
@@ -3630,7 +3648,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.1
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.1
 		civilian_intel_to_others = -10
 		agency_upgrade_time = -0.1
@@ -3640,7 +3658,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.05
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.15
 		civilian_intel_to_others = -10
 		intel_network_gain_factor = 0.1
@@ -3651,7 +3669,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.05
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.15
 		civilian_intel_to_others = -10
 		intel_network_gain_factor = 0.1
@@ -3663,7 +3681,7 @@ leader_traits = {
 		random = no
 		sprite = 13
 		stability_factor = -0.05
-		enemy_operative_detection_chance = 5
+		enemy_operative_detection_chance = 0.2
 		enemy_operative_capture_chance_factor = 0.15
 		civilian_intel_to_others = -10
 		intel_network_gain_factor = 0.1
@@ -3813,8 +3831,9 @@ leader_traits = {
 	peoples_commissar_for_posts_and_telegraphs = {
 		random = no
 		sprite = 13
-		political_power_factor = 0.05
+		political_power_factor = 0.1	#was 0.05, too weak for 150 pp cost
 		land_reinforce_rate = 0.02
+		production_speed_infrastructure_factor = 0.1
 	}
 
 	#Zinovyev
@@ -3971,6 +3990,21 @@ leader_traits = {
 			}
 		}
 	}
+
+	indigenous_recruiter = {
+		random = no
+		sprite = 13
+		weekly_manpower = 250
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				not = { has_completed_focus = USA_america_first }
+				factor = 0
+			}
+		}
+	}   
+	 
 	staunch_monarchist = {
 		random = no
 		# Boosts Unaligned
@@ -5520,13 +5554,10 @@ leader_traits = {
 	light_aircraft_manufacturer = {
 		random = no
 		equipment_bonus = {
-			fighter_equipment = {
+			small_plane_airframe = {
 				air_agility = 0.1 maximum_speed = 0.1
 			}
-			fighter_bomber_equipment = {
-				air_agility = 0.1 maximum_speed = 0.1				
-			}
-			cv_fighter_equipment = {
+			cv_small_plane_airframe = {
 				air_agility = 0.1 maximum_speed = 0.1
 			}
 		}
@@ -5539,13 +5570,10 @@ leader_traits = {
 	light_aircraft_manufacturer_2 = {
 		random = no
 		equipment_bonus = {
-			fighter_equipment = {
+			small_plane_airframe = {
 				air_agility = 0.2 maximum_speed = 0.1
 			}
-			fighter_bomber_equipment = {
-				air_agility = 0.2 maximum_speed = 0.1				
-			}			
-			cv_fighter_equipment = {
+			cv_small_plane_airframe = {
 				air_agility = 0.2 maximum_speed = 0.1
 			}
 		}
@@ -5559,10 +5587,10 @@ leader_traits = {
 	CAS_manufacturer = {
 		random = no
 		equipment_bonus = {
-			CAS_equipment = {
+			small_plane_cas_airframe = {
 				air_ground_attack = 0.1 reliability = 0.1
 			}
-			cv_CAS_equipment = {
+			cv_small_plane_cas_airframe = {
 				air_ground_attack = 0.1 reliability = 0.1
 			}
 		}
@@ -5575,22 +5603,15 @@ leader_traits = {
 	medium_aircraft_manufacturer = {
 		random = no
 		equipment_bonus = {
-			heavy_fighter_equipment = {
+			medium_plane_fighter_airframe = {
 				reliability = 0.2
 			}
-			hfighter_bomber_equipment = {
+			medium_plane_airframe = {
 				reliability = 0.2
 			}
-			tac_bomber_equipment = {
+			medium_plane_scout_plane_airframe = {
 				reliability = 0.2
 			}
-			med_maritime_equipment = {
-				reliability = 0.2
-			}
-			scout_plane_equipment = {
-				reliability = 0.2
-			}			
-
 		}
 
 		ai_will_do = {
@@ -5603,37 +5624,14 @@ leader_traits = {
 		equipment_bonus = {
 			small_plane_airframe = {
 				air_range = 0.1
-				fuel_consumption = -0.15
 			}
 			medium_plane_fighter_airframe = {
 				air_range = 0.1
-				fuel_consumption = -0.15				
+				reliability = 0.2
 			}
-			heavy_fighter_equipment = {
-				air_range = 0.1
-				fuel_consumption = -0.15
-				reliability = 0.1
+			medium_plane_airframe = {
+				reliability = 0.2
 			}
-			hfighter_bomber_equipment = {
-				air_range = 0.1
-				fuel_consumption = -0.15
-				reliability = 0.1
-			}			
-			tac_bomber_equipment = {
-				air_range = 0.1
-				fuel_consumption = -0.15
-				reliability = 0.1
-			}
-			med_maritime_equipment = {
-				air_range = 0.1
-				fuel_consumption = -0.15
-				reliability = 0.1
-			}
-			scout_plane_equipment = {
-				air_range = 0.1
-				fuel_consumption = -0.15
-				reliability = 0.1
-			}							
 		}
 
 		ai_will_do = {
@@ -6725,6 +6723,7 @@ leader_traits = {
 		sprite = 5
 		special_forces_attack_factor = 0.1
 	    special_forces_defence_factor = 0.1
+		special_forces_out_of_supply_factor = -0.02
 		#experience_gain_army = @experience_gain_low
 
 		command_cap = @tier1
@@ -6738,6 +6737,7 @@ leader_traits = {
 		sprite = 5
 		special_forces_attack_factor = 0.15
 	    special_forces_defence_factor = 0.15
+		special_forces_out_of_supply_factor = -0.05
 		#experience_gain_army = @experience_gain_medium
 
 		command_cap = @tier2
@@ -6751,6 +6751,7 @@ leader_traits = {
 		sprite = 5
 		special_forces_attack_factor = 0.2
 	    special_forces_defence_factor = 0.2
+		special_forces_out_of_supply_factor = -0.1
 		#experience_gain_army = @experience_gain_high
 
 		command_cap = @tier3

@@ -402,7 +402,6 @@ MON_thousand_year_rivalry_decisions_tt:0 "Unlocks §Hdecisions§! to §Hrebuke f
 
 MON_reinforce_the_issue_of_FROM:0 "Reinforce the Issue of [FROM.getName]"
 MON_already_reinforcing_the_territorial_issue_flag:0 "Already Reinforcing the Territorial Issue"
-MON_states_required_for_greater_mongolia_flag:0 "Is Required to Form Greater Mongolia"
 
 MON_provide_political_support:0 "Provide Political Support"
 MON_provide_weaponry:0 "Provide Weaponry"
@@ -585,7 +584,7 @@ MON_can_deescalate_situation_tt:0 "Mongolia will be given one chance to deescala
 MON_will_not_be_able_to_meddle_with_this_country_tt:0 "§RWill not be able to to meddle with this country from now on!§!"
 MON_supporting_revolutionary_cause_tt:0 "Launching an Uprising will provide §Gadditional autonomy§!!"
 
-MON_unpopular_decision_while_at_peace:0 "While we are at peace, this decision remains widely unpopular among the common man!"
+MON_unpopular_decision_while_at_peace:0 "§RWhile we are at peace, this decision remains widely unpopular among the common man!§!"
 MON_raises_cavalry_regiments_across_the_country_tt:0 "Raises §HCavalry Regiments§! of §H3 cavalry battalions§! across the country."
 MON_raises_an_elite_mountain_tt:0 "Raises an elite §HMountaineer Division§! of §H9 mountaineers§! and §H1 artillery battalions§! in Ulaanbaatar."
 
