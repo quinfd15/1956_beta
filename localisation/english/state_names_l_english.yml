@@ -963,7 +963,7 @@
  STATE_310:0 "French Guiana"
  STATE_310_RENAMING:0 "[310.controller.GetStateName_310]"
 
- STATE_311:1 "British Honduras"
+ STATE_311:1 "Belize"
  STATE_311_RENAMING:0 "[311.controller.GetStateName_311]"
 
  STATE_312:0 "Honduras"
@@ -1392,7 +1392,7 @@
  STATE_453:0 "Sinai"
  STATE_453_RENAMING:0 "[453.controller.GetStateName_453]"
 
- STATE_454:0 "Palestine"
+ STATE_454:0 "Jaffa"
  STATE_454_RENAMING:0 "[454.controller.GetStateName_454]"
 
  STATE_455:0 "Jordan"
@@ -2091,7 +2091,7 @@
  STATE_686:0 "Puerto Rico"
  STATE_686_RENAMING:0 "[686.controller.GetStateName_686]"
 
- STATE_687:0 "British Guyana"
+ STATE_687:0 "Guyana"
  STATE_687_RENAMING:0 "[687.controller.GetStateName_687]"
 
  STATE_688:0 "Chaco Boreal"
@@ -2115,7 +2115,7 @@
  STATE_694:0 "French Caribbean"
  STATE_694_RENAMING:0 "[694.controller.GetStateName_694]"
 
- STATE_695:0 "Curaçao"
+ STATE_695:0 "Curaçao-Aruba"
  STATE_695_RENAMING:0 "[695.controller.GetStateName_695]"
 
  STATE_696:0 "Bermuda"
@@ -3068,3 +3068,18 @@
 
  STATE_1012:0 "Monaco"
  STATE_1012_RENAMING:0 "[1012.controller.GetStateName_1012]
+
+ STATE_1013:0 "Sikkim"
+ STATE_1013_RENAMING:0 "[1013.controller.GetStateName_1013]
+
+ STATE_1014:0 "Brunei"
+ STATE_1014_RENAMING:0 "[1014.controller.GetStateName_1014]
+
+ STATE_1015:0 "San Marino"
+ STATE_1015_RENAMING:0 "[1015.controller.GetStateName_1015]
+
+ STATE_1016:0 "Jerusalem"
+ STATE_1016_RENAMING:0 "[1016.controller.GetStateName_1016]
+
+ STATE_1017:0 "Beersheba"
+ STATE_1017_RENAMING:0 "[1017.controller.GetStateName_1017]

@@ -1338,6 +1338,11 @@
  ICE_GER_autonomy_reichsprotectorate_DEF:0 "die Reichskommissariat Island"
  ICE_GER_autonomy_satellite:0 "Reichsprotektorat Island"
  ICE_GER_autonomy_satellite_DEF:0 "die Reichsprotektorat Island"
+ #Danish Puppet
+ ICE_DEN_democratic_autonomy_personal_union:0 "Kingdom of Iceland"
+ ICE_DEN_democratic_autonomy_personal_union_DEF:0 "the Kingdom of Iceland"
+ ICE_DEN_neutrality_autonomy_personal_union:0 "Kingdom of Iceland"
+ ICE_DEN_neutrality_autonomy_personal_union_DEF:0 "the Kingdom of Iceland"
  #Norwegian Puppet
  ICE_NOR_neutrality_autonomy_integrated_puppet:0 "Earldom of Iceland"
  ICE_NOR_neutrality_autonomy_integrated_puppet_DEF:0 "the Earldom of Iceland"
@@ -1889,6 +1894,20 @@
  EGY_PAL_fascism:0 "All-Palestine Protectorate"
  EGY_PAL_fascism_DEF:0 "the All-Palestine Protectorate"
  EGY_PAL_fascism_ADJ:0 "Palestinian"
+
+ #ISR 
+ ISR_couped_neutrality:0 "State of Israel"
+ ISR_couped_neutrality_DEF:0 "the State of Israel"
+ ISR_couped_neutrality_ADJ:0 "Israeli"
+ ISR_couped_democratic:0 "State of Israel"
+ ISR_couped_democratic_DEF:0 "the State of Israel"
+ ISR_couped_democratic_ADJ:0 "Israeli"
+ ISR_couped_communism:0 "State of Israel"
+ ISR_couped_communism_DEF:0 "the State of Israel"
+ ISR_couped_communism_ADJ:0 "Israeli"
+ ISR_couped_fascism:0 "State of Israel"
+ ISR_couped_fascism_DEF:0 "the State of Israel"
+ ISR_couped_fascism_ADJ:0 "Israeli"
  
  #POL
  #German Puppet
