@@ -638,10 +638,13 @@ FRA = {
 	}
 	callsigns = { "Dragon" "Flèche" "Tigre" "Corbeau" "Escargot" "Grenouille" "Andouillette" "Hérisson" "Marte" "Goupil" "Pantoufle" "Soutane" "Eglantine" "Taiseux" "Epervier" "Aigle" "Faucon" "Hiboux"}
 
-	prefix = Opération
-	#operation name are mostly fictitious, I had fun picking random words
+	prefix = "Opération" #needs " " (?)
+	#operation name are mostly fictitious, I had fun picking random words Last in the list goes first...again
 	operation = {
 		0 = { #generic
+
+			Corned-Beef #from another French movie, yes it's an easter egg but a credible one.
+
 			Renard
 			Ecureuil
 			"Faucon"
@@ -660,15 +663,7 @@ FRA = {
 			Ajax
 			Ulysses
 			Danaïdes
-			Jupiter
-			Junon
-			Saphir
-			Rubis
-			Saphire
-			Emeraude
-			Topaze
-			Jade
-			Foudre
+
 			Tonnerre
 			Ramses
 			Moïse
@@ -680,7 +675,14 @@ FRA = {
 			"Eglantine" #from a certain French war Movie
 			Mirabelle
 
-			Corned-Beef #from another French movie, yes it's an easter egg but a credible one.
+			Jupiter
+			Junon
+			Saphir
+			Rubis
+			Emeraude
+			Topaze
+			Jade
+			Foudre			
 		}
 	#	37 = { #baltics #It works by strategic region
 	#		o_beowulf
@@ -696,8 +698,9 @@ FRA = {
 		}
 		7 = { #West Germany
 			Carloman
-			Oriflamme
+			
 			Clémenceau
+			Oriflamme
 			XVII
 		}
 		8 = { #East Germany
@@ -709,9 +712,10 @@ FRA = {
 			Routier
 		}		
 		20 = { #Southern France #historical
+			Envergure
 			Zèbre 
 			Dragon 
-			Envergure
+			
 		}
 		161 = { #iceland
 			Rouge
@@ -723,16 +727,19 @@ FRA = {
 		1 = { #South England
 			Charlemagne
 			Amiens
-			"Jeanne d'Arc"
+			
 			Montargis
+			"Jeanne d'Arc"
 		}
 		5 = { #Benelux
-			Enghien
+			
 			Joseph
 			Lapin
-			Clovis
+			
 			Mérovée
 			"Jeu de Balle"
+			Clovis
+			Enghien
 		}
 		6 = { #Denmark
 			XCVIII
@@ -745,9 +752,10 @@ FRA = {
 			Minos
 		}
 		25 = { #Greece
-			Athéna
+			
 			Ambroisie
 			Pythie
+			Athéna
 		}
 		29 = { #Central Med
 			Ferdinand
