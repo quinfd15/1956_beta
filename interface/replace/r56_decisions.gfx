@@ -521,7 +521,16 @@ spriteTypes = {
 		texturefile = "gfx/interface/decisions/r56_decision_cat_aliyah.dds"
 	}	
 	spriteType = {
+		name = "GFX_decision_cat_MPL_collapse"
+		texturefile = "gfx/interface/decisions/r56_decision_cat_MPL_collapse.dds"
+	}
+	spriteType = {
 		name = "GFX_decision_cat_arab_revolt"
 		texturefile = "gfx/interface/decisions/r56_decision_cat_arab_revolt.dds"
+	}
+###---> ISR <><> <><> <><>
+	spriteType = {
+		name = "GFX_decision_cat_land_reclamation_JNF"
+		texturefile = "gfx/interface/decisions/r56_decision_cat_land_reclamation_JNF.dds"
 	}
 }

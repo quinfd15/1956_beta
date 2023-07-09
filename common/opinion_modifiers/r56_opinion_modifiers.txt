@@ -84,6 +84,14 @@ opinion_modifiers = {
 		value = 20
 	}
 
+	LIE_armed_neutrality_op = {
+		value = -10
+	}
+
+	LIE_gold_trade = {
+		value = 30
+	}
+
 ###------> AXM <><> <><> <><> <><> <><>
 
 	RUT_POL_diplomacy_focus = {

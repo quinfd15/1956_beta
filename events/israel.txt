@@ -9,6 +9,7 @@ country_event = { # Haganah - Irgun fight
 	id = israel.1
 	title = israel.1.t
 	desc = israel.1.d
+	picture = GFX_report_event_isr_altalena
 	trigger = {
 		TAG = ISR
 		has_war = no
@@ -34,11 +35,12 @@ country_event = { #Jabotinsky Dies
 	picture = GFX_report_event_generic_funeral
 	fire_only_once = yes
 	trigger = {
-		date > 1940.8.4
-		ISR_zeev_jabotinsky = {
-			can_be_country_leader = yes
-		}
 		TAG = ISR
+		date > 1940.8.4
+		has_country_leader = {
+			character = ISR_zeev_jabotinsky
+			ruling_only = no
+		}
 	}
 	mean_time_to_happen = {
 		days = 10
@@ -138,6 +140,14 @@ country_event = { #Aliyah
 			remove_idea = ISR_diaspora_volunteers
 			add_idea = ISR_aliyah
 		}
+		hidden_effect = {
+			country_event = {
+				id = israel.16
+				days = 1000
+				random_days = 100
+				random_hours = 24
+			}
+		}
 	}
 }
 country_event = { #Election
@@ -148,6 +158,22 @@ country_event = { #Election
 	is_triggered_only = yes
 	option = {
 		name = israel.5.a
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ISR_AI_BEHAVIOR
+						option = ISR_HATZOHAR
+					}
+					has_game_rule = {
+						rule = ISR_AI_BEHAVIOR
+						option = ISR_MAPAI
+					}
+				}
+			}
+		}
 		complete_national_focus = ISR_hashomer
 		effect_tooltip = {
 			set_politics = {
@@ -158,10 +184,33 @@ country_event = { #Election
 				ideology = communism
 				popularity = 0.1
 			}
+			effect_tooltip = {
+				promote_character = ISR_yaakov_hazan
+			}
 		}
 	}
 	option = {
 		name = israel.5.b
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ISR_AI_BEHAVIOR
+						option = ISR_HATZOHAR
+					}
+					has_game_rule = {
+						rule = ISR_AI_BEHAVIOR
+						option = ISR_HASHOMER
+					}
+				}
+			}
+			modifier = {
+				factor = 1000
+				is_historical_focus_on = yes
+			}
+		}
 		complete_national_focus = ISR_mapai
 		effect_tooltip = {
 			set_politics = {
@@ -172,10 +221,29 @@ country_event = { #Election
 				ideology = democratic
 				popularity = 0.1
 			}
+			effect_tooltip = {
+				promote_character = ISR_david_ben_gurion
+			}
 		}
 	}
 	option = {
 		name = israel.5.c
+		ai_chance = {
+			factor = 1
+			modifier = {
+				factor = 0
+				OR = {
+					has_game_rule = {
+						rule = ISR_AI_BEHAVIOR
+						option = ISR_MAPAI
+					}
+					has_game_rule = {
+						rule = ISR_AI_BEHAVIOR
+						option = ISR_HASHOMER
+					}
+				}
+			}
+		}
 		complete_national_focus = ISR_hatzohar
 		effect_tooltip = {
 			set_politics = {
@@ -185,6 +253,22 @@ country_event = { #Election
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.1
+			}
+			if = {
+				limit = {
+					has_country_leader = {
+						character = ISR_zeev_jabotinsky
+						ruling_only = no
+					}
+				}
+				effect_tooltip = {
+					promote_character = ISR_zeev_jabotinsky
+				}
+			}
+			else = {
+				effect_tooltip = {
+					promote_character = ISR_menachem_begin
+				}
 			}
 		}
 	}
@@ -260,6 +344,30 @@ country_event = { #demand jordan
 			455 = {
 				transfer_state_to = ISR
 			}
+			if = {
+				limit = {
+					455 = {
+						controller = {
+							controls_state = 1021
+						}
+					}
+				}
+				1021 = {
+					transfer_state_to = ISR
+				}
+			}
+			if = {
+				limit = {
+					455 = {
+						controller = {
+							controls_state = 1022
+						}
+					}
+				}
+				1022 = {
+					transfer_state_to = ISR
+				}
+			}
 		}
 		ISR = {
 			country_event = { #jordan yes
@@ -299,9 +407,34 @@ country_event = { #jordan yes
 	is_triggered_only = yes
 	option = {
 		name = israel.9.a
+		if = {
+			limit = {
+				455 = {
+					controller = {
+						controls_state = 1021
+					}
+				}
+			}
+			1021 = {
+				transfer_state_to = ISR
+			}
+			}
+		if = {
+			limit = {
+				455 = {
+					controller = {
+						controls_state = 1022
+					}
+				}
+			}
+			1022 = {
+				transfer_state_to = ISR
+			}
+		}
 		455 = {
 			transfer_state_to = ISR
 		}
+		
 	}
 }
 country_event = {
@@ -320,6 +453,26 @@ country_event = {
 	option = {
 		name = israel.10.b
 		455 = {
+			controller = {
+				ISR = {
+					create_wargoal = {
+						target = PREV
+						type = take_claimed_state
+					}
+				}
+			}
+		}
+		1021 = {
+			controller = {
+				ISR = {
+					create_wargoal = {
+						target = PREV
+						type = take_claimed_state
+					}
+				}
+			}
+		}
+		1022 = {
 			controller = {
 				ISR = {
 					create_wargoal = {
@@ -367,8 +520,8 @@ country_event = {
 				limit = {
 					controls_state = 911
 				}
+				transfer_state = 911
 			}
-			transfer_state = 911
 		}
 	}
 
@@ -417,5 +570,200 @@ country_event = {
 		ai_chance = { factor = 1 }
 		add_stability = -0.05
 		add_political_power = -75
+	}
+}
+country_event = {
+	id = israel.15
+	picture = GFX_report_event_isr_victory
+	title = israel.15.t
+	desc = israel.15.d
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		name = israel.15.a
+		news_event = {
+			id = mandate_palestine.208
+			days = 1
+			random_hours = 12
+		}
+		country_event = {
+			id = israel.4
+			days = 10
+			random_hours = 24
+		}
+		if = {
+			limit = {
+				has_idea = MPL_civil_war_isr
+			}
+			remove_ideas = MPL_civil_war_isr
+			
+		}
+		if = {
+			limit = {
+				has_idea = ISR_alei_barikadot
+			}
+			swap_ideas = {
+				remove_idea = ISR_alei_barikadot
+				add_idea = ISR_zionist_consensus
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = ISR_always_first
+			}
+			swap_ideas = {
+				remove_idea = ISR_always_first
+				add_idea = ISR_zionist_consensus
+			}
+		}
+		else = {
+			add_ideas = ISR_zionist_consensus
+		}
+		remove_ideas = MPL_collapse_idea
+	}
+}
+country_event = {
+	id = israel.16
+	picture = GFX_report_event_MPL_aliyah
+	title = israel.16.t
+	desc = israel.16.d
+	is_triggered_only = yes
+	trigger = {
+		has_idea = ISR_aliyah
+	}
+	option = {
+		name = israel.16.a
+		swap_ideas = {
+			remove_idea = ISR_aliyah
+			add_idea = ISR_aliyah_2
+		}
+	}
+}
+country_event = { #PRESIDENT
+	id = israel.20
+	title = israel.20.t
+	
+	desc = israel.20.d
+	
+	is_triggered_only = yes
+	option = {
+		name = israel.20.a
+		add_ideas = ISR_president_weizmann
+	}
+	option = {
+		name = israel.20.b
+		add_ideas = ISR_president_ben_zvi
+	}
+	option = {
+		name = israel.20.c
+		trigger = {
+			has_completed_focus = ISR_national_higher_education
+			NOT = {
+				has_completed_focus = ISR_gather_irgun
+			}
+		}
+		add_ideas = ISR_president_einstein
+	}
+}
+country_event = { #EINSTEIN RESIGN
+	id = israel.21
+	title = israel.21.t
+	desc = {
+		trigger = {
+			has_completed_focus = ISR_work_with_religious
+		}
+		text = israel.21.d.a 
+	}
+	desc = {
+		text = israel.21.d.b
+	}
+	fire_only_once = yes	#prevents false positive error
+	trigger = {
+		TAG = ISR
+		has_idea = ISR_president_einstein
+		OR = {
+			has_completed_focus = ISR_work_with_religious
+			has_completed_focus = ISR_hatzohar
+		}
+	}
+	option = {
+		name = israel.21.a
+		swap_ideas = {
+			remove_idea = ISR_president_einstein
+			add_idea = ISR_president_weizmann
+		}
+	}
+}
+
+country_event = {
+	id = israel.22
+	title = israel.22.t
+	desc = {
+		trigger = {
+			tag = ISR
+		}
+		text = israel.22.d.a
+	}
+	desc = {
+		trigger = {
+			NOT = {
+				tag = ISR
+			}
+		}
+		text = israel.22.d.b
+	}
+	picture = GFX_report_event_isr_jerusalem
+	is_triggered_only = yes
+	immediate = {
+		if = {
+			limit = {
+				TAG = ISR
+			}
+			hidden_effect = {
+				JOR = {
+					country_event = israel.22
+				}
+			}
+		}
+	}
+	option = {
+		name = israel.22.a
+		if = {
+			limit = {
+				TAG = ISR
+			}
+			add_opinion_modifier = {
+				target = JOR
+				modifier = small_increase
+			}
+			JOR = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = small_increase
+				}
+			}
+			set_truce = {
+				target = JOR
+				days = 550
+			}
+		}
+		else = {
+			effect_tooltip = {
+				add_opinion_modifier = {
+					target = ISR
+					modifier = small_increase
+				}
+				ISR = {
+					add_opinion_modifier = {
+						target = JOR
+						modifier = small_increase
+					}
+				}
+				set_truce = {
+					target = ISR
+					days = 550
+				}
+			}
+		}
 	}
 }

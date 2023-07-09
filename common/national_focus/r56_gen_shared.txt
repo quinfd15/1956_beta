@@ -2051,7 +2051,7 @@
 					add_tech_bonus = {
 						bonus = 1.0
 						uses = 1
-						category = light_fighter
+						category = light_air
 					}
 					add_tech_bonus = {
 						bonus = 1.0
@@ -3688,7 +3688,7 @@
 				category = bc_tech
 			}
 
-			custom_effect_tooltip = GEN_Generals_Other_nav_tt
+			#custom_effect_tooltip = GEN_Generals_Other_nav_tt
 		}
 		search_filters = { FOCUS_FILTER_RESEARCH }
 	}

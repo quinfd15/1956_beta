@@ -30,6 +30,7 @@ set_popularities = {
 add_ideas = {
 	disarmed_nation
 	limited_exports
+	POL_Neutral_Foreign_Policy
 }
 
 create_country_leader = {
@@ -44,7 +45,7 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Consiglio Grande e Generale"
-	picture = "gfx/leaders/kr_generic/Portrait_Europe_Generic_new_10.dds" # generic building portrait
+	picture = "gfx/leaders/SAN/r56_portrait_SAN_consiglio_grande_e_generale.dds" # generic building portrait
 	expire = "1965.1.1"
 	ideology = oligarchism
 }
