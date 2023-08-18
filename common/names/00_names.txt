@@ -2933,12 +2933,30 @@ SPB = {
 		"de Carvajal" "de la Fuente" Díaz Espartero Fernández   Franco 
 		García  González Heredia Hernández Herrera Hevia  Linares López 
 		Maroto Márquez Martínez-Campos Maura Menéndez Miaja Millán-Astray Mina Mola Muñoz 
-		Narváez O'Donnell Ortega Pavía Pérez  Rodríguez Rojo Ruiz 
+		Narváez Ortega Pavía Pérez  Rodríguez Rojo Ruiz
 		Sanjurjo Serrano Silvestre Topete Valdés Varela Villapol Villar Weyler Yagüe
 	
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Furia Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
+
+	prefix = "Operación" #needs " ", it should mean operation
+
+	operation = {
+
+		0 = {
+			Santiago "San Juan" "Montemayor" "Monterrey" Molina Aguila Halcón Plata Tomás "Santa Cruz" "Santa Trinidad" "Lion de Oro" "San Miguel" "San Salvador" "Nuestra Señora de la Concepción y las Animas" Rosario "San Esteban" Trinidad "Espíritu Santo" "Castillo Negro" "San Pedro" Ventura Sagrario "Nuestra Señora de Guadalupe" "Santa Rosalia" "San Bernardo" "San Sebastián" "Ignacio de Loyola" "Varones Apostolicos" "San Segundo" "Vicente de Huesca"
+		}
+		154 = {
+			"Lucas del Espíritu Santo"
+		}
+		46 = {
+			"Emmanuel Ruiz" "Sanctissima Trinidad"
+		}
+	}
+
 }
 
 SPC = {
@@ -2962,17 +2980,23 @@ SPC = {
 	}
 	surnames = { 
 		Blázquez
-		Acuña Aguirre Allendesalazar Alonso Álvarez  Aranda  Asensio
-		Aznar Barradas Bugallal Cabrera Cano Cervera "de Albornoz" 
-		"de Carvajal" "de la Fuente" Díaz Espartero Fernández   Franco 
+		Acuña Allendesalazar Alonso Álvarez  Aranda  Asensio
+		Aznar Barradas Bugallal Cabrera Cano Cervera "de Albornoz"
+		"de Carvajal" "de la Fuente" Díaz Espartero Fernández   Franco
 		García  González Heredia Hernández Herrera Hevia  Linares López 
 		Maroto Márquez Martínez-Campos Maura Menéndez Miaja Millán-Astray Mina Mola Muñoz 
-		Narváez O'Donnell Ortega Pavía Pérez  Rodríguez Rojo Ruiz 
-		Sanjurjo Serrano Silvestre Topete Valdés Varela Villapol Villar Weyler Yagüe
-	
-	
+		Narváez Ortega Pavía Pérez  Rodríguez Rojo Ruiz
+		Sanjurjo Serrano Silvestre Topete Valdés Varela Villapol Villar
+		Rodriguez Hernandez Lopez Martinez Mella Lorenzo Ramos Giménez Iniesta
 	}
 	callsigns = { }
+
+	operation = {
+		0 = { #changed some to Esperanto, because why not right?
+			Liberar Comité Colectivización Unión "Nigra flago" "Sindikato" Poetino Aktivado Konfederacio Demokratio Pacismo Doktoro Telefónica Kolono Anserino Pavo Vesperto Vizelo Aglo Sciuro Cikonio Popularaj Konsilioj
+			Revolucia "Politika Filozofio"
+	}
+
 }
 
 #Galicia
@@ -3037,7 +3061,7 @@ CAT = {
 		"de Carvajal" "de la Fuente" Díaz Espartero Fernández   Franco 
 		García  González Heredia Hernández Herrera Hevia  Linares López 
 		Maroto Márquez Martínez-Campos Maura Menéndez Miaja Millán-Astray Mina Mola Muñoz 
-		Narváez O'Donnell Ortega Pavía Pérez  Rodríguez Rojo Ruiz 
+		Narváez Ortega Pavía Pérez  Rodríguez Rojo Ruiz
 		Sanjurjo Serrano Silvestre Topete Valdés Varela Villapol Villar Weyler Yagüe
 	
 	
@@ -3056,6 +3080,7 @@ NAV = {
 			Joaquín José  Juan Julio Leopoldo Lorenzo 
 			Luis Manuel Marcelo Mariano Mateo Melchor Miguel Nicolás Pablo Pascual
 			Pedro Rafael Raimundo Ramón Ricardo Santiago Sebastián Segismundo Valeriano Vicente 
+			Xavi
 		  }
 	}
 	female = {
@@ -3072,8 +3097,8 @@ NAV = {
 		"de Carvajal" "de la Fuente" Díaz Espartero Fernández   Franco 
 		García  González Heredia Hernández Herrera Hevia  Linares López 
 		Maroto Márquez Martínez-Campos Maura Menéndez Miaja Millán-Astray Mina Mola Muñoz 
-		Narváez O'Donnell Ortega Pavía Pérez  Rodríguez Rojo Ruiz 
-		Sanjurjo Serrano Silvestre Topete Valdés Varela Villapol Villar Weyler Yagüe
+		Narváez Ortega Pavía Pérez  Rodríguez Rojo Ruiz
+		Sanjurjo Serrano Silvestre Topete Valdés Varela Villapol Villar Weyler Yagüe Aguirre
 	
 	
 	}
@@ -3111,6 +3136,20 @@ ADU = {
 		Youssoufi Zarra 
 	}
 	callsigns = { }
+
+	prefix = "Zamalia"
+
+	#use_geographical_default_operation_names = yes
+
+	operation = {
+		0 = {
+			"Zulfiqar" "Malik" "Jamal" "'Arnab" "Qita" "Al-Mansur" "ʿAd" "Div" "Marid" "Og" "Salman" "Dhu al-Qarnayn" "Easifatan" "Raed" "Nasr" "Hisan" "Aintiqam" "Suq" "Abriq Alshaay"
+			"Qaws" "Rajfa" "Aiktishaf" "Wahy" "Yatbakh" "Al'ard Alziraeia" "Nwria" "Fam Alnahr" "Alqasas" "Malakut" "Israʾ" "Miʿraj" "Eataf" "Fadila" "Ramil" "Naqa'" "Hamlat Al-arsh" "Muqarrabun" "Jibraʾil" "Mīkhaʾil"
+			"Israfil" "Qiyamah" "Azrael" "Ridwan" "Zabaniya" "Raqib" "Atid" "Ishim" "Nimrud" "Nabi" "Sulaiman" "Dawud" "Ifrit" "Hadiqat Aizhar" "Bunduqia" "Hadaf" "Khidae" "Tufaahatan" "Mahsul"
+			"Bustan" "Khaliat Nahl" "Tabl"
+		}
+	}
+
 }
 
 #Scotland
