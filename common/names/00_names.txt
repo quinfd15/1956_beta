@@ -2563,11 +2563,11 @@ BEL = {
 			Gérard Gilles Guillaume Gustave Henri Hercule Hubert Ignace Isidore Jacques Jean Jean-Baptiste Jean-François Jean-Louis 
 			Jean-Jacques Joseph Jules Lambert Laurent Léon Léonard Léopold Louis Lucien Mathieu Maxime Maximilien Nicolas Olivier 
 			Pascal Patrice Paul Philippe Philippe-Joseph Pierre Pierre-Guillaume Sébastien Sylvain Théophile Victor Vincent Remy
-		
+			Armand Raymond Félix
 		  }
 	}
 	female = {
-		names = { Marie Anne Géraldine Louise Marie-Claude Helene Karine Rachel Paule Claude Melanie Merel Marleen Johanna Ingrid Irene Ilse Hilda Helga Beatrix Antje Anneke Elvire}
+		names = { Marie Anne Géraldine Louise Marie-Claude Helene Karine Rachel Paule Claude Melanie Merel Marleen Johanna Ingrid Irene Ilse Hilda Helga Beatrix Antje Anneke Elvire Agathe Germaine Raymonde Angeline Marijke Constance }
 	}
 	surnames = {
 		Allard Barbanson Barthélémy Baugniet Beaucarne Berger Berthels Beyts Biver Blargnies Brialmont Bredart Cauvin Collet 
@@ -2598,7 +2598,7 @@ BEL = {
 HOL = {
 	male = {
 		names = { 
-			Adriaan Albert Antonius Arie Berend Bernardus Christiaan Coenraad Cornelis Dirk Ferdinand Franciscus Frederik Gerardus Gerrit Hendrik Henri Hermanus Jacob Jacobus Jan Johan Johannes Karel Klaas Laurens Leonardus Lodewijk Mathias Marinus Martinus Nicolaas Peter Petrus Philippus Pieter Simon Theodorus Wilhelmus Willem
+			Adriaan Albert Antonius Arie Berend Bernardus Christiaan Coenraad Cornelis Dirk Ferdinand Franciscus Frederik Gerardus Gerrit Hendrik Henri Hermanus Jacob Jacobus Jan Johan Johannes Karel Klaas Laurens Leonardus Lodewijk Mathias Marinus Martinus Nicolaas Peter Petrus Philippus Pieter Simon Theodorus Wilhelmus Willem Cornelius
 		}
 	}
 	
