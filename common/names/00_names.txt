@@ -2870,7 +2870,9 @@ SPR = {
 	
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 
 SPA = {
@@ -2904,7 +2906,9 @@ SPA = {
 	
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 
 SPB = {
@@ -2939,7 +2943,7 @@ SPB = {
 	
 	}
 	callsigns = {
-		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Furia Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
 	}
 
 	prefix = "Operación" #needs " ", it should mean operation
@@ -2994,7 +2998,7 @@ SPC = {
 	operation = {
 		0 = { #changed some to Esperanto, because why not right?
 			Liberar Comité Colectivización Unión "Nigra flago" "Sindikato" Poetino Aktivado Konfederacio Demokratio Pacismo Doktoro Telefónica Kolono Anserino Pavo Vesperto Vizelo Aglo Sciuro Cikonio Popularaj Konsilioj
-			Revolucia "Politika Filozofio"
+			Revolucio "Politika Filozofio"
 	}
 
 }
@@ -6045,7 +6049,9 @@ MEX = {
 		"Martínez del Río" Mejía Miramón Múzquiz Obregón Pedraza Pimentel Reyes "Rincón Gallardo" Robles
 		Ruíz Salas Sánchez "Sarmaniego del Castillo" "Vázquez de la Cadena" Villa Woll Zapata Zaragoza Zuloaga		
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 
 COS = {
@@ -6072,7 +6078,9 @@ COS = {
 		Medina Mejía Menéndez Montes Montiel Morazán Palacios Peralta Quiros Regalado
 		Rosales Sevilla Sinibaldi Soto Terán Ubico Vasconcelos Vigil Zelaya Zeledón
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 ELS = {
 	male = {
@@ -6098,7 +6106,9 @@ ELS = {
 		Medina Mejía Menéndez Montes Montiel Morazán Palacios Peralta Quiros Regalado
 		Rosales Sevilla Sinibaldi Soto Terán Ubico Vasconcelos Vigil Zelaya Zeledón
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 GUA = {
 	male = {
@@ -6124,7 +6134,9 @@ GUA = {
 		Medina Mejía Menéndez Montes Montiel Morazán Palacios Peralta Quiros Regalado
 		Rosales Sevilla Sinibaldi Soto Terán Ubico Vasconcelos Vigil Zelaya Zeledón
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 HON = {
 	male = {
@@ -6150,7 +6162,9 @@ HON = {
 		Medina Mejía Menéndez Montes Montiel Morazán Palacios Peralta Quiros Regalado
 		Rosales Sevilla Sinibaldi Soto Terán Ubico Vasconcelos Vigil Zelaya Zeledón
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 
 NIC = {
@@ -6177,7 +6191,9 @@ NIC = {
 		Medina Mejía Menéndez Montes Montiel Morazán Palacios Peralta Quiros Regalado
 		Rosales Sevilla Sinibaldi Soto Terán Ubico Vasconcelos Vigil Zelaya Zeledón
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 PAN = {
 	male = {
@@ -6203,7 +6219,9 @@ PAN = {
 		Medina Mejía Menéndez Montes Montiel Morazán Palacios Peralta Quiros Regalado
 		Rosales Sevilla Sinibaldi Soto Terán Ubico Vasconcelos Vigil Zelaya Zeledón
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 CUB = {
 	male = {
@@ -6230,7 +6248,9 @@ CUB = {
 		Luperón Maceo Machado Márquez Mella Méndez Mendieta Moncada Morales Mota
 		Pelletier Pimentel Puello Santana Sosa Trujillo Valverde Vásquez Vázquez Zayas
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 DOM = {
 	male = {
@@ -6258,7 +6278,9 @@ DOM = {
 		Luperón Maceo Machado Márquez Mella Méndez Mendieta Moncada Morales Mota
 		Pelletier Pimentel Puello Santana Sosa Trujillo Valverde Vásquez Vázquez Zayas
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 HAI = {
 	male = {
@@ -6281,7 +6303,9 @@ HAI = {
 		Roy Saget Salnave Salomon Sam Simon Soulouque Théodore Vincent Zamor
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 
 
@@ -6337,7 +6361,9 @@ ARG = {
 		Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 CHL = {
 	male = {
@@ -6365,7 +6391,9 @@ CHL = {
 		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 COL = {
 	male = {
@@ -6399,7 +6427,9 @@ COL = {
 	  Ordóñez Castillo "Ordóñez Castillo"  Fonseca Espinosa "Fonseca Espinosa" Leyva Lozano Escobar Marín Uribe González "Uribe Uribe"		
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 BOL = {
 	male = {
@@ -6427,7 +6457,9 @@ BOL = {
 		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 ECU = {
 	male = {
@@ -6455,7 +6487,9 @@ ECU = {
 		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 PAR = {
 	male = {
@@ -6483,7 +6517,9 @@ PAR = {
 		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 PRU = {
 	male = {
@@ -6511,7 +6547,9 @@ PRU = {
 		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 URG = {
 	male = {
@@ -6538,7 +6576,9 @@ URG = {
 		Santos Sarmineto Solano Tajes Uriburu Viamonte Vidal Williman Wisner Yrigoyen
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 VEN = {
 	male = {
@@ -6566,7 +6606,9 @@ VEN = {
 		Pezet Rebolledo Ruíz-Tagle Salaverry "Santa María" Siles Sotomayor Toro Valencia Zañartu Zapata
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 
 GYA = {
@@ -6684,7 +6726,9 @@ PUE = {
 	
 	
 	}
-	callsigns = { }
+	callsigns = {
+		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
+	}
 }
 
 CRC = {
