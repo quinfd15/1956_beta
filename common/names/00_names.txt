@@ -2873,6 +2873,18 @@ SPR = {
 	callsigns = {
 		Gato Paloma Plata Oro Rosario Grande Ventura Hércules Ciervo Zorro Comadreja Estornino Meteoro Halcón Rapaz Lobo Trueno Ráfaga Rayo Tornado Fúria Burro Toro Jabalí Perro Pájaro Gallo Pato Oso Búho Lechuza Lince Lobo Erizo Ardilla Castor Tejón Araña
 	}
+
+	prefix = "Operación"
+
+	#use_geographical_default_operation_names = yes
+
+	operation = {
+		0 = {
+			Brevedad Centinela Diligencia Tercio Puente Lanza Guijarros Estebàn Destello Higo Pinzón Aldea Capa Mirada "Rio Tinto" "Marea" Proyectil Lanzadera Jinete Jabalina Acróbata Fuente Yugo Jardinero Avalancha Borde Glande Mecanismo Circe Gorgona Pilar Guadalquivir
+
+		}
+	}
+
 }
 
 SPA = {
