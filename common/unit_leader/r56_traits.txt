@@ -547,7 +547,7 @@ leader_traits = {
 		unit_trigger = {
 			division_has_battalion_in_template = paratrooper
 
-			#division_has_majority_template = paratrooper #now gainable with BBA
+			#division_has_majority_template = paratrooper #now gainable with BBA, doesn't work and should use division_has_battalion_in_template.???
 			owner = {
 				NOT = {
 					OR = {
@@ -559,7 +559,7 @@ leader_traits = {
 		}
 
 		new_commander_weight = {
-			factor = 0
+			factor = 1
 			
 			modifier = {
 				is_army_leader = yes
