@@ -125,8 +125,11 @@ recruit_character = PRU_Carlos_I_of_habsburg
 recruit_character = PRU_maximo
 recruit_character = PRU_Cesar_alvarez_Guerra
 recruit_character = PRU_lindley_lopez
+<<<<<<< HEAD
 recruit_character = PRU_Carlos_Francisco
 recruit_character = PRU_torres
+=======
+>>>>>>> parent of 0b4ea1987 (new portraits for peru)
 recruit_character = PRU_oscar_miro_quesada
 recruit_character = PRU_rodriguez_ramirez
 recruit_character = PRU_jose_bustamante_y_rivero
