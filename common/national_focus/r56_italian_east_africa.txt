@@ -59,7 +59,7 @@ focus_tree = {
 	default = no
 	reset_on_civilwar = no
 
-	continuous_focus_position = { x = 1400 y = 1000 }
+	continuous_focus_position = { x = 1400 y = 1100 }
 
 	shared_focus = GEN_Aviation_Effort
 	shared_focus = GEN_Naval_Effort
@@ -91,6 +91,839 @@ focus_tree = {
 		
 	}
 
+	focus = {
+		id = AOI_attract_settlers
+		icon = GFX_focus_ETH_invite_italian_settlers
+		prerequisite = { focus = AOI_securing_east_africa }
+
+		x = 10
+		y = 1
+		relative_position_id = AOI_securing_east_africa
+		cost = 10
+		available = {
+			is_subject = yes 
+		}
+
+		completion_reward = {
+			capital_scope = {
+				ETH_upgrade_state_category = yes # WAFFLE remove bad modifiers instead
+				add_manpower = 50000 # could be split between states
+				add_compliance = 10
+			}
+			add_political_power = 75
+		}
+	}
+	focus = {
+		id = AOI_import_construction_equipment
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = AOI_attract_settlers }
+
+		x = 0
+		y = 1
+		relative_position_id = AOI_attract_settlers
+		cost = 5
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = industry 
+			}
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}	
+
+	focus = {
+		id = AOI_develop_ethiopia
+		icon = GFX_focus_generic_develop_ethiopia
+		prerequisite = { focus = AOI_import_construction_equipment }
+
+		x = -1
+		y = 1
+		relative_position_id = AOI_import_construction_equipment
+		cost = 5
+		available = {
+			OR = {
+				any_controlled_state = {
+					is_core_of = ETH
+					is_fully_controlled_by = ROOT
+				}
+				any_subject_country = { #FOR PUPPETS
+					any_controlled_state = {
+						is_core_of = ETH
+						is_fully_controlled_by = PREV
+					}
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+						}
+						any_subject_country = { #FOR PUPPETS
+							any_controlled_state = {
+								is_core_of = ETH
+								is_fully_controlled_by = PREV
+							}
+						}
+					}
+				}
+				custom_effect_tooltip = ITA_develop_ethiopia_tt
+			}
+
+			if = {
+				limit = {
+					271 = { #SHEWA (Addis Ababa)
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+						NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+					}
+				}
+				271 = { #SHEWA (Addis Ababa)
+					set_state_flag = ITA_improved_infrastructure_in_state_flag
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+				}
+				ROOT = {
+					random_controlled_state = {
+						prioritize = { 835 } #HARARGHE
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_subject_country = { #FOR PUPPETS
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_subject_of = ROOT
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+						}
+					}
+					random_controlled_state = {
+						prioritize = { 835 } #HARARGHE
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			if = {
+				limit = {
+					843 = { #WELLO
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+						NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+					}
+				}
+				843 = { #WELLO
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+				}
+				ROOT = {
+					random_controlled_state = {
+						prioritize = { 837 } #SIDAMO
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_subject_country = { #FOR PUPPETS
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_subject_of = ROOT
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+					random_controlled_state = {
+						prioritize = { 837 } #SIDAMO
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+
+			if = {
+				limit = {
+					842 = { #TIGRAY
+						OR = {
+							is_fully_controlled_by = ROOT
+							controller = {
+								is_subject_of = ROOT
+								has_full_control_of_state = PREV
+							}
+						}
+						NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+					}
+				}
+				842 = { #TIGRAY
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+			else_if = {
+				limit = {
+					ROOT = {
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+				}
+				ROOT = {
+					random_controlled_state = {
+						prioritize = { 841 } #BEGEMDER
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = ROOT
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					any_subject_country = { #FOR PUPPETS
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+				}
+				random_other_country = {
+					limit = {
+						is_subject_of = ROOT
+						any_controlled_state = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+					}
+					random_controlled_state = {
+						prioritize = { 841 } #BEGEMDER
+						limit = {
+							is_core_of = ETH
+							is_fully_controlled_by = PREV
+							NOT = { has_state_flag = ITA_improved_infrastructure_in_state_flag }
+						}
+						set_state_flag = ITA_improved_infrastructure_in_state_flag
+						add_building_construction = {
+							type = infrastructure
+							level = 1
+							instant_build = yes
+						}
+						add_extra_state_shared_building_slots = 1
+					}
+				}
+			}
+
+			every_controlled_state = {
+				limit = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_core_of = ETH
+					has_resistance = yes
+				}
+				add_compliance = 5
+			}
+		}
+	}
+	focus = {
+		id = AOI_develop_eritrea
+		icon = GFX_focus_generic_develop_eritrea
+		prerequisite = { focus = AOI_import_construction_equipment }
+
+		x = -3
+		y = 1
+		relative_position_id = AOI_import_construction_equipment
+		cost = 5
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			550 = { #ERITREA
+				set_state_flag = ITA_improved_infrastructure_in_state_flag
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+		}
+	}
+	focus = {
+		id = AOI_eritrean_coast_oil_extraction
+		icon = GFX_goal_generic_oil_refinery
+		prerequisite = { focus = AOI_develop_eritrea }
+		x = 0
+		y = 1
+		relative_position_id = AOI_develop_eritrea
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+		completion_reward = {
+			550 = {
+				add_resource = {
+					type = oil
+					amount = 10
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY  FOCUS_FILTER_OIL }
+	}
+
+
+	focus = {
+		id = AOI_establish_the_sme
+		icon = GFX_goal_italy_establish_the_sme
+		prerequisite = { focus = AOI_develop_eritrea }
+		x = -1
+		y = 2
+		relative_position_id = AOI_develop_eritrea
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+
+		available = {
+			OR = {
+				550 = {	is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 550
+				}
+			}
+		}
+		completion_reward = {
+			550 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 12
+				}
+			}
+			add_ideas = ITA_profits_from_eritrea
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_STEEL}
+	}
+
+
+	focus = {
+		id = AOI_modernize_ethiopian_roads
+		icon = GFX_goal_italy_modernize_ethiopian_roads
+		prerequisite = { focus = AOI_develop_ethiopia focus = AOI_develop_eritrea }
+		x = 0
+		y = 1
+		relative_position_id = AOI_develop_ethiopia
+		cost = 10
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			842 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			841 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			843 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+			840 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		completion_reward = {
+			every_state = {
+				limit = {
+					OR = {
+						state = 842
+						state = 841
+						state = 843
+						state = 840
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_core_of = ETH
+					OR = {
+						state = 842
+						state = 841
+						state = 843
+						state = 840
+					}
+					has_resistance = yes
+				}
+				add_compliance = 8
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = AOI_cementerie_d_etiopia
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = AOI_modernize_ethiopian_roads }
+		x = -1
+		y = 1
+		relative_position_id = AOI_modernize_ethiopian_roads
+		cost = 10
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			271 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		completion_reward = {
+			271 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_core_of = ETH
+					OR = {
+						state = 271
+					}
+					has_resistance = yes
+				}
+				add_resistance = -5
+				add_compliance = 5
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = AOI_compagnia_etiopica_degli_esplosivi
+		icon = GFX_goal_italy_compagnia_etiopica_degli_esplosivi
+		prerequisite = { focus = AOI_cementerie_d_etiopia }
+		x = -1
+		y = 1
+		relative_position_id = AOI_cementerie_d_etiopia
+		cost = 5
+
+		ai_will_do = {
+			factor = 20
+		}
+
+		available = {
+			any_state = {
+				is_core_of = ETH
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		completion_reward = {
+			random_state = {
+				limit = {
+					is_core_of = ETH
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = AOI_imperial_line
+		icon = GFX_goal_italy_imperial_line
+		prerequisite = { focus = AOI_modernize_ethiopian_roads }
+		x = 0
+		y = 2
+		relative_position_id = AOI_modernize_ethiopian_roads
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 25
+		}
+		available = {
+			271 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		completion_reward = {
+			add_ideas = ITA_imperial_line
+			271 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			every_controlled_state = {
+				limit = {
+					state_is_fully_controlled_by_ROOT_or_subject = yes
+					is_core_of = ETH
+					OR = {
+						state = 271
+					}
+					has_resistance = yes
+				}
+				add_resistance = 5
+				add_compliance = 5
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+	focus = {
+		id = AOI_expand_addis_ababa
+		icon = GFX_goal_generic_construct_civilian
+		prerequisite = { focus = AOI_imperial_line }
+		prerequisite = { focus = AOI_cementerie_d_etiopia }
+		x = 0
+		y = 2
+		relative_position_id = AOI_cementerie_d_etiopia
+		cost = 7.2
+
+		ai_will_do = {
+			factor = 10
+		}
+		available = {
+			271 = {
+				state_is_fully_controlled_by_ROOT_or_subject = yes
+			}
+		}
+		completion_reward = {
+			271 = {
+				add_extra_state_shared_building_slots = 3
+				add_state_modifier = {
+					modifier = {
+						local_non_core_manpower = 0.1
+						resistance_target = -0.1
+					}
+				}
+			}
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+	focus = {
+		id = AOI_develop_somaliland
+		icon = GFX_focus_generic_develop_somaliland
+		prerequisite = { focus = AOI_import_construction_equipment }
+
+		x = 3
+		y = 1
+		relative_position_id = AOI_import_construction_equipment
+		cost = 5
+		available = {
+			OR = {
+				559 = { is_fully_controlled_by = ROOT }
+				any_subject_country = {
+					has_full_control_of_state = 559
+				}
+			}
+		}
+
+		search_filters = {FOCUS_FILTER_INDUSTRY}
+
+		completion_reward = {
+			559 = { #SOMALILAND
+				set_state_flag = ITA_improved_infrastructure_in_state_flag
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_extra_state_shared_building_slots = 1
+			}
+			if = {
+				limit = {
+					844 = { #JUBALAND
+						OR = {
+							is_fully_controlled_by = ROOT
+							any_other_country = {
+								is_subject_of = ROOT
+								has_full_control_of_state = 559
+							}
+						}
+					}
+				}
+				844 = { #JUBALAND
+					set_state_flag = ITA_improved_infrastructure_in_state_flag
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+					add_extra_state_shared_building_slots = 1
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = AOI_establish_the_lira_AOI 
+		icon = GFX_focus_ETH_adopt_the_lira
+		prerequisite = { focus = AOI_develop_ethiopia }
+		prerequisite = { focus = AOI_develop_somaliland }
+		x = 2
+		y = 1
+		relative_position_id = AOI_develop_ethiopia
+
+		cost = 10
+
+		available_if_capitulated = yes
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		completion_reward = {
+			add_ideas = GEN_Autarky_I
+			#unique idea if necessary
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_POLITICAL }
+	}
+
+	focus = {
+		id = AOI_colonial_rifles_production
+		icon = GFX_goal_generic_munitions_factories
+		prerequisite = { focus = AOI_develop_somaliland focus = AOI_develop_ethiopia }
+		x = 0
+		y = 1
+		relative_position_id = AOI_develop_somaliland
+		cost = 10
+
+		ai_will_do = {
+			factor = 15
+		}
+		available = {
+			has_completed_focus = ITA_develop_ethiopia
+
+		}
+		completion_reward = {
+		#	random_state = {
+		#		limit = {
+		#			is_core_of = LBA
+		#			NOT = {
+		#				state = 273
+		#			}
+		#			free_building_slots = {
+		#				building = arms_factory
+		#				size > 1
+		#				include_locked = yes
+		#			}
+		#		}
+		#		add_extra_state_shared_building_slots = 2
+		#		add_building_construction = {
+		#			type = arms_factory
+		#			level = 2
+		#			instant_build = yes
+		#		}
+		#	}
+			random_state = {
+				limit = {
+					is_core_of = ETH				
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_state = {
+				limit = {
+					is_core_of = ETH				
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}			
+		}
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+	}
+
+################# RETURN TO MILITARY MATTERS ##################"
 	focus = {
 		id = AOI_warm_climate_equipment
 		icon = GFX_goal_ARG_sun
