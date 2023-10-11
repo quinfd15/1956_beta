@@ -1,6 +1,4 @@
 ideas = {
-
-
 	country = {
 
 		SIA_fascist_sympathies_in_the_army = {
@@ -840,6 +838,7 @@ ideas = {
 				join_faction_tension = 0.45
 				stability_factor = -0.10
 				political_power_factor = -0.10
+				democratic_drift = 0.02
 				hidden_modifier = {
 					ai_get_ally_desire_factor = -50
 				}
@@ -865,6 +864,7 @@ ideas = {
 				join_faction_tension = 0.30
 				stability_factor = -0.10
 				political_power_factor = -0.10
+				democratic_drift = 0.01
 			}
 			
 		}
@@ -999,6 +999,147 @@ ideas = {
 				conscription = 0.02
 			}
 			
+		}
+
+		SIA_rampant_illiteracy1 = {
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+	
+			picture = indochina_illiteracy
+			
+			modifier = {
+				research_speed_factor = -0.25
+			}
+		}
+
+		SIA_rampant_illiteracy2 = {
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+	
+			picture = indochina_illiteracy
+			
+			modifier = {
+				research_speed_factor = -0.175
+			}
+		}
+
+		SIA_rampant_illiteracy3 = {
+				
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+	
+			picture = indochina_illiteracy
+			
+			modifier = {
+				research_speed_factor = -0.10
+			}
+		}
+
+
+		SIA_exploiting_the_jungle = {
+			allowed = {
+				always = no
+			}
+	
+			allowed_civil_war = {
+				always = yes
+			}
+	
+			removal_cost = -1
+	
+			picture = ROM_timber_industry
+			
+			modifier = {
+				production_lack_of_resource_penalty_factor = -0.075
+			}
+		}
+
+		SIA_heavy_water_idea = {
+			picture = BEL_congo_uranium
+			removal_cost = -1
+			
+			allowed = {
+				always = no # Added via focus
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			research_bonus = {
+				nuclear = 0.05
+			}
+		}
+
+		SIA_strategic_bombing_focus = {
+			picture = GFX_idea_strategic_bombing_focus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				large_plane_airframe = {
+					build_cost_ic = -0.1
+					instant = yes
+				}
+			}
+			modifier ={
+				air_strategic_bomber_bombing_factor = 0.15
+				air_bombing_targetting = 0.05
+			}
+		}
+
+		SIA_air_support_focus = {
+			picture = GFX_idea_air_support_focus
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			
+			equipment_bonus = {
+				small_plane_cas_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+				medium_plane_airframe = {
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			
+			modifier = {
+				ground_attack_factor = 0.20
+			}
 		}
 	}
 }

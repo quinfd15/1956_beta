@@ -1278,8 +1278,68 @@ country_event = { #while allied with France, negotiate Indochinese freedom
 			release_puppet = CAM
 			release_puppet = VIN
 			release_puppet = LAO			 	
-
-
 		}
+	}
+}
+
+country_event = {
+	id = siam.37
+	title = siam.37.t
+	desc = siam.37.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # Yas!
+		name = siam.37.a
+		hidden_effect = {
+			SIA = {
+				set_country_flag = FRA_agreed_to_help_SIA
+				country_event = siam.38
+			}
+		}	
+	}
+	option = { # No !
+		name = siam.37.b
+		hidden_effect = {
+			SIA = {
+				set_country_flag = FRA_refused_to_help_SIA
+				country_event =  siam.39
+			}
+		}
+	}
+}
+
+country_event = { # Reply Positive
+	id = siam.38
+	title = siam.38.t
+	desc = siam.38.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { # france accepts
+		name = siam.38.a
+		add_opinion_modifier = {
+			target = FRA
+			modifier = large_increase
+		}	
+	}
+}
+
+country_event = { # Reply Negative
+	id = siam.39
+	title = siam.39.t
+	desc = siam.39.d
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = siam.39.a
+		add_opinion_modifier = {
+			target = FRA
+			modifier = medium_decrease
+		}		
 	}
 }
